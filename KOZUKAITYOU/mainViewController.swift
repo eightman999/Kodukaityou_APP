@@ -1,4 +1,4 @@
-//view
+//
 //  mainViewController.swift
 //  KOZUKAITYOU
 //
@@ -7,10 +7,17 @@
 //
 
 import UIKit
-
-
+import Charts
+import RealmSwift
 class mainViewController: UIViewController, UITableViewDataSource {
-   
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        <#code#>
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        <#code#>
+    }
+    
     
     //----------@IBOutlet-----------
     @IBOutlet var week: UILabel!
@@ -18,6 +25,13 @@ class mainViewController: UIViewController, UITableViewDataSource {
     @IBOutlet var switch_month: UIButton!
     @IBOutlet var switch_years: UIButton!
     @IBOutlet var tableView: UITableView!
+    @IBOutlet weak var chartView: PieChartView!
+    var realm: Realm!
+   
+    var token: NotificationToken!
+
+
+    
     
     var kd: [Dictionary<String, Any>] = []
     let saveData = UserDefaults.standard
@@ -33,7 +47,6 @@ class mainViewController: UIViewController, UITableViewDataSource {
     var First_time:Int = 0
     var check: Date = Date()
 //=============================初回チェック用============↓
-    
     func getDateBeforeOrAfterSomeWeek(week:Double) -> Date {
         
         let now = Date()
@@ -48,15 +61,9 @@ class mainViewController: UIViewController, UITableViewDataSource {
         return resultDate
         
     }
-    
-    //========================viewWillAppear====================↓
-    override func viewWillAppear(_ animated: Bool) {
-        
-        super.viewWillAppear(animated)
-        
-        
-        thisMonthMoney = 0
-        thisWeeksMoney = 0
+//======================週の出費/月の出費/初回チェック/設定===========↓
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
         //---------------設定-----------------------↓
         tableView.dataSource = self
@@ -64,10 +71,7 @@ class mainViewController: UIViewController, UITableViewDataSource {
             kd = saveData.array(forKey: "WORD") as! [Dictionary<String,Any>]
             kd.reverse()
         }
-        
         tableView.reloadData()
-        
-        
         //-----------------month---------------------↓
         for data in kd {
             let time = data["TIME"] as! Date
@@ -78,9 +82,24 @@ class mainViewController: UIViewController, UITableViewDataSource {
                 let money = Int((data["kingaku"] as! String).prefix((data["kingaku"] as! String).count - 1))
                 thisMonthMoney += money!
                 
+        //---------------Charts-----------------
+             super.viewDidLoad()
+                     
+                     var rect = view.bounds
+                     rect.origin.y += 20
+                     rect.size.height -= 20
+                     let entries = [
+                         PieChartDataEntry(value: 10, label: "A"),
+                         PieChartDataEntry(value: 20, label: "B"),
+                         PieChartDataEntry(value: 30, label: "C"),
+                         PieChartDataEntry(value: 40, label: "D"),
+                         PieChartDataEntry(value: 50, label: "E")
+                     ]
+                let set = PieChartDataSet(entries: entries, label: "Data")
+                     chartView.data = PieChartData(dataSet: set)
+                     view.addSubview(chartView)
             }
         }
-        
         //----------------------Week-----------------↓
         for data2 in kd {
             let  time2 = data2["TIME"] as! Date
@@ -90,24 +109,24 @@ class mainViewController: UIViewController, UITableViewDataSource {
                 thisWeeksMoney += money!
                 
             }
-            
+       
         }
         //------------------Firsttime?--------------------------↓
-              //  for data3 in kd {
-                    //let Datedic: [String: Any] = ["First_time?":First_time]
-                 //   First_time = data3["First_time?"] as! Int
-             //   }
-        
-               // print(First_time)
-        
-        
-               // if First_time == nil{
-//                   check = (getDateBeforeOrAfterSomeWeek(week: -200)) // 200週間前
-//                    let Datedic: [String: Any] = ["SAVE-DAY":check]
-//                    First_time + 100
-           //         let Datedic: [String: Any] = ["First_time?":First_time]
-        
-              //  }
+//        for data3 in kd {
+//            //let Datedic: [String: Any] = ["First_time?":First_time]
+//            First_time = data3["First_time?"] as! Int
+//        }
+//        
+//        print(First_time)
+//        
+//        
+//        if First_time == nil{
+//           check = (getDateBeforeOrAfterSomeWeek(week: -200)) // 200週間前
+//            let Datedic: [String: Any] = ["SAVE-DAY":check]
+//            First_time + 100
+//            let Datedic: [String: Any] = ["First_time?":First_time]
+//
+//        }
         
         //-----------テキスト設定-------------↓
         month.text = "\(thisMonthMoney)"
@@ -117,17 +136,17 @@ class mainViewController: UIViewController, UITableViewDataSource {
         
         //-------K'odukaityou-D'ata中身確認-------------↓
         print("kdは",kd)
+    }
+ //========================viewWillAppear====================↓
+    override func viewWillAppear(_ animated: Bool) {
+        
+        super.viewWillAppear(animated)
+        
+        tableView.reloadData()
+        print("リロードデータ！")
         
     }
     
-    
-//======================週の出費/月の出費/初回チェック/設定===========↓
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
-
- 
     //===============@IBAction====週・切り替え=========↓
     @IBAction func pushM(){
         if ch1 == false{
@@ -168,52 +187,22 @@ class mainViewController: UIViewController, UITableViewDataSource {
     //_____________________tableView_________↓
    
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        
-        return 1
-        
+    override func awakeFromNib() {
+      super.awakeFromNib()
+
+      // RealmのTodoリストを取得し，更新を監視
+      realm = try! Realm()
+      mainItem = realm.objects(MainItem.self)
+      token = mainItem.observe { [weak self] _ in
+        self?.reload()
+      }
     }
-    
-   
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return kd.count
-    }
-   
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        as! ListTableViewCell
-        let nowindexPATHdic = kd[indexPath.row]
-        
-      //------------datefomat--------------↓
-        guard let formatString = DateFormatter.dateFormat(fromTemplate: "MMMdd", options: 0, locale: Locale.current) else { fatalError() }
-        print(formatString)
-        
-        //=======dateFomatter===========↓
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = formatString
-        
-        
-        //============date呼び出し==============↓
-        let date = (nowindexPATHdic["TIME"] as! Date)
-        dateFormatter.string(from: date)
-        
-        
-        //-----------------表示-----------------------↓
-        cell.saihu.text = nowindexPATHdic["saihu"] as? String
-        cell.day.text = dateFormatter.string(from: date)
-        cell.kingaku.text = nowindexPATHdic["kingaku"] as? String
-        cell.kosuu.text = nowindexPATHdic["kosuu"] as? String
-        cell.himokuzandaka.text = nowindexPATHdic[""] as? String
-        cell.himoku.text = nowindexPATHdic["himoku"] as? String
-        cell.name.text = nowindexPATHdic["name"] as? String
-        
-        
-        return cell
-        
+
+    func reload() {
+      tableView.reloadData()
     }
 }
+
 //-----------extention-----------Date/Calendar!-------------↓
 extension Date {
     
@@ -238,3 +227,6 @@ extension Calendar {
         return isDate(date1, equalTo: date2, toGranularity: .weekOfYear)
     }
 }
+//=====================charts-------^^
+   
+

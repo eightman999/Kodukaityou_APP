@@ -7,14 +7,17 @@
 //
 
 import UIKit
-
+import Charts
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
+     @IBOutlet weak var myChartView: BarChartView!
 
+        override func viewDidLoad() {
+            super.viewDidLoad()
+            // y軸のプロットデータ
+
+        }
+
+      
 
 }
-

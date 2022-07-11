@@ -7,11 +7,12 @@
 //
 
 import UIKit
+import RealmSwift
 
 class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate{
 
-  
-    
+    weak var mVC = mainViewController()
+   
     @IBOutlet var pickerView: UIPickerView!    
     @IBOutlet var name: UITextField!
     @IBOutlet var kosu: UITextField!
@@ -31,6 +32,7 @@ class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
     var himoku: String = "A費"
     var saihu: Int = 0
     var kd: [Dictionary<String, Any>] = []
+    public var realm: Realm!//レルム
     //---PickerView----設定-----↓
     let saveData = UserDefaults.standard
      let dataList = ["A費",
@@ -131,11 +133,18 @@ class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
         dateFormatter.dateFormat = formatString
         
         dateFormatter.string(from: date!)
-        
+        namebox = name.text!
         
         kingaku = Int(kosu.text!)! * Int(tanka.text!)!
         goukeib = String(kingaku) + "円"
         namebox = name.text!
+        func MainItem(title:String) {
+          try! realm.write {
+            realm.add(name: namebox)
+            
+            
+          }
+        }
         let Datedic: [String: Any] = [
             "saihu":saihu,
             "name": name.text!,
@@ -171,7 +180,7 @@ class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
             self.view.endEditing(true)
         })
       
-   
+        mVC?.tableView.reloadData()
         
     }
     // UIPickerViewの列の数
