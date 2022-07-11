@@ -9,7 +9,8 @@
 import UIKit
 import Firebase
 import FirebaseAuth
-
+import FirebaseAuthUI
+import FirebaseDatabaseUI
 class SETViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -18,7 +19,11 @@ class SETViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     @IBAction func logout(){
-        authUI.signOut()
+          do {
+           try Auth.auth().signOut()
+       } catch let error {
+         print("エラーでたよお")
+       }
     }
     
 

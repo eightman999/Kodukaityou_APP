@@ -7,12 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3CDE17B0F31C6A6199946AF1 /* Pods_KOZUKAITYOU.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8318B6A6B11D01A7D554C0C1 /* Pods_KOZUKAITYOU.framework */; };
 		4E0A7DE122EA812400AD0ECD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0A7DE022EA812400AD0ECD /* AppDelegate.swift */; };
 		4E0A7DE322EA812400AD0ECD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0A7DE222EA812400AD0ECD /* ViewController.swift */; };
 		4E0A7DE922EA812400AD0ECD /* KOZUKAITYOU.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4E0A7DE722EA812400AD0ECD /* KOZUKAITYOU.xcdatamodeld */; };
 		4E0A7DEB22EA812600AD0ECD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E0A7DEA22EA812600AD0ECD /* Assets.xcassets */; };
-		4E0A7DEE22EA812600AD0ECD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E0A7DEC22EA812600AD0ECD /* LaunchScreen.storyboard */; };
 		4E0A7DF922EA812600AD0ECD /* KOZUKAITYOUTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0A7DF822EA812600AD0ECD /* KOZUKAITYOUTests.swift */; };
 		4E0A7E0422EA812600AD0ECD /* KOZUKAITYOUUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0A7E0322EA812600AD0ECD /* KOZUKAITYOUUITests.swift */; };
 		4EBA8EB022EA82F200E85CC3 /* K1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EBA8EAF22EA82F200E85CC3 /* K1.png */; };
@@ -36,8 +34,17 @@
 		AFC06734237B7FE400E1E06C /* suksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC06733237B7FE400E1E06C /* suksViewController.swift */; };
 		AFD71AB6237E4ACC00706A30 /* SUBItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD71AB5237E4ACC00706A30 /* SUBItem.swift */; };
 		AFF1E9BD237BA5D900124341 /* 旗.png in Resources */ = {isa = PBXBuildFile; fileRef = AFF1E9BC237BA5D900124341 /* 旗.png */; };
+		C10ADBD724337696002E839D /* YearItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10ADBD624337696002E839D /* YearItem.swift */; };
 		C10B315423B633B0002B6232 /* FirebaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10B315323B633B0002B6232 /* FirebaseAPI.swift */; };
 		C10B315623B63F1E002B6232 /* SETViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10B315523B63F1E002B6232 /* SETViewController.swift */; };
+		C12EBF992442E06F005BF2E2 /* yearViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12EBF982442E06F005BF2E2 /* yearViewContoller.swift */; };
+		C16A0CB2243AEA160042C817 /* CyearViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16A0CB1243AEA160042C817 /* CyearViewController.swift */; };
+		C16A0CB4243AEA230042C817 /* DyearViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16A0CB3243AEA230042C817 /* DyearViewController.swift */; };
+		C16A0CB6243AEA2E0042C817 /* EyearViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16A0CB5243AEA2E0042C817 /* EyearViewController.swift */; };
+		C16A0CB8243AEA3B0042C817 /* FyearViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16A0CB7243AEA3B0042C817 /* FyearViewController.swift */; };
+		C16A0CBA243AEA5E0042C817 /* GyearViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16A0CB9243AEA5E0042C817 /* GyearViewController.swift */; };
+		C16A0CBC243AEA6B0042C817 /* HyearViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16A0CBB243AEA6B0042C817 /* HyearViewController.swift */; };
+		C16A0CBE243AEAB50042C817 /* IyearViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16A0CBD243AEAB50042C817 /* IyearViewController.swift */; };
 		C16AC26E2376E2BA0035F03C /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16AC26C2376E2BA0035F03C /* ListTableViewCell.swift */; };
 		C16AC26F2376E2BA0035F03C /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C16AC26D2376E2BA0035F03C /* ListTableViewCell.xib */; };
 		C16C76EA23796B5D001F7642 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C16C76E923796B5D001F7642 /* GoogleService-Info.plist */; };
@@ -46,11 +53,18 @@
 		C173822923B33F6D0047E081 /* azuki.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C16AC2692376DD1E0035F03C /* azuki.ttf */; };
 		C187C98E23404C5500A10733 /* メモアイコン.png in Resources */ = {isa = PBXBuildFile; fileRef = C187C98D23404C5500A10733 /* メモアイコン.png */; };
 		C187C99023404C8700A10733 /* gia.png in Resources */ = {isa = PBXBuildFile; fileRef = C187C98F23404C8700A10733 /* gia.png */; };
-		C187C99223404E7C00A10733 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C187C99123404E7C00A10733 /* Charts.framework */; };
 		C187C99423404E8000A10733 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C187C99323404E8000A10733 /* Realm.framework */; };
 		C187C99623404E8400A10733 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C187C99523404E8400A10733 /* RealmSwift.framework */; };
 		C187C99823406D7E00A10733 /* MainItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C187C99723406D7E00A10733 /* MainItem.swift */; };
 		C187C99C23406FB400A10733 /* Pods_KOZUKAITYOU.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C187C99B23406FB400A10733 /* Pods_KOZUKAITYOU.framework */; };
+		C1D364C924234EAE006EAD43 /* ListTableViewCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1D364C824234EAE006EAD43 /* ListTableViewCell2.xib */; };
+		C1D364CD24239A35006EAD43 /* AyearViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D364CC24239A35006EAD43 /* AyearViewController.swift */; };
+		C1D364CF24239A47006EAD43 /* ByearViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D364CE24239A47006EAD43 /* ByearViewController.swift */; };
+		C1F88A4F251EC95F00533C9A /* sunlight.png in Resources */ = {isa = PBXBuildFile; fileRef = C1F88A4E251EC95F00533C9A /* sunlight.png */; };
+		C1F88A57251ED3C900533C9A /* SE.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1F88A56251ED3C900533C9A /* SE.storyboard */; };
+		C1FED9CA287BC72000C73403 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1FED9C9287BC72000C73403 /* LaunchScreen.storyboard */; };
+		C1FED9CC287BC97300C73403 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1FED9CB287BC97300C73403 /* XCTest.framework */; };
+		C1FED9CD287BCA2B00C73403 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C187C99123404E7C00A10733 /* Charts.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,7 +92,6 @@
 		4E0A7DE222EA812400AD0ECD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4E0A7DE822EA812400AD0ECD /* KOZUKAITYOU.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KOZUKAITYOU.xcdatamodel; sourceTree = "<group>"; };
 		4E0A7DEA22EA812600AD0ECD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		4E0A7DED22EA812600AD0ECD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4E0A7DEF22EA812600AD0ECD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E0A7DF422EA812600AD0ECD /* KOZUKAITYOUTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KOZUKAITYOUTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E0A7DF822EA812600AD0ECD /* KOZUKAITYOUTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KOZUKAITYOUTests.swift; sourceTree = "<group>"; };
@@ -112,8 +125,17 @@
 		AFD71AB5237E4ACC00706A30 /* SUBItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SUBItem.swift; sourceTree = "<group>"; };
 		AFD79AA1230CE1DD002FB2E7 /* KOZUKAITYOU.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KOZUKAITYOU.entitlements; sourceTree = "<group>"; };
 		AFF1E9BC237BA5D900124341 /* 旗.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "旗.png"; sourceTree = "<group>"; };
+		C10ADBD624337696002E839D /* YearItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearItem.swift; sourceTree = "<group>"; };
 		C10B315323B633B0002B6232 /* FirebaseAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseAPI.swift; sourceTree = "<group>"; };
 		C10B315523B63F1E002B6232 /* SETViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SETViewController.swift; sourceTree = "<group>"; };
+		C12EBF982442E06F005BF2E2 /* yearViewContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = yearViewContoller.swift; sourceTree = "<group>"; };
+		C16A0CB1243AEA160042C817 /* CyearViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CyearViewController.swift; sourceTree = "<group>"; };
+		C16A0CB3243AEA230042C817 /* DyearViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DyearViewController.swift; sourceTree = "<group>"; };
+		C16A0CB5243AEA2E0042C817 /* EyearViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyearViewController.swift; sourceTree = "<group>"; };
+		C16A0CB7243AEA3B0042C817 /* FyearViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FyearViewController.swift; sourceTree = "<group>"; };
+		C16A0CB9243AEA5E0042C817 /* GyearViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GyearViewController.swift; sourceTree = "<group>"; };
+		C16A0CBB243AEA6B0042C817 /* HyearViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HyearViewController.swift; sourceTree = "<group>"; };
+		C16A0CBD243AEAB50042C817 /* IyearViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IyearViewController.swift; sourceTree = "<group>"; };
 		C16AC2692376DD1E0035F03C /* azuki.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = azuki.ttf; sourceTree = "<group>"; };
 		C16AC26A2376DD2C0035F03C /* azukiB.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = azukiB.ttf; sourceTree = "<group>"; };
 		C16AC26B2376DD3E0035F03C /* ゆず ポップ A [M] Extra Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ゆず ポップ A [M] Extra Light.ttf"; sourceTree = "<group>"; };
@@ -127,6 +149,13 @@
 		C187C99523404E8400A10733 /* RealmSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C187C99723406D7E00A10733 /* MainItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainItem.swift; sourceTree = "<group>"; };
 		C187C99B23406FB400A10733 /* Pods_KOZUKAITYOU.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_KOZUKAITYOU.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1D364C824234EAE006EAD43 /* ListTableViewCell2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListTableViewCell2.xib; sourceTree = "<group>"; };
+		C1D364CC24239A35006EAD43 /* AyearViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AyearViewController.swift; sourceTree = "<group>"; };
+		C1D364CE24239A47006EAD43 /* ByearViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ByearViewController.swift; sourceTree = "<group>"; };
+		C1F88A4E251EC95F00533C9A /* sunlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sunlight.png; sourceTree = "<group>"; };
+		C1F88A56251ED3C900533C9A /* SE.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SE.storyboard; sourceTree = "<group>"; };
+		C1FED9C9287BC72000C73403 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C1FED9CB287BC97300C73403 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,10 +164,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C187C99C23406FB400A10733 /* Pods_KOZUKAITYOU.framework in Frameworks */,
+				C1FED9CD287BCA2B00C73403 /* Charts.framework in Frameworks */,
 				C187C99623404E8400A10733 /* RealmSwift.framework in Frameworks */,
 				C187C99423404E8000A10733 /* Realm.framework in Frameworks */,
-				C187C99223404E7C00A10733 /* Charts.framework in Frameworks */,
-				3CDE17B0F31C6A6199946AF1 /* Pods_KOZUKAITYOU.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,6 +174,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1FED9CC287BC97300C73403 /* XCTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,14 +215,15 @@
 			children = (
 				AFD79AA1230CE1DD002FB2E7 /* KOZUKAITYOU.entitlements */,
 				4E0A7DE022EA812400AD0ECD /* AppDelegate.swift */,
+				C10B315323B633B0002B6232 /* FirebaseAPI.swift */,
 				C187C99723406D7E00A10733 /* MainItem.swift */,
-				AF1E6A20230F6B3700629476 /* InmoneyViewController.swift */,
 				AFD71AB5237E4ACC00706A30 /* SUBItem.swift */,
+				C10ADBD624337696002E839D /* YearItem.swift */,
+				AF1E6A20230F6B3700629476 /* InmoneyViewController.swift */,
 				4EBA8EC722EAA0A100E85CC3 /* AddViewController.swift */,
 				AFA118A02382770300D11DC8 /* MonthViewController.swift */,
 				AF1E6A22230F79AE00629476 /* SavebudgetViewController.swift */,
 				4EBA8EC322EA936500E85CC3 /* mainViewController.swift */,
-				C10B315323B633B0002B6232 /* FirebaseAPI.swift */,
 				4E0A7DE222EA812400AD0ECD /* ViewController.swift */,
 				AFA675D2237A3D8000985F7B /* LoginViewController.swift */,
 				AFA675D4237A3E1800985F7B /* SignUpViewController.swift */,
@@ -201,13 +231,25 @@
 				C16AC26C2376E2BA0035F03C /* ListTableViewCell.swift */,
 				C10B315523B63F1E002B6232 /* SETViewController.swift */,
 				C16AC26D2376E2BA0035F03C /* ListTableViewCell.xib */,
+				C1D364C824234EAE006EAD43 /* ListTableViewCell2.xib */,
+				C1FED9C9287BC72000C73403 /* LaunchScreen.storyboard */,
 				AF4155DC237D3C0E00725B44 /* Main.storyboard */,
-				4E0A7DEC22EA812600AD0ECD /* LaunchScreen.storyboard */,
+				C1F88A56251ED3C900533C9A /* SE.storyboard */,
 				C16C76E923796B5D001F7642 /* GoogleService-Info.plist */,
 				4E0A7DEF22EA812600AD0ECD /* Info.plist */,
 				4E0A7DE722EA812400AD0ECD /* KOZUKAITYOU.xcdatamodeld */,
 				4E0A7DEA22EA812600AD0ECD /* Assets.xcassets */,
 				AF1E6A24230FB7E000629476 /* New Group */,
+				C1D364CC24239A35006EAD43 /* AyearViewController.swift */,
+				C1D364CE24239A47006EAD43 /* ByearViewController.swift */,
+				C16A0CB1243AEA160042C817 /* CyearViewController.swift */,
+				C16A0CB3243AEA230042C817 /* DyearViewController.swift */,
+				C16A0CB5243AEA2E0042C817 /* EyearViewController.swift */,
+				C16A0CB7243AEA3B0042C817 /* FyearViewController.swift */,
+				C16A0CB9243AEA5E0042C817 /* GyearViewController.swift */,
+				C16A0CBB243AEA6B0042C817 /* HyearViewController.swift */,
+				C16A0CBD243AEAB50042C817 /* IyearViewController.swift */,
+				C12EBF982442E06F005BF2E2 /* yearViewContoller.swift */,
 			);
 			path = KOZUKAITYOU;
 			sourceTree = "<group>";
@@ -233,6 +275,7 @@
 		674B1ECE1F583B495D705114 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C1FED9CB287BC97300C73403 /* XCTest.framework */,
 				AFA675DD237A47C300985F7B /* GoogleUtilities.framework */,
 				AFA675DA237A47BE00985F7B /* GoogleDataTransport.framework */,
 				AFA675D6237A47B900985F7B /* SVProgressHUD.framework */,
@@ -257,6 +300,7 @@
 		AF1E6A24230FB7E000629476 /* New Group */ = {
 			isa = PBXGroup;
 			children = (
+				C1F88A4E251EC95F00533C9A /* sunlight.png */,
 				AF82080D23837E030091C41B /* ararra.png */,
 				AFF1E9BC237BA5D900124341 /* 旗.png */,
 				AF82080F23837E210091C41B /* icon.png */,
@@ -343,7 +387,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1030;
-				LastUpgradeCheck = 1030;
+				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "塙　詠斗";
 				TargetAttributes = {
 					4E0A7DDC22EA812400AD0ECD = {
@@ -480,13 +524,14 @@
 			files = (
 				C173822923B33F6D0047E081 /* azuki.ttf in Resources */,
 				C173822823B33F680047E081 /* ゆず ポップ A [M] Extra Light.ttf in Resources */,
+				C1D364C924234EAE006EAD43 /* ListTableViewCell2.xib in Resources */,
 				C173822723B33F620047E081 /* azukiB.ttf in Resources */,
 				AFC06732237B7BF800E1E06C /* 国旗.png in Resources */,
 				C187C98E23404C5500A10733 /* メモアイコン.png in Resources */,
 				AF4155DD237D3C0F00725B44 /* Main.storyboard in Resources */,
 				C16C76EA23796B5D001F7642 /* GoogleService-Info.plist in Resources */,
 				AF26245E230E644A00423B58 /* 麻袋型のドル袋の無料アイコン（ユーロ）.png in Resources */,
-				4E0A7DEE22EA812600AD0ECD /* LaunchScreen.storyboard in Resources */,
+				C1FED9CA287BC72000C73403 /* LaunchScreen.storyboard in Resources */,
 				4EBA8EBC22EA8F8100E85CC3 /* home3.png in Resources */,
 				4ED54AD922EBDB3600C2293B /* ダウンロード.png in Resources */,
 				AF262464230E655700423B58 /* カレンダーのフリーアイコン19.png in Resources */,
@@ -497,7 +542,9 @@
 				4EBA8EB422EA8D8900E85CC3 /* gurahu.jpeg in Resources */,
 				AF82081023837E210091C41B /* icon.png in Resources */,
 				4E0A7DEB22EA812600AD0ECD /* Assets.xcassets in Resources */,
+				C1F88A57251ED3C900533C9A /* SE.storyboard in Resources */,
 				AFF1E9BD237BA5D900124341 /* 旗.png in Resources */,
+				C1F88A4F251EC95F00533C9A /* sunlight.png in Resources */,
 				C16AC26F2376E2BA0035F03C /* ListTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -589,14 +636,25 @@
 				AFC06734237B7FE400E1E06C /* suksViewController.swift in Sources */,
 				4E0A7DE322EA812400AD0ECD /* ViewController.swift in Sources */,
 				AFD71AB6237E4ACC00706A30 /* SUBItem.swift in Sources */,
+				C16A0CB6243AEA2E0042C817 /* EyearViewController.swift in Sources */,
 				AFA118A12382770300D11DC8 /* MonthViewController.swift in Sources */,
+				C12EBF992442E06F005BF2E2 /* yearViewContoller.swift in Sources */,
+				C1D364CD24239A35006EAD43 /* AyearViewController.swift in Sources */,
 				4EBA8EC822EAA0A100E85CC3 /* AddViewController.swift in Sources */,
+				C16A0CBA243AEA5E0042C817 /* GyearViewController.swift in Sources */,
+				C16A0CB4243AEA230042C817 /* DyearViewController.swift in Sources */,
 				C16AC26E2376E2BA0035F03C /* ListTableViewCell.swift in Sources */,
 				C187C99823406D7E00A10733 /* MainItem.swift in Sources */,
+				C16A0CBE243AEAB50042C817 /* IyearViewController.swift in Sources */,
 				4E0A7DE122EA812400AD0ECD /* AppDelegate.swift in Sources */,
+				C16A0CBC243AEA6B0042C817 /* HyearViewController.swift in Sources */,
 				AFA675D3237A3D8000985F7B /* LoginViewController.swift in Sources */,
+				C1D364CF24239A47006EAD43 /* ByearViewController.swift in Sources */,
+				C16A0CB8243AEA3B0042C817 /* FyearViewController.swift in Sources */,
+				C16A0CB2243AEA160042C817 /* CyearViewController.swift in Sources */,
 				C10B315623B63F1E002B6232 /* SETViewController.swift in Sources */,
 				C10B315423B633B0002B6232 /* FirebaseAPI.swift in Sources */,
+				C10ADBD724337696002E839D /* YearItem.swift in Sources */,
 				4EBA8EC422EA936500E85CC3 /* mainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -632,22 +690,12 @@
 		};
 /* End PBXTargetDependency section */
 
-/* Begin PBXVariantGroup section */
-		4E0A7DEC22EA812600AD0ECD /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4E0A7DED22EA812600AD0ECD /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
 		4E0A7E0622EA812600AD0ECD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -709,6 +757,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -770,12 +819,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XBT5U5CHS8;
 				INFOPLIST_FILE = KOZUKAITYOU/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = "β0.9.8";
+				MARKETING_VERSION = "β0.9.9";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Sunlight.library.app.KOZUKAITYOU;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -794,12 +843,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XBT5U5CHS8;
 				INFOPLIST_FILE = KOZUKAITYOU/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = "β0.9.8";
+				MARKETING_VERSION = "β0.9.9";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Sunlight.library.app.KOZUKAITYOU;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

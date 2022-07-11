@@ -1,5 +1,5 @@
 /*
- *  Copyright (c) 2019 Erik Doernenburg and contributors
+ *  Copyright (c) 2019-2021 Erik Doernenburg and contributors
  *
  *  Licensed under the Apache License, Version 2.0 (the "License"); you may
  *  not use these files except in compliance with the License. You may obtain
@@ -14,15 +14,16 @@
  *  under the License.
  */
 
-#import "OCMFunctions.h"
+#import "NSInvocation+OCMAdditions.h"
 #import "OCMNonRetainingObjectReturnValueProvider.h"
+#import "OCMFunctions.h"
 
 
 @implementation OCMNonRetainingObjectReturnValueProvider
 
 - (instancetype)initWithValue:(id)aValue
 {
-    if ((self = [super init]))
+    if((self = [super init]))
         returnValue = aValue;
     return self;
 }
@@ -33,13 +34,6 @@
     {
         @throw [NSException exceptionWithName:NSInvalidArgumentException reason:@"Expected invocation with object return type. Did you mean to use andReturnValue: instead?" userInfo:nil];
     }
-    NSString *sel = NSStringFromSelector([anInvocation selector]);
-    if([sel hasPrefix:@"alloc"] || [sel hasPrefix:@"new"] || [sel hasPrefix:@"copy"] || [sel hasPrefix:@"mutableCopy"])
-    {
-        // methods that "create" an object return it with an extra retain count
-        [returnValue retain];
-    }
     [anInvocation setReturnValue:&returnValue];
 }
 @end
-

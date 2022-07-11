@@ -20,7 +20,8 @@ class mainViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet var switch_month: UIButton!
     @IBOutlet var switch_years: UIButton!
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var chartView: PieChartView!
+  
+    
     var itemList: Results<MainItem>!
     var itemLists: [MainItem] = [MainItem]()
     let realm = try! Realm()
@@ -132,7 +133,7 @@ class mainViewController: UIViewController, UITableViewDelegate, UITableViewData
             let himoku = data.Expense
             let time = data.Day
             if himoku ==  "　"{}else{
-                if Calendar.current.isDate2(time, inSameMonthAs: Date()) {
+                if Calendar.current.isDate(time, inSameMonthAs: Date()) {
                     // お金の取得
                     let money = data.total
                     thisMonthMoney += money
@@ -144,7 +145,7 @@ class mainViewController: UIViewController, UITableViewDelegate, UITableViewData
             let himoku = data2.Expense
             let  time2 = data2.Day
             if himoku ==  "　"{}else{
-                if Calendar.current.isDate2(time2, inSameWeekAs: Date()){
+                if Calendar.current.isDate(time2, inSameWeekAs: Date()){
                     //お金の取得2
                     let money = data2.total
                     thisWeeksMoney += money
@@ -156,7 +157,7 @@ class mainViewController: UIViewController, UITableViewDelegate, UITableViewData
             let time = dataa.Day
             let himoku = dataa.Expense
             if himoku ==  "　"{}else{
-                if Calendar.current.isOneMonth(time, inSameMonthAs: Date()) {
+                if Calendar.current.isMonth(time, inSameMonthAs: Date()) {
                     // お金の取得
                     let money = dataa.total
                     lastMonthmoney += money
@@ -174,7 +175,7 @@ class mainViewController: UIViewController, UITableViewDelegate, UITableViewData
             let  time2 = dataa2.Day
             let himoku = dataa2.Expense
             if himoku ==  "　"{}else{
-                if Calendar.current.isOneweek(time2, inSameWeekAs: Date()){
+                if Calendar.current.isweek(time2, inSameWeekAs: Date()){
                     //お金の取得2
                     let money = dataa2.total
                     lastWeekmoney += money
@@ -247,21 +248,22 @@ extension Date {
         return calendar
     }
 }
+//=====================charts-------^^
+//-----------extention-----------Date/Calendar!-------------↓
+
 
 extension Calendar {
     
     //==================月の判定用設定-------------------↓
-    func isDate2(_ date1:Date, inSameMonthAs date2:Date) -> Bool {
+    func isDate(_ date1:Date, inSameMonthAs date2:Date) -> Bool {
         return isDate(date1, equalTo: date2, toGranularity: .month)
     }
-    
     //===================週の判定用設定-------------------↓
-    func isDate2(_ date1:Date, inSameWeekAs date2:Date) -> Bool {
+
+    func isDate(_ date1:Date, inSameWeekAs date2:Date) -> Bool {
         return isDate(date1, equalTo: date2, toGranularity: .weekOfYear)
     }
-    
-    func isOneMonth(_ date1:Date, inSameMonthAs date2:Date) -> Bool {
-        //        return isDate(date1, equalTo: date2, toGranularity: .month)
+    func isMonth(_ date1:Date, inSameMonthAs date2:Date) -> Bool {
         let calender = Calendar(identifier: .gregorian)
         let components = calender.dateComponents([.month], from: date1, to: date2).month
         if components == 1 {
@@ -270,8 +272,7 @@ extension Calendar {
             return false
         }
     }
-    func isOneweek(_ date1:Date, inSameWeekAs date2:Date) -> Bool {
-        //        return isDate(date1, equalTo: date2, toGranularity: .month)
+    func isweek(_ date1:Date, inSameWeekAs date2:Date) -> Bool {
         let calender = Calendar(identifier: .gregorian)
         let components = calender.dateComponents([.weekOfYear], from: date1, to: date2).weekOfYear
         if components == 1 {
@@ -282,5 +283,7 @@ extension Calendar {
     }
 }
 //=====================charts-------^^
+
+
 
 

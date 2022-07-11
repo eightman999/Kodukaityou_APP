@@ -11,7 +11,6 @@
 import RealmSwift
 import Foundation
 class MainItem: Object {
-    
     @objc dynamic var Name:String = ""//名前//
     @objc dynamic var Number:Int = 0//個数//
     @objc dynamic var Expense = ""//費目//
@@ -20,6 +19,7 @@ class MainItem: Object {
     @objc dynamic var total:Int = 0//トータル//
     @objc dynamic var Day:Date = Date()//日時//
     @objc dynamic var  TIME :Date = Date()//TIME//
+    @objc dynamic var year :Int = 0
     
     
     

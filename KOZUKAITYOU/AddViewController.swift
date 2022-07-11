@@ -12,62 +12,68 @@ import CoreData
 import Firebase
 
 class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate{
-    
-    //    weak var mVC = mainViewController()
-    
-    @IBOutlet var pickerView: UIPickerView!    
+    @IBOutlet var pickerView: UIPickerView!
+    @IBOutlet var pickerView2:UIDatePicker!
     @IBOutlet var name: UITextField!
     @IBOutlet var kosu: UITextField!
     @IBOutlet var tanka: UITextField!
-    @IBOutlet var Tuki: UITextField!
-    @IBOutlet var Niti: UITextField!
     @IBOutlet var Save: UIButton!
+    
     let realm = try! Realm()
+    
+    var listcount:Int = 0
+    var datePicker: UIDatePicker = UIDatePicker()
     var day: String = "0"
     var kosuu: String = "0"
     var goukeib: String = "0"
     var niti: Int = 0
     var tuki: Int = 0
+    var tosi:Int = 0
     var kingaku: Int = 0
     var kingaku1: String = "0"
     var goukei: Int = 0
     var tanka1:Int = 0
     var exp :Int = 0
-    
+    var EXP:String = ""
     var himoku: String = "A費"
     var saihu: Int = 0
+    
+
     //---PickerView----設定-----↓
-    let dataList = ["A費",
-                    "B費",
-                    "C費",
-                    "D費",
-                    "E費",
-                    "F費",
-                    "G費",
-                    "H費",
-                    "I費"]
-    
+    let dataList = ["A費", "B費","C費", "D費","E費", "F費", "G費","H費","I費"]
     //------viewDidLoad()---------↓
-     var firebaseAPI = FirebaseAPI()
+    var firebaseAPI = FirebaseAPI()
     override func viewDidLoad() {
+    // ピッカー設定
+        datePicker.datePickerMode = UIDatePicker.Mode.date
+              datePicker.timeZone = NSTimeZone.local
+              datePicker.locale = Locale.current
+      // 決定バーの生成
         
-        //      if saveData.array(forKey: "WORD") != nil {
-        //        mVC?.allData = saveData.array(forKey: "WORD") as! [Dictionary<String,Any>]
-        //      }
-        pickerView.delegate = self
-        pickerView.dataSource = self
+              let toolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 35))
+              let spacelItem = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
+              let doneItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(done1))
+              toolbar.setItems([spacelItem, doneItem], animated: true)
         
-        
-        
-        // Do any additional setup after loading the view.
+           
+             pickerView.delegate = self
+             pickerView.dataSource = self
+             
+            
+    
+          // Do any additional setup after loading the view.
     }
-    
-    
-    
-    //========@IBAction========seveでーた=============↓↓
+    @objc func done1() {
+        // 日付のフォーマット
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"    }
+     //========@IBAction========seveでーた=============↓↓
+    @objc func done() {
+        // 日付のフォーマット
+        let formatter = DateFormatter()
+       }
     @IBAction func saveWorld(_ sender: Any){
-        
-        
+        //-------警告---------//
         // 文字列がカラだったら
         if kosu.text?.isEmpty == true {
             let alert = UIAlertController(title: "警告！", message:"個数が入力されていません！", preferredStyle: .alert)
@@ -87,69 +93,33 @@ class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
             present(alert, animated: true, completion: nil)
             self.view.endEditing(true)
             return
-            
-        }else if Tuki.text?.isEmpty == true {
-            let alert = UIAlertController(title: "警告！", message:"月が入力されていません！", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK!", style: .default, handler: nil))
-            present(alert, animated: true, completion: nil)
-            self.view.endEditing(true)
-            return
-        }else if Niti.text?.isEmpty == true {
-            let alert = UIAlertController(title: "警告！", message:"日付が入力されていません！", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK!", style: .default, handler: nil))
-            present(alert, animated: true, completion: nil)
-            self.view.endEditing(true)
-            return
         }
         kosuu = kosu.text! + "個"
-        niti = Int(Niti.text!)!
-        tuki = Int(Tuki.text!)!
-        if niti > 31 {
-            let alert = UIAlertController(title: "警告！", message:"日付が存在しません！", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK!", style: .default, handler: nil))
-            present(alert, animated: true, completion: nil)
-            self.view.endEditing(true)
-            return
-        }else if tuki > 12{
-            let alert = UIAlertController(title: "警告！", message:"そんな月はねえ！", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK!", style: .default, handler: nil))
-            present(alert, animated: true, completion: nil)
-            self.view.endEditing(true)
-            return
-        }
         //====================今いつ？======================↓
-        var myDateComponents = DateComponents()
-        myDateComponents.year = 2019
-        myDateComponents.month = Int(Tuki.text!)!
-        myDateComponents.day = Int(Niti.text!)!
+        let calendar = Calendar(identifier: .gregorian)
+        let pickerDate = datePicker.date
+        var myDateComponents =  calendar.dateComponents([.year, .month, .day], from: pickerDate )
+       print(myDateComponents.year)
+        print(myDateComponents.month)
+        print(myDateComponents.day)
         myDateComponents.timeZone = Calendar.current.timeZone
         print(myDateComponents)
-        
-        let date = Calendar.current.date(from: myDateComponents)
-        print(date!)
-        
-        guard let formatString = DateFormatter.dateFormat(fromTemplate: "MMMdd", options: 0, locale: Locale.current) else { fatalError() }
+          let date = Calendar.current.date(from: myDateComponents)
+        guard let formatString = DateFormatter.dateFormat(fromTemplate: "YYMMdd", options: 0, locale: Locale.current) else { fatalError() }
         print(formatString)
-        
         let dateFormatter = DateFormatter()
-        
         dateFormatter.dateFormat = formatString
         print(saihu)
         print(kingaku)
         dateFormatter.string(from: date!)
         
         print("処理１")
-        
-        
-        
-        kingaku = Int(kosu.text!)! * Int(tanka.text!)!
+    kingaku = Int(kosu.text!)! * Int(tanka.text!)!
         let results = realm.objects(MainItem.self)
         for dataa in results {
             let money = kingaku
             saihu = dataa.Nowmoney - money
         }
-        
-        
         let results2 = realm.objects(SUBItem.self)
         for data in results2{
             let himoku2 = himoku
@@ -159,66 +129,66 @@ class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
                     let money = kingaku
                     var a = data2.A2
                     exp = a - money
-                    
+                    EXP = "A"
                 }
             case "B費":
                 for data2 in results2 {
                     let money = kingaku
                     var b = data2.B2
                     exp = b - money
-                    
+                      EXP = "B"
                 }
             case "C費":
                 for data2 in results2 {
                     let money = kingaku
                     var c = data2.C2
                     exp = c - money
-                    
+                      EXP = "C"
                 }
             case "D費":
                 for data2 in results2 {
                     let money = kingaku
                     var d = data2.D2
                     exp = d - money
-                    
+                      EXP = "D"
                 }
             case "E費":
                 for data2 in results2 {
                     let money = kingaku
                     var e = data2.E2
                     exp = e - money
-                    
+                      EXP = "E"
                 }
             case "F費":
                 for data2 in results2 {
                     let money = kingaku
                     var f = data2.F2
                     exp = f - money
-                    
+                      EXP = "F"
                 }
             case"G費":
                 for data2 in results2 {
                     let money = kingaku
                     var g = data2.G2
                     exp = g - money
-                    
+                      EXP = "G"
                 }
             case "H費":
                 for data2 in results2 {
                     let money = kingaku
                     var h = data2.H2
                     exp = h - money
-                    
+                      EXP = "H"
                 }
             case "I費":
                 for data2 in results2 {
                     let money = kingaku
                     var I = data2.I2
                     exp = I - money
-                    
+                      EXP = "I"
                 }
             case "　":
-                print("FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF")
+                print("----------------error-------------------")
             default: // defaultは必須
                 print("全部違ったよ")
                 break
@@ -226,10 +196,15 @@ class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
         }
         //            mVC?.allData.append(Datedic)
         //        saveData.set(mVC?.allData, forKey: "WORD")
-        
-        let USERID:String = String((Auth.auth().currentUser?.uid)!) + "/" + "出費" + "/" + name.text!
+        let USERID:String = String((Auth.auth().currentUser?.uid)!) + "/" + "出費" + "/" + String(listcount)
         print(USERID)
         firebaseAPI.uploadToFirebase(path: "\(USERID)", write: ["Name" : name.text!,"Number":Int(kosu.text!)!,"Expense" : himoku,"Nowmoney":saihu,"NowExpence": exp,"total":kingaku,"Day":date!.timeIntervalSinceReferenceDate,"TIME":Date().timeIntervalSinceReferenceDate])
+        let USERID2:String = String((Auth.auth().currentUser?.uid)!) + "/" + "EXP" + "/" + EXP
+            print(USERID2)
+        firebaseAPI.uploadToFirebase(path: "\(USERID2)", write: [ "NowExpence":exp,"Day":date!.timeIntervalSinceReferenceDate,"TIME":Date().timeIntervalSinceReferenceDate])
+          let USERID3:String = String((Auth.auth().currentUser?.uid)!) + "/" + "NOWMONEY" + "/" + "NM"
+                    print(USERID3)
+                firebaseAPI.uploadToFirebase(path: "\(USERID3)", write: [ "Nowmoney":saihu,"Day":date!.timeIntervalSinceReferenceDate,"TIME":Date().timeIntervalSinceReferenceDate])
         let newItem = MainItem()
         newItem.Name = name.text!
         newItem.Number = Int(kosu.text!)!
@@ -249,32 +224,15 @@ class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
             print("登録")
         }catch{
         }
-        
         let names :String = "名称" + String(name.text!) + "\n"
         let tanka2 :String = "単価" + String(tanka.text!) + "円\n"
         let kosuu2 :String = "個数" + kosuu + "\n"
         let kei :String = "小計" + goukeib
         let nitiji:String = "\n日時" + dateFormatter.string(from: date!)
-        
-        
-        //        let Datedic: [String: Any] = [
-        //            "saihu":saihu,
-        //            "name": name.text!,
-        //            "kosuu": kosuu,
-        //            "kingaku": goukeib,
-        //            "day": dateFormatter.string(from: date!),
-        //            "TIME": date as Any,
-        //            "himoku": himoku,
-        //            "goukei": goukeib]
-        //        kd.append(Datedic)
-        //        saveData.set(kd, forKey: "WORD")
-        
-        print("アラート")
+  print("アラート")
         let title = "登録したよ！"
         let message = "登録されました！\n" + "登録されたデータ\n" + names + tanka2 + kosuu2 + kei + nitiji
-        
-        let okText = "ok"
-        
+       let okText = "ok"
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
         let okayButton = UIAlertAction(title: okText, style: UIAlertAction.Style.cancel, handler: nil)
         alert.addAction(okayButton)
@@ -286,8 +244,7 @@ class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
         self.name.text = ""
         self.kosu.text = ""
         self.tanka.text = ""
-        self.Tuki.text = ""
-        self.Niti.text = ""
+    
         self.view.endEditing(true)
         
         print("owari")
@@ -318,18 +275,6 @@ class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
                     inComponent component: Int) {
         himoku = dataList[row]
     }
-    
-    
-    func hideKeyboardWhenTappedAround() {
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
-        tap.cancelsTouchesInView = false
-        view.addGestureRecognizer(tap)
-    }
-    
-    @objc func hideKeyboard() {
-        view.endEditing(true)
-    }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -352,3 +297,4 @@ class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
      }
      */
 }
+

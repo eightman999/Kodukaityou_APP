@@ -59,23 +59,16 @@ class MonthViewController: UIViewController{
         HTotal = 0
         ITotal = 0
         super.viewWillAppear(animated)
-        
         let results = realm.objects(MainItem.self)
         print(results)
-        
         //dataが今月のもののみ適用する
-        
-        
-        
-        
-        
+    
         for data in results {
             let time = data.Day
-            if Calendar.current.isDate2(time, inSameMonthAs: Date()) {
+            if Calendar.current.isDate(time, inSameMonthAs: Date()) {
                 // お金の取得
                 //A費ならAtotalに追加 -> Iまでやる
                 let himoku = data.Expense
-                
                 if himoku ==  "　"{}else{
                     let money = data.total
                     TMMsiyougaku += money
@@ -167,24 +160,3 @@ class MonthViewController: UIViewController{
 
 
 
-extension Date {
-    //・・・・・・・・・TIMEZONE->localeにする・・・・・・・・↓
-    var calendar2: Calendar {
-        var calendar = Calendar(identifier: .gregorian)
-        calendar.timeZone = .current
-        calendar.locale   = .current
-        return calendar
-    }
-}
-extension Calendar {
-    
-    //==================月の判定用設定-------------------↓
-    func isDate3(_ date1:Date, inSameMonthAs date2:Date) -> Bool {
-        return isDate(date1, equalTo: date2, toGranularity: .month)
-    }
-    
-    //===================週の判定用設定-------------------↓
-    func isDate3(_ date1:Date, inSameWeekAs date2:Date) -> Bool {
-        return isDate(date1, equalTo: date2, toGranularity: .weekOfYear)
-    }
-}

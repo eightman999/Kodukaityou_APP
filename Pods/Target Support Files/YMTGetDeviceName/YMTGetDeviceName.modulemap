@@ -1,0 +1,6 @@
+framework module YMTGetDeviceName {
+  umbrella header "YMTGetDeviceName-umbrella.h"
+
+  export *
+  module * { export * }
+}
