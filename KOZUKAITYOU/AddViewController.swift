@@ -7,10 +7,12 @@
 //
 
 import UIKit
-
+import CoreData
 class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate{
 
-  
+    
+    weak var iMVC = InmoneyViewController()
+    
     
     @IBOutlet var pickerView: UIPickerView!    
     @IBOutlet var name: UITextField!
@@ -30,10 +32,10 @@ class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
     var namebox: String = "0"
     var himoku: String = "A費"
     var saihu: Int = 0
-    weak var mVC = mainViewController()
-    
-    let saveData = UserDefaults.standard
+    var allData: [Dictionary<String, Any>] = []
+//    var saveData = UserDefaults.standard
     //---PickerView----設定-----↓
+    let saveData = UserDefaults.standard
      let dataList = ["A費",
                      "B費",
                      "C費",
@@ -48,8 +50,8 @@ class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if saveData.array(forKey: "WORD") != nil {
-            mVC?.kd = saveData.array(forKey: "WORD") as! [Dictionary<String,Any>]
+        if saveData.array(forKey: "SAVE") != nil {
+            allData = saveData.array(forKey: "SAVE") as! [Dictionary<String,Any>]
         }
         pickerView.delegate = self
         pickerView.dataSource = self
@@ -64,7 +66,7 @@ class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
 //========@IBAction========seveでーた=============↓↓
     @IBAction func saveWorld(){
      
-        // 文字列がカラだったら
+        // 〜ーーーーーーー文字列がカラだったらーーーーーーーーーーーーー↓
         if kosu.text?.isEmpty == true {
             let alert = UIAlertController(title: "警告！", message:"個数が入力されていません！", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK!", style: .default, handler: nil))
@@ -127,14 +129,23 @@ class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
         guard let formatString = DateFormatter.dateFormat(fromTemplate: "MMMdd", options: 0, locale: Locale.current) else { fatalError() }
         print(formatString)
         
-        let dateFormatter = DateFormatter()
-        saihu = saihu - kingaku
+       let dateFormatter = DateFormatter()
+//        //-------------計算---------------↓
+//        //-----変数bagを定義↓
+//        var bag: Int = 0
+//        //---bagにOutmoneyのsaihuの中身を入れる---↓
+//        for data in Outmoney {
+//            bag = data["saihu"] as! Int
+//        }
+//        //-------足し合わせる------↓
+//
         dateFormatter.dateFormat = formatString
         
         dateFormatter.string(from: date!)
         
         
         kingaku = Int(kosu.text!)! * Int(tanka.text!)!
+        //saihu = bag + kingaku
         goukeib = String(kingaku) + "円"
         namebox = name.text!
         let Datedic: [String: Any] = [
@@ -146,9 +157,10 @@ class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
             "TIME": date as Any,
             "himoku": himoku,
             "goukei": goukeib,
-            "Check": 1]
-        mVC?.kd.append(Datedic)
-        saveData.set(mVC?.kd, forKey: "WORD")
+            ]
+        allData.append(Datedic)
+        saveData.set(allData, forKey: "SAVE")
+        //--------Alert"登録しました！"---------------↓
         let alert = UIAlertController(
             title: "登録しましたよ！！",
             
@@ -172,30 +184,29 @@ class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
             self.Niti.text = ""
             self.view.endEditing(true)
         })
-        print("セーブしたよ" , mVC?.kd)
       
-   
+      
         
     }
-    // UIPickerViewの列の数
+    // -----------------UIPickerViewの列の数--------------------↓
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     
-    // UIPickerViewの行数、リストの数
+    // ------------UIPickerViewの行数、リストの数---------------↓
     func pickerView(_ pickerView: UIPickerView,
                     numberOfRowsInComponent component: Int) -> Int {
         return dataList.count
     }
     
-    // UIPickerViewの最初の表示
+    //----------- UIPickerViewの最初の表示-----------------------↓
     func pickerView(_ pickerView: UIPickerView,
                     titleForRow row: Int,
                     forComponent component: Int) -> String? {
         
         return dataList[row]
     }
-    // UIPickerViewのRowが選択された時の挙動
+    //------------ UIPickerViewのRowが選択された時の挙動----------↓
     func pickerView(_ pickerView: UIPickerView,
                     didSelectRow row: Int,
                     inComponent component: Int) {
@@ -203,7 +214,7 @@ class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
     }
     
 
- 
+ //-------------キーボード解除コード-------------------------------↓
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
                 self.view.endEditing(true)
     }

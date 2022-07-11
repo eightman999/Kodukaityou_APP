@@ -7,9 +7,9 @@
 //
 
 import UIKit
-
+import CoreData
 class ListTableViewCell: UITableViewCell {
-    //----------@IBOutlet-----------
+    //----------@IBOutlet--------------------↓
     
     @IBOutlet var day: UILabel!
     @IBOutlet var kingaku: UILabel!
@@ -18,14 +18,14 @@ class ListTableViewCell: UITableViewCell {
     @IBOutlet var himoku: UILabel!
     @IBOutlet var name: UILabel!
     @IBOutlet var saihu: UILabel!
-    //ーーーーーDictionary呼び出しーーーーーー
+    //ーーーーーDictionary呼び出しーーーーーー↓
     var kd: [Dictionary<String, String>] = []
     let saveData = UserDefaults.standard
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
+//----------------------------------------------------------------
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

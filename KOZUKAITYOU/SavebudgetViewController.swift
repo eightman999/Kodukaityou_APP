@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import CoreData
 class SavebudgetViewController: UIViewController {
     //----------@IBOutlet-----------↓
     
@@ -25,35 +25,17 @@ class SavebudgetViewController: UIViewController {
     var saveday: Int = 0
     var checksaveday: Int = 0
     
-    var budget: [Dictionary<String, Any>] = []
+    var kd: [Dictionary<String, Any>] = []
     let saveData = UserDefaults.standard
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        if saveData.array(forKey: "budget") != nil {
-            budget = saveData.array(forKey: "budget") as! [Dictionary<String,Any>]
+        if saveData.array(forKey: "WORD") != nil {
+            kd = saveData.array(forKey: "WORD") as! [Dictionary<String,Any>]
         }
-//        for data in budget {
-//            let SD = data["SAVE-DAY"] as! Date
-//            print(getIntervalDays(date: SD))
-//            if getIntervalDays(date: SD) < 1{
-//                let alert = UIAlertController(title: "警告！", message:"一年経たないと予算は変えられません！", preferredStyle: .alert)
-//                alert.addAction(UIAlertAction(title: "OK!", style: .default, handler: nil))
-//                present(alert, animated: true, completion: nil)
-//                self.view.endEditing(true)
-//                let storyboard: UIStoryboard = self.storyboard!
-//                let second = storyboard.instantiateViewController(withIdentifier: "second")
-//                self.present(second, animated: true, completion: nil)
-//                return
-//            }else{
-//                return
-//            }
-        //}
        
 
         // Do any additional setup after loading the view.
     }
-    
     func getIntervalDays(date:Date?,anotherDay:Date? = nil) -> Double {
         
         var retInterval:Double!
@@ -128,10 +110,12 @@ class SavebudgetViewController: UIViewController {
     
        
         
-        for data in budget {
+        for data in kd {
             let SD = data["SAVE-DAY"] as! Date
+           
                print(getIntervalDays(date: SD))
-            if getIntervalDays(date: SD) < 1{
+            
+            if getIntervalDays(date: SD) > 1{
                 let alert = UIAlertController(title: "警告！", message:"一年経たないと予算は変えられません！", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "OK!", style: .default, handler: nil))
                 present(alert, animated: true, completion: nil)
@@ -141,7 +125,7 @@ class SavebudgetViewController: UIViewController {
         }
         
 
-        let Datedics: [String: Any] = [
+        let Datedic: [String: Any] = [
             "budget-A":a.text!,
             "budget-B":b.text!,
             "budget-C":c.text!,
@@ -153,9 +137,8 @@ class SavebudgetViewController: UIViewController {
             "budget-I":i.text!,
             "SAVE-DAY":Date()]
         
-        budget.append(Datedics)
-        saveData.set(budget, forKey: "budget")
-        print("予算は", budget)
+        kd.append(Datedic)
+        saveData.set(kd, forKey: "WORD")
         
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
