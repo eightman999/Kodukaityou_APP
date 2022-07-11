@@ -1,0 +1,6 @@
+framework module Pods_KOZUKAITYOUUITests {
+  umbrella header "Pods-KOZUKAITYOUUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

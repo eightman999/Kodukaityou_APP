@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import CoreData
+
 class InmoneyViewController: UIViewController {
 //----------@IBOutlet-----------↓
     
@@ -15,14 +15,13 @@ class InmoneyViewController: UIViewController {
     @IBOutlet var Tuki: UITextField!
     @IBOutlet var Niti: UITextField!
     @IBOutlet var Save: UIButton!
-    weak var aVC = AddViewController()
 //---------------var-------------↓
     var niti: Int = 0
     var tuki: Int = 0
     var saihu: Int = 0
-    var isNyukin: Bool = true
     
     //-------Dictonary呼び出し-------↓
+    var kd: [Dictionary<String, Any>] = []
     let saveData = UserDefaults.standard
     
     override func viewDidLoad() {
@@ -62,55 +61,44 @@ class InmoneyViewController: UIViewController {
         }
         
         //---------Date関連の何か？(作者にもわからない)-------↓
-            //---------DateComponents関連--------------↓
-            var myDateComponents = DateComponents()
-            myDateComponents.year = 2019
-            myDateComponents.month = Int(Tuki.text!)!
-            myDateComponents.day = Int(Niti.text!)!
-            myDateComponents.timeZone = Calendar.current.timeZone
+        var myDateComponents = DateComponents()
+        myDateComponents.year = 2019
+        myDateComponents.month = Int(Tuki.text!)!
+        myDateComponents.day = Int(Niti.text!)!
+        myDateComponents.timeZone = Calendar.current.timeZone
         
-                //---------print------------------↓
-                print(myDateComponents)
+        print(myDateComponents)
         
-            //------------date変更？--------------------↓
-            let date = Calendar.current.date(from: myDateComponents)
+        let date = Calendar.current.date(from: myDateComponents)
         
-                //---------print------------------↓
-                print(date!)
-            //-----------DateFomatter->"MMMdd"に-----------↓
-            guard let formatString = DateFormatter.dateFormat(fromTemplate: "MMMdd", options: 0, locale: Locale.current) else { fatalError() }
-                //-------print------↓
-                //print(formatString)
-            //--------dateFomatter設定？-----------↓
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = formatString
+        print(date!)
         
-           // dateFormatter.string(from: date!)
+        guard let formatString = DateFormatter.dateFormat(fromTemplate: "MMMdd", options: 0, locale: Locale.current) else { fatalError() }
+        print(formatString)
+        
+        //=======dateFomatter===========↓
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = formatString
         
         //-------------計算---------------↓
-            //-----変数bagを定義↓
-//                var bag: Int = 0
-//                //---bagにallDataのsaihuの中身を入れる---↓
-//                    for data in allData {
-//                        bag = data["saihu"] as! Int
-//                    }
-//                //-------足し合わせる------↓
-//                    saihu = bag + Int(inmoney.text!)!
-        //-----------登録処理！-----------↓
-        var TourokuyouKingaku: String = String(inmoney.text!) + "円"
-        if isNyukin == true{
-        let Datedic: [String: Any] = [
-            "saihu":String(saihu),
-            "name": "入金",
-            "kosuu": "",
-            "TIME": date!,
-            "kingaku": TourokuyouKingaku,
-          //"day": dateFormatter.string(from: date!),
-            "himoku": "",
-            ]
-            aVC?.allData.append(Datedic)
-            saveData.set(aVC?.allData, forKey: "SAVE")
+        var bag: Int = 0
+        
+        for data in kd {
+            bag = data["saihu"] as! Int
         }
+        
+        saihu = bag + Int(inmoney.text!)!
+       
+        //-----------登録処理！-----------↓
+        let Datedic: [String: Any] = ["saihu": String(saihu),
+                                      "name": "入金",
+                                      "kosuu": "",
+                                      "kingaku": inmoney.text!,
+                                      "TIME": date!,
+                                      "himoku": "",
+                                    ]
+        kd.append(Datedic)
+        saveData.set(kd, forKey: "WORD")
         
         //------------入金報告！----------↓
         
@@ -134,7 +122,6 @@ class InmoneyViewController: UIViewController {
         present(alert, animated:  true, completion: {
             self.Tuki.text = ""
             self.Niti.text = ""
-            self.inmoney.text = ""
             self.view.endEditing(true)
         })
     }

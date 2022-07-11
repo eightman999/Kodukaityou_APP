@@ -1,4 +1,4 @@
-//
+//view
 //  mainViewController.swift
 //  KOZUKAITYOU
 //
@@ -7,19 +7,20 @@
 //
 
 import UIKit
-import CoreData
+
+
 class mainViewController: UIViewController, UITableViewDataSource {
-    //----------@IBOutlet-----------↓
-    weak var aVC = AddViewController()
+   
+    
+    //----------@IBOutlet-----------
     @IBOutlet var week: UILabel!
     @IBOutlet var month: UILabel!
     @IBOutlet var switch_month: UIButton!
     @IBOutlet var switch_years: UIButton!
     @IBOutlet var tableView: UITableView!
-    //-----------dictionary------------↓
-//    var kd: [Dictionary<String, Any>] = []
+    
+    var kd: [Dictionary<String, Any>] = []
     let saveData = UserDefaults.standard
-    //------------var------------------↓
     var k__week: Int = 0//前週比
     var k__month: Int = 0//前月比
     var ch1: Bool = false//週切り替え判定
@@ -32,6 +33,7 @@ class mainViewController: UIViewController, UITableViewDataSource {
     var First_time:Int = 0
     var check: Date = Date()
 //=============================初回チェック用============↓
+    
     func getDateBeforeOrAfterSomeWeek(week:Double) -> Date {
         
         let now = Date()
@@ -46,97 +48,85 @@ class mainViewController: UIViewController, UITableViewDataSource {
         return resultDate
         
     }
-//======================週の出費/月の出費/初回チェック/設定===========↓
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-       
-    }
- //========================viewWillAppear====================↓
+    
+    //========================viewWillAppear====================↓
     override func viewWillAppear(_ animated: Bool) {
-       super.viewWillAppear(animated)
+        
+        super.viewWillAppear(animated)
+        
         
         thisMonthMoney = 0
         thisWeeksMoney = 0
         
         //---------------設定-----------------------↓
         tableView.dataSource = self
-        if saveData.array(forKey: "SAVE") != nil {
-            aVC?.allData = saveData.array(forKey: "SAVE") as! [Dictionary<String,Any>]
-            aVC?.allData.reverse()
+        if saveData.array(forKey: "WORD") != nil {
+            kd = saveData.array(forKey: "WORD") as! [Dictionary<String,Any>]
+            kd.reverse()
         }
+        
         tableView.reloadData()
-        //-----------------前月比--------------------
-      
-       
-            
         
         
         //-----------------month---------------------↓
-        for data in aVC!.allData {
+        for data in kd {
             let time = data["TIME"] as! Date
-            
-          //  let Check = data["Check"] as! Bool
-            
             
             
             if Calendar.current.isDate(time, inSameMonthAs: Date()){
-             //   if Check == true{
                 // お金の取得
                 let money = Int((data["kingaku"] as! String).prefix((data["kingaku"] as! String).count - 1))
                 thisMonthMoney += money!
-            //    }else{
-              //      return
-               // }
+                
             }
         }
+        
         //----------------------Week-----------------↓
-        for data2 in aVC!.allData {
+        for data2 in kd {
             let  time2 = data2["TIME"] as! Date
-          //  var Check2 = data2["Check"] as! Bool
             if Calendar.current.isDate(time2, inSameWeekAs: Date()){
-               // if Check2 == true{
                 //お金の取得2
                 let money = Int((data2["kingaku"] as! String).prefix((data2["kingaku"] as! String).count - 1))
-                    thisWeeksMoney += money!
-               // }else{
-               //     return
-               // }
-                
+                thisWeeksMoney += money!
                 
             }
             
         }
         //------------------Firsttime?--------------------------↓
-        //        for data3 in kd {
-        //            //let Datedic: [String: Any] = ["First_time?":First_time]
-        //            First_time = data3["First_time?"] as! Int
-        //        }
-        //
-        //        print(First_time)
-        //
-        //
-        //        if First_time == nil{
-        //           check = (getDateBeforeOrAfterSomeWeek(week: -200)) // 200週間前
-        //            let Datedic: [String: Any] = ["SAVE-DAY":check]
-        //            First_time + 100
-        //            let Datedic: [String: Any] = ["First_time?":First_time]
-        //
-        //        }
+              //  for data3 in kd {
+                    //let Datedic: [String: Any] = ["First_time?":First_time]
+                 //   First_time = data3["First_time?"] as! Int
+             //   }
+        
+               // print(First_time)
+        
+        
+               // if First_time == nil{
+//                   check = (getDateBeforeOrAfterSomeWeek(week: -200)) // 200週間前
+//                    let Datedic: [String: Any] = ["SAVE-DAY":check]
+//                    First_time + 100
+           //         let Datedic: [String: Any] = ["First_time?":First_time]
+        
+              //  }
         
         //-----------テキスト設定-------------↓
-        month.text = "\(thisMonthMoney)" + "円"
-        week.text = "\(thisWeeksMoney)" + "円"
+        month.text = "\(thisMonthMoney)"
+        week.text = "\(thisWeeksMoney)"
         
         // Do any additional setup after loading the view.
         
         //-------K'odukaityou-D'ata中身確認-------------↓
-        print("kdは",aVC?.allData)
-        
-        tableView.reloadData()
-        print("リロードデータ！")
+        print("kdは",kd)
         
     }
+    
+    
+//======================週の出費/月の出費/初回チェック/設定===========↓
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+    }
+
  
     //===============@IBAction====週・切り替え=========↓
     @IBAction func pushM(){
@@ -187,14 +177,14 @@ class mainViewController: UIViewController, UITableViewDataSource {
    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (aVC?.allData.count)!
+        return kd.count
     }
    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         as! ListTableViewCell
-        let nowindexPATHdic = aVC?.allData[indexPath.row]
+        let nowindexPATHdic = kd[indexPath.row]
         
       //------------datefomat--------------↓
         guard let formatString = DateFormatter.dateFormat(fromTemplate: "MMMdd", options: 0, locale: Locale.current) else { fatalError() }
@@ -206,18 +196,18 @@ class mainViewController: UIViewController, UITableViewDataSource {
         
         
         //============date呼び出し==============↓
-        let date = (nowindexPATHdic!["TIME"] as! Date)
+        let date = (nowindexPATHdic["TIME"] as! Date)
         dateFormatter.string(from: date)
         
         
         //-----------------表示-----------------------↓
-        cell.saihu.text = nowindexPATHdic!["saihu"] as? String
+        cell.saihu.text = nowindexPATHdic["saihu"] as? String
         cell.day.text = dateFormatter.string(from: date)
-        cell.kingaku.text = nowindexPATHdic!["kingaku"] as? String
-        cell.kosuu.text = nowindexPATHdic!["kosuu"] as? String
-        cell.himokuzandaka.text = nowindexPATHdic![""] as? String
-        cell.himoku.text = nowindexPATHdic!["himoku"] as? String
-        cell.name.text = nowindexPATHdic!["name"] as? String
+        cell.kingaku.text = nowindexPATHdic["kingaku"] as? String
+        cell.kosuu.text = nowindexPATHdic["kosuu"] as? String
+        cell.himokuzandaka.text = nowindexPATHdic[""] as? String
+        cell.himoku.text = nowindexPATHdic["himoku"] as? String
+        cell.name.text = nowindexPATHdic["name"] as? String
         
         
         return cell
@@ -247,6 +237,4 @@ extension Calendar {
     func isDate(_ date1:Date, inSameWeekAs date2:Date) -> Bool {
         return isDate(date1, equalTo: date2, toGranularity: .weekOfYear)
     }
-
-    
 }
