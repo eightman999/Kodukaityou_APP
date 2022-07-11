@@ -10,7 +10,7 @@ import UIKit
 
 class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate{
 
-  
+    weak var mVC = mainViewController()
     
     @IBOutlet var pickerView: UIPickerView!    
     @IBOutlet var name: UITextField!
@@ -171,7 +171,7 @@ class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
             self.view.endEditing(true)
         })
       
-   
+        mVC?.tableView.reloadData()
         
     }
     // UIPickerViewの列の数

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,15 +21,15 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="KOZUKAITYOU" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="K1.png" translatesAutoresizingMaskIntoConstraints="NO" id="orO-Bf-C4y">
-                                <rect key="frame" x="63" y="86.5" width="260" height="192"/>
+                                <rect key="frame" x="63" y="81" width="260" height="179"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a9w-FK-w3e">
-                                <rect key="frame" x="18" y="393" width="339" height="90"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a9w-FK-w3e">
+                                <rect key="frame" x="18" y="367" width="339" height="84"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="17"/>
                                 <state key="normal" title="小遣い帳をつける"/>
@@ -37,8 +37,8 @@
                                     <segue destination="Nqa-7y-3ST" kind="presentation" id="0na-WX-ZeG"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fn1-cW-jQ4">
-                                <rect key="frame" x="18" y="606" width="339" height="90"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fn1-cW-jQ4">
+                                <rect key="frame" x="18" y="566" width="339" height="84"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="17"/>
                                 <state key="normal" title="チュートリアルを見る"/>
@@ -47,8 +47,8 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -67,7 +67,7 @@
                                 <rect key="frame" x="18" y="66" width="339" height="583"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dWX-By-9lg">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dWX-By-9lg">
                                 <rect key="frame" x="0.0" y="37" width="375" height="648"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="　　　"/>
@@ -75,7 +75,7 @@
                                     <segue destination="BYZ-38-t0r" kind="presentation" id="LRa-TV-AeJ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z8o-26-r9u">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z8o-26-r9u">
                                 <rect key="frame" x="0.0" y="676" width="375" height="82"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="画面をタップして戻る"/>
@@ -84,8 +84,8 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="uGW-BM-dyz"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="uGW-BM-dyz"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QVd-DI-drB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -97,18 +97,18 @@
             <objects>
                 <viewController id="hGp-SA-ITT" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pNf-ps-4Ct">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="通知　ON/OFF" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qup-Iu-2CC">
-                                <rect key="frame" x="19" y="193.5" width="213" height="28"/>
+                                <rect key="frame" x="19" y="181" width="213" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gb2-Lz-8SG">
-                                <rect key="frame" x="0.0" y="20" width="132" height="51.5"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gb2-Lz-8SG">
+                                <rect key="frame" x="0.0" y="20" width="132" height="48"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="17"/>
                                 <state key="normal" title="Back to menu"/>
@@ -117,12 +117,12 @@
                                 </connections>
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="udZ-CD-KTa">
-                                <rect key="frame" x="247" y="188" width="49" height="31"/>
+                                <rect key="frame" x="247" y="175" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </switch>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="xvK-VJ-aaE"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="xvK-VJ-aaE"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="設定" image="ギアアイコン.png" selectedImage="ギアアイコン.png" id="ovk-AP-7KL"/>
                 </viewController>
@@ -138,8 +138,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="ADn-p3-yit">
-                                <rect key="frame" x="0.0" y="25" width="375" height="592.33333333333337"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="37" translatesAutoresizingMaskIntoConstraints="NO" id="ADn-p3-yit">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="675"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="　　　　予算は変えないでください！　　　　" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bCh-a2-9LB">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
@@ -147,8 +147,8 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y8f-OV-TYG">
-                                        <rect key="frame" x="0.0" y="45" width="375" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y8f-OV-TYG">
+                                        <rect key="frame" x="0.0" y="57" width="375" height="30"/>
                                         <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="15"/>
                                         <state key="normal" title="SAVE"/>
                                         <connections>
@@ -156,21 +156,21 @@
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hg8-bD-pmK">
-                                        <rect key="frame" x="0.0" y="100" width="375" height="20.333333333333329"/>
+                                        <rect key="frame" x="0.0" y="124" width="375" height="20"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="　A費（学費・学校関係）  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qg9-mg-s9w">
-                                                <rect key="frame" x="0.0" y="0.0" width="207.66666666666666" height="20.333333333333332"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="207.66666666666666" height="20"/>
                                                 <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F6H-d9-0t3">
-                                                <rect key="frame" x="207.66666666666663" y="0.0" width="150.33333333333337" height="20.333333333333332"/>
+                                                <rect key="frame" x="207.66666666666663" y="0.0" width="150.33333333333337" height="20"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="円" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7MQ-B8-Y2m">
-                                                <rect key="frame" x="358" y="0.0" width="17" height="20.333333333333332"/>
+                                                <rect key="frame" x="358" y="0.0" width="17" height="20"/>
                                                 <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -178,21 +178,21 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e66-aU-JTx">
-                                        <rect key="frame" x="0.0" y="145.33333333333334" width="375" height="34"/>
+                                        <rect key="frame" x="0.0" y="181" width="375" height="20"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="　 B費（本・参考書等）　 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eNd-Ed-QY6">
-                                                <rect key="frame" x="0.0" y="0.0" width="208.33333333333334" height="34"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="208.33333333333334" height="20"/>
                                                 <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XDM-dj-vKJ">
-                                                <rect key="frame" x="208.33333333333337" y="0.0" width="149.66666666666663" height="34"/>
+                                                <rect key="frame" x="208.33333333333337" y="0.0" width="149.66666666666663" height="20"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="円" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xCl-ep-fMr">
-                                                <rect key="frame" x="358" y="0.0" width="17" height="34"/>
+                                                <rect key="frame" x="358" y="0.0" width="17" height="20"/>
                                                 <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -200,21 +200,21 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hhE-Fc-3pL">
-                                        <rect key="frame" x="0.0" y="204.33333333333334" width="375" height="34"/>
+                                        <rect key="frame" x="0.0" y="238" width="375" height="20"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="　　 　C費（衣服）　　 　" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n2g-kR-Nhd" userLabel="C費（衣服）">
-                                                <rect key="frame" x="0.0" y="0.0" width="209" height="34"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="209" height="20"/>
                                                 <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jtO-ZS-n6W">
-                                                <rect key="frame" x="209" y="0.0" width="149" height="34"/>
+                                                <rect key="frame" x="209" y="0.0" width="149" height="20"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" spellCheckingType="yes" keyboardType="numberPad"/>
+                                                <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="円" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RQL-Uw-9Nd">
-                                                <rect key="frame" x="358" y="0.0" width="17" height="34"/>
+                                                <rect key="frame" x="358" y="0.0" width="17" height="20"/>
                                                 <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -222,21 +222,21 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oWx-3w-i4m">
-                                        <rect key="frame" x="0.0" y="263.33333333333331" width="375" height="34"/>
+                                        <rect key="frame" x="0.0" y="295" width="375" height="25"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="　D費（医療・衛生用品等）" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F8G-Cm-o5m">
-                                                <rect key="frame" x="0.0" y="0.0" width="216" height="34"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="216" height="25"/>
                                                 <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q6A-hc-rKX">
-                                                <rect key="frame" x="216" y="0.0" width="142" height="34"/>
+                                                <rect key="frame" x="216" y="0.0" width="142" height="25"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="円" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dz0-r1-W3m">
-                                                <rect key="frame" x="358" y="0.0" width="17" height="34"/>
+                                                <rect key="frame" x="358" y="0.0" width="17" height="25"/>
                                                 <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -244,7 +244,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sGy-gX-RP6">
-                                        <rect key="frame" x="0.0" y="322.33333333333331" width="375" height="34"/>
+                                        <rect key="frame" x="0.0" y="357" width="375" height="34"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="　　　　E費（通信）　　　" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xtd-XL-sR6">
                                                 <rect key="frame" x="0.0" y="0.0" width="214.66666666666666" height="34"/>
@@ -255,7 +255,7 @@
                                             <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aGF-V2-dGd">
                                                 <rect key="frame" x="214.66666666666663" y="0.0" width="143.33333333333337" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="円" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Txp-nA-d6e">
                                                 <rect key="frame" x="358" y="0.0" width="17" height="34"/>
@@ -266,7 +266,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MR6-jI-pXS">
-                                        <rect key="frame" x="0.0" y="381.33333333333331" width="375" height="34"/>
+                                        <rect key="frame" x="0.0" y="428" width="375" height="34"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="　　　F費（交通費）　　　" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iVK-Ks-xgC">
                                                 <rect key="frame" x="0.0" y="0.0" width="214" height="34"/>
@@ -277,7 +277,7 @@
                                             <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tv6-J5-wSr">
                                                 <rect key="frame" x="214" y="0.0" width="144" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="円" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3A6-WM-0ft">
                                                 <rect key="frame" x="358" y="0.0" width="17" height="34"/>
@@ -288,7 +288,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Juf-hD-jqw">
-                                        <rect key="frame" x="0.0" y="440.33333333333331" width="375" height="34"/>
+                                        <rect key="frame" x="0.0" y="499" width="375" height="34"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="　G費（娯楽費・雑誌等）　" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7a7-YQ-FOf">
                                                 <rect key="frame" x="0.0" y="0.0" width="217" height="34"/>
@@ -299,7 +299,7 @@
                                             <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z2U-ma-7sm">
                                                 <rect key="frame" x="217" y="0.0" width="141" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="円" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KYi-ga-nGP">
                                                 <rect key="frame" x="358" y="0.0" width="17" height="34"/>
@@ -310,7 +310,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0l3-Pb-pyw">
-                                        <rect key="frame" x="0.0" y="499.33333333333337" width="375" height="34"/>
+                                        <rect key="frame" x="0.0" y="570" width="375" height="34"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="　　　H費（寄附等）　　　" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yUW-rj-m9v">
                                                 <rect key="frame" x="0.0" y="0.0" width="216.33333333333334" height="34"/>
@@ -321,7 +321,7 @@
                                             <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d2S-sN-Yfx">
                                                 <rect key="frame" x="216.33333333333337" y="0.0" width="141.66666666666663" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="円" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SqW-Ne-WDP">
                                                 <rect key="frame" x="358" y="0.0" width="17" height="34"/>
@@ -332,7 +332,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bHe-f5-kTu">
-                                        <rect key="frame" x="0.0" y="558.33333333333337" width="375" height="34"/>
+                                        <rect key="frame" x="0.0" y="641" width="375" height="34"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="　　　I費（特別費）　　　" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Is9-Gl-Di3">
                                                 <rect key="frame" x="0.0" y="0.0" width="208.66666666666666" height="34"/>
@@ -343,7 +343,7 @@
                                             <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K2I-pE-vrA">
                                                 <rect key="frame" x="208.66666666666663" y="0.0" width="149.33333333333337" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="円" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rrt-Iz-wmj">
                                                 <rect key="frame" x="358" y="0.0" width="17" height="34"/>
@@ -354,18 +354,16 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="ADn-p3-yit" secondAttribute="height" multiplier="119:188" id="4bG-AQ-bLe"/>
-                                </constraints>
                             </stackView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="7d7-j1-BTc"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="ADn-p3-yit" firstAttribute="trailing" secondItem="7d7-j1-BTc" secondAttribute="trailing" id="3yj-nG-Ps6"/>
-                            <constraint firstItem="ADn-p3-yit" firstAttribute="top" secondItem="7d7-j1-BTc" secondAttribute="top" constant="25" id="OEB-eh-uJx"/>
-                            <constraint firstItem="ADn-p3-yit" firstAttribute="leading" secondItem="7d7-j1-BTc" secondAttribute="leading" id="aWP-LF-M94"/>
+                            <constraint firstItem="ADn-p3-yit" firstAttribute="leading" secondItem="7d7-j1-BTc" secondAttribute="leading" id="Zve-4v-f5j"/>
+                            <constraint firstItem="ADn-p3-yit" firstAttribute="top" secondItem="7d7-j1-BTc" secondAttribute="top" id="dHX-fg-ODE"/>
+                            <constraint firstItem="7d7-j1-BTc" firstAttribute="bottom" secondItem="ADn-p3-yit" secondAttribute="bottom" id="fq9-Tb-FUP"/>
+                            <constraint firstItem="7d7-j1-BTc" firstAttribute="trailing" secondItem="ADn-p3-yit" secondAttribute="trailing" id="hkO-ti-SuW"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="7d7-j1-BTc"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="予算設定" image="ギアアイコン.png" selectedImage="ギアアイコン.png" id="piw-Q0-ihC"/>
                     <connections>
@@ -405,7 +403,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P41-sV-Tn9">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P41-sV-Tn9">
                                         <rect key="frame" x="0.0" y="82" width="315" height="32"/>
                                         <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="17"/>
                                         <state key="normal" title="SAVE"/>
@@ -525,7 +523,6 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="U4H-d0-N5h"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Bkx-cU-kXF" firstAttribute="top" secondItem="4tT-CI-LEB" secondAttribute="top" constant="-66" id="40h-R5-x77"/>
@@ -538,6 +535,7 @@
                             <constraint firstItem="1fv-uU-k0s" firstAttribute="top" secondItem="U4H-d0-N5h" secondAttribute="top" constant="11" id="iVU-ic-F3r"/>
                             <constraint firstAttribute="trailing" secondItem="1fv-uU-k0s" secondAttribute="trailing" id="q61-Dl-hlt"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="U4H-d0-N5h"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="入力" image="メモアイコン.png" selectedImage="メモアイコン.png" id="aIG-WA-Wje"/>
                     <connections>
@@ -567,8 +565,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="BFw-D4-vrf"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="BFw-D4-vrf"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="月のまとめ" image="カレンダーのフリーアイコン19.png" selectedImage="カレンダーのフリーアイコン19.png" id="51X-A3-d8X">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
@@ -595,7 +593,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="s0T-4x-ENf">
                                                 <rect key="frame" x="0.0" y="0.0" width="412.66666666666669" height="30"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YoM-9b-tYF">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YoM-9b-tYF">
                                                         <rect key="frame" x="0.0" y="0.0" width="103" height="30"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="7EY-5s-my0"/>
@@ -625,7 +623,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jTX-NF-DJT">
                                                 <rect key="frame" x="0.0" y="47" width="412.66666666666669" height="32"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jxK-KD-tkv">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jxK-KD-tkv">
                                                         <rect key="frame" x="0.0" y="0.0" width="103" height="32"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="103" id="1yX-Rl-iBv"/>
@@ -673,10 +671,10 @@
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <prototypes>
                                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="jHm-7B-jqj" customClass="ListTableViewCell" customModule="KOZUKAITYOU" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="28" width="412.66666666666669" height="43"/>
+                                                                <rect key="frame" x="0.0" y="28" width="412.66666666666669" height="43.666667938232422"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jHm-7B-jqj" id="7fp-Ir-lei">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="412.66666666666669" height="43"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="412.66666666666669" height="43.666667938232422"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="¥100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ojz-dI-ZAW">
@@ -753,7 +751,6 @@
                                 </subviews>
                             </scrollView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="diU-lV-cd4"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="xuX-dy-Dyf" firstAttribute="leading" secondItem="diU-lV-cd4" secondAttribute="leading" id="6xw-lA-OUJ"/>
@@ -765,6 +762,7 @@
                             <constraint firstItem="xuX-dy-Dyf" firstAttribute="trailing" secondItem="diU-lV-cd4" secondAttribute="trailing" id="uXM-g5-eHn"/>
                             <constraint firstItem="diU-lV-cd4" firstAttribute="trailing" secondItem="xuX-dy-Dyf" secondAttribute="trailing" id="wGh-yT-FFA"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="diU-lV-cd4"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="メニュー" image="home3.png" id="aB4-wB-xFT"/>
                     <connections>
@@ -792,8 +790,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="pzb-we-6x2"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="pzb-we-6x2"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="年度のまとめ" image="カレンダーのフリーアイコン19.png" selectedImage="カレンダーのフリーアイコン19.png" id="FY1-qv-uai"/>
                 </viewController>
@@ -816,7 +814,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A2m-Zl-Ajf">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A2m-Zl-Ajf">
                                 <rect key="frame" x="0.0" y="145" width="375" height="75"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
@@ -872,8 +870,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="rfP-na-jiO"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="rfP-na-jiO"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="入金" image="麻袋型のドル袋の無料アイコン（ユーロ）.png" selectedImage="麻袋型のドル袋の無料アイコン（ユーロ）.png" id="E48-kZ-Mwz"/>
                     <connections>
@@ -914,10 +912,6 @@
             <point key="canvasLocation" x="847" y="134"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="ErR-zW-KD9"/>
-        <segue reference="LRa-TV-AeJ"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="K1.png" width="113.27999877929688" height="113.27999877929688"/>
         <image name="gurahu.jpeg" width="317" height="159"/>
@@ -928,4 +922,8 @@
         <image name="メモアイコン.png" width="32" height="32"/>
         <image name="麻袋型のドル袋の無料アイコン（ユーロ）.png" width="32" height="32"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="ErR-zW-KD9"/>
+        <segue reference="LRa-TV-AeJ"/>
+    </inferredMetricsTieBreakers>
 </document>

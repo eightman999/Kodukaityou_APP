@@ -1,4 +1,4 @@
-//view
+//
 //  mainViewController.swift
 //  KOZUKAITYOU
 //
@@ -9,8 +9,6 @@
 import UIKit
 
 class mainViewController: UIViewController, UITableViewDataSource {
-   
-    
     //----------@IBOutlet-----------
     @IBOutlet var week: UILabel!
     @IBOutlet var month: UILabel!
@@ -32,7 +30,6 @@ class mainViewController: UIViewController, UITableViewDataSource {
     var First_time:Int = 0
     var check: Date = Date()
 //=============================初回チェック用============↓
-    
     func getDateBeforeOrAfterSomeWeek(week:Double) -> Date {
         
         let now = Date()
@@ -47,15 +44,9 @@ class mainViewController: UIViewController, UITableViewDataSource {
         return resultDate
         
     }
-    
-    //========================viewWillAppear====================↓
-    override func viewWillAppear(_ animated: Bool) {
-        
-        super.viewWillAppear(animated)
-        
-        
-        thisMonthMoney = 0
-        thisWeeksMoney = 0
+//======================週の出費/月の出費/初回チェック/設定===========↓
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
         //---------------設定-----------------------↓
         tableView.dataSource = self
@@ -63,10 +54,7 @@ class mainViewController: UIViewController, UITableViewDataSource {
             kd = saveData.array(forKey: "WORD") as! [Dictionary<String,Any>]
             kd.reverse()
         }
-        
         tableView.reloadData()
-        
-        
         //-----------------month---------------------↓
         for data in kd {
             let time = data["TIME"] as! Date
@@ -79,7 +67,6 @@ class mainViewController: UIViewController, UITableViewDataSource {
                 
             }
         }
-        
         //----------------------Week-----------------↓
         for data2 in kd {
             let  time2 = data2["TIME"] as! Date
@@ -89,24 +76,24 @@ class mainViewController: UIViewController, UITableViewDataSource {
                 thisWeeksMoney += money!
                 
             }
-            
+       
         }
         //------------------Firsttime?--------------------------↓
-              //  for data3 in kd {
-                    //let Datedic: [String: Any] = ["First_time?":First_time]
-                 //   First_time = data3["First_time?"] as! Int
-             //   }
-        
-               // print(First_time)
-        
-        
-               // if First_time == nil{
-//                   check = (getDateBeforeOrAfterSomeWeek(week: -200)) // 200週間前
-//                    let Datedic: [String: Any] = ["SAVE-DAY":check]
-//                    First_time + 100
-           //         let Datedic: [String: Any] = ["First_time?":First_time]
-        
-              //  }
+//        for data3 in kd {
+//            //let Datedic: [String: Any] = ["First_time?":First_time]
+//            First_time = data3["First_time?"] as! Int
+//        }
+//        
+//        print(First_time)
+//        
+//        
+//        if First_time == nil{
+//           check = (getDateBeforeOrAfterSomeWeek(week: -200)) // 200週間前
+//            let Datedic: [String: Any] = ["SAVE-DAY":check]
+//            First_time + 100
+//            let Datedic: [String: Any] = ["First_time?":First_time]
+//
+//        }
         
         //-----------テキスト設定-------------↓
         month.text = "\(thisMonthMoney)"
@@ -116,16 +103,16 @@ class mainViewController: UIViewController, UITableViewDataSource {
         
         //-------K'odukaityou-D'ata中身確認-------------↓
         print("kdは",kd)
+    }
+ //========================viewWillAppear====================↓
+    override func viewWillAppear(_ animated: Bool) {
+        
+        super.viewWillAppear(animated)
+        
+        tableView.reloadData()
+        print("リロードデータ！")
         
     }
-    
-    
-//======================週の出費/月の出費/初回チェック/設定===========↓
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
-
  
     //===============@IBAction====週・切り替え=========↓
     @IBAction func pushM(){
