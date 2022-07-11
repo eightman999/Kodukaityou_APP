@@ -1,0 +1,1326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="azuki.ttf">
+            <string>azuki_font</string>
+        </array>
+        <array key="ゆず ポップ A [M] Extra Light.ttf">
+            <string>YuzuPopA_M_ExtraLight</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="KOZUKAITYOU" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="25W-bD-kRY">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0kd-ME-R3V">
+                                        <rect key="frame" x="0.0" y="480" width="414" height="64"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="17"/>
+                                        <state key="normal" title="ログイン　新規登録">
+                                            <color key="titleColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="nlx-v0-ZOi" kind="presentation" modalPresentationStyle="overFullScreen" id="TPe-yl-rNR"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a9w-FK-w3e">
+                                        <rect key="frame" x="0.0" y="210" width="414" height="65"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="17"/>
+                                        <state key="normal" title="小遣い帳をつける">
+                                            <color key="titleShadowColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="Nqa-7y-3ST" kind="presentation" identifier="001" modalPresentationStyle="fullScreen" id="0na-WX-ZeG"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <viewLayoutGuide key="contentLayoutGuide" id="Ey2-Oh-LxA"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="Fw4-Kg-VOL"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-797.10144927536237" y="132.58928571428572"/>
+        </scene>
+        <!--Sign Up View Controller-->
+        <scene sceneID="Nry-O0-P8i">
+            <objects>
+                <viewController id="X7F-ji-4bN" customClass="SignUpViewController" customModule="KOZUKAITYOU" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Whl-1s-fB7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="skN-Qa-oKM">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LjF-6j-3wM">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="51"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="51" id="mzb-NR-VVd"/>
+                                        </constraints>
+                                        <state key="normal" title="Buck→"/>
+                                        <connections>
+                                            <action selector="didTapBackToLogin:" destination="X7F-ji-4bN" eventType="touchUpInside" id="z9W-Zq-Lkx"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DRD-pY-zXQ">
+                                        <rect key="frame" x="8" y="132" width="398" height="46"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="46" id="IxX-oA-Ofc"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="go" textContentType="password"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZnY-2M-sbe">
+                                        <rect key="frame" x="0.0" y="185.33333333333334" width="414" height="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UDq-Fq-6sw">
+                                        <rect key="frame" x="8" y="213" width="398" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="go" textContentType="password"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aCb-Bm-U3d">
+                                        <rect key="frame" x="0.0" y="104" width="414" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G68-XE-Yp1">
+                                        <rect key="frame" x="0.0" y="406" width="414" height="101"/>
+                                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="101" id="Yzi-xS-0Fs"/>
+                                        </constraints>
+                                        <state key="normal" title="新規登録">
+                                            <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didTapSignUp:" destination="X7F-ji-4bN" eventType="touchUpInside" id="gg1-9J-d1x"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="G68-XE-Yp1" secondAttribute="trailing" id="32Q-Vb-Fb5"/>
+                                    <constraint firstItem="ZnY-2M-sbe" firstAttribute="trailing" secondItem="UDq-Fq-6sw" secondAttribute="trailing" id="5ps-1S-bwZ"/>
+                                    <constraint firstItem="DRD-pY-zXQ" firstAttribute="trailing" secondItem="ZnY-2M-sbe" secondAttribute="trailing" id="5w4-bM-w9B"/>
+                                    <constraint firstItem="LjF-6j-3wM" firstAttribute="leading" secondItem="aCb-Bm-U3d" secondAttribute="leading" id="B9E-3n-W1f"/>
+                                    <constraint firstItem="LjF-6j-3wM" firstAttribute="top" secondItem="o8v-qP-ssa" secondAttribute="top" constant="28" id="DoI-fq-F3H"/>
+                                    <constraint firstItem="ZnY-2M-sbe" firstAttribute="leading" secondItem="UDq-Fq-6sw" secondAttribute="leading" id="H4J-vT-ZJA"/>
+                                    <constraint firstAttribute="bottom" secondItem="G68-XE-Yp1" secondAttribute="bottom" constant="335" id="Hlb-tD-rPx"/>
+                                    <constraint firstItem="aCb-Bm-U3d" firstAttribute="trailing" secondItem="DRD-pY-zXQ" secondAttribute="trailing" id="M1T-Ab-yXz"/>
+                                    <constraint firstItem="DRD-pY-zXQ" firstAttribute="leading" secondItem="ZnY-2M-sbe" secondAttribute="leading" id="PvZ-sv-qAv"/>
+                                    <constraint firstItem="G68-XE-Yp1" firstAttribute="leading" secondItem="skN-Qa-oKM" secondAttribute="leading" id="QIm-SH-NSA"/>
+                                    <constraint firstItem="DRD-pY-zXQ" firstAttribute="top" secondItem="aCb-Bm-U3d" secondAttribute="bottom" constant="8" id="QdS-4V-Fco"/>
+                                    <constraint firstItem="UDq-Fq-6sw" firstAttribute="trailing" secondItem="G68-XE-Yp1" secondAttribute="trailing" id="T5w-Tu-tam"/>
+                                    <constraint firstItem="UDq-Fq-6sw" firstAttribute="top" secondItem="ZnY-2M-sbe" secondAttribute="bottom" constant="8" id="e6q-eQ-DRK"/>
+                                    <constraint firstItem="aCb-Bm-U3d" firstAttribute="leading" secondItem="DRD-pY-zXQ" secondAttribute="leading" id="ebR-KQ-qNo"/>
+                                    <constraint firstItem="LjF-6j-3wM" firstAttribute="centerX" secondItem="skN-Qa-oKM" secondAttribute="centerX" id="nK0-vx-WMR"/>
+                                    <constraint firstItem="ZnY-2M-sbe" firstAttribute="top" secondItem="DRD-pY-zXQ" secondAttribute="bottom" constant="7" id="qbp-Uu-hxM"/>
+                                    <constraint firstItem="aCb-Bm-U3d" firstAttribute="top" secondItem="LjF-6j-3wM" secondAttribute="bottom" constant="25" id="riP-St-FEh"/>
+                                    <constraint firstItem="UDq-Fq-6sw" firstAttribute="leading" secondItem="G68-XE-Yp1" secondAttribute="leading" id="sCo-xK-40Q"/>
+                                    <constraint firstItem="o8v-qP-ssa" firstAttribute="bottom" secondItem="G68-XE-Yp1" secondAttribute="bottom" constant="335" id="thR-jB-bR5"/>
+                                    <constraint firstItem="LjF-6j-3wM" firstAttribute="trailing" secondItem="aCb-Bm-U3d" secondAttribute="trailing" id="z9Q-88-JXb"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="Ldr-gH-H6H"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="o8v-qP-ssa"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="skN-Qa-oKM" firstAttribute="centerX" secondItem="Whl-1s-fB7" secondAttribute="centerX" id="Cz3-hR-Kaq"/>
+                            <constraint firstItem="skN-Qa-oKM" firstAttribute="top" secondItem="gIy-S6-fFh" secondAttribute="top" id="ErW-Dd-FcG"/>
+                            <constraint firstItem="skN-Qa-oKM" firstAttribute="leading" secondItem="gIy-S6-fFh" secondAttribute="leading" id="WLc-st-dQq"/>
+                            <constraint firstItem="skN-Qa-oKM" firstAttribute="centerY" secondItem="Whl-1s-fB7" secondAttribute="centerY" id="cY8-qy-Ns6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gIy-S6-fFh"/>
+                    </view>
+                    <connections>
+                        <outlet property="emailField" destination="DRD-pY-zXQ" id="Zx9-5E-yDQ"/>
+                        <outlet property="passwordField" destination="UDq-Fq-6sw" id="NaC-28-zrY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W8L-rU-f1g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-797.10144927536237" y="915.40178571428567"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="U7r-uL-eXD">
+            <objects>
+                <viewController id="nlx-v0-ZOi" customClass="LoginViewController" customModule="KOZUKAITYOU" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fI2-1H-aBj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZUr-D0-17U">
+                                <rect key="frame" x="0.0" y="44" width="414" height="798"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b6h-jl-yGp">
+                                        <rect key="frame" x="0.0" y="70" width="414" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bE2-K5-tVp">
+                                        <rect key="frame" x="8" y="106" width="398" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="go" textContentType="password"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8dT-p6-V0b">
+                                        <rect key="frame" x="0.0" y="145" width="414" height="37"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3VE-KH-cce">
+                                        <rect key="frame" x="8" y="179" width="398" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="go" textContentType="password"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mnk-FG-p2Y">
+                                        <rect key="frame" x="0.0" y="391" width="414" height="86"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="新規登録">
+                                            <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="X7F-ji-4bN" kind="presentation" identifier="SignInFromSignUp'" id="w1b-vf-UqK"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="or" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Jh-yB-BVw">
+                                        <rect key="frame" x="0.0" y="328" width="414" height="61"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="38"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gho-be-YOH">
+                                        <rect key="frame" x="0.0" y="267" width="414" height="65"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="ログイン">
+                                            <color key="titleColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didTapSignIn:" destination="nlx-v0-ZOi" eventType="touchUpInside" id="6ek-7M-BIP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jvp-6I-8h2">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="36"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Buck→"/>
+                                        <connections>
+                                            <action selector="didTapBackToLogin:" destination="nlx-v0-ZOi" eventType="touchUpInside" id="DM2-ll-bvI"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ftB-bp-YvS">
+                                        <rect key="frame" x="0.0" y="504" width="414" height="76"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="パスワードを忘れたらこちら"/>
+                                        <connections>
+                                            <action selector="didRequestPasswordReset:" destination="nlx-v0-ZOi" eventType="touchUpInside" id="xZg-XO-PPv"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <viewLayoutGuide key="contentLayoutGuide" id="bgF-Zb-uol"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="Rdh-Ib-BwY"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="rE7-e5-mV3"/>
+                    </view>
+                    <connections>
+                        <outlet property="emailField" destination="bE2-K5-tVp" id="Uqe-IK-Rgz"/>
+                        <outlet property="passwordField" destination="3VE-KH-cce" id="gUl-JV-pjF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MYe-0q-2m6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2.8985507246376816" y="914.73214285714278"/>
+        </scene>
+        <!--設定-->
+        <scene sceneID="GPx-Kq-oLM">
+            <objects>
+                <viewController id="hGp-SA-ITT" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pNf-ps-4Ct">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GFD-Qv-agg">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="759"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="khQ-gz-Hfc">
+                                        <rect key="frame" x="0.0" y="538" width="414" height="88"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="88" id="FF2-iX-fEO"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                        <state key="normal" title="ログイン　新規登録"/>
+                                        <connections>
+                                            <segue destination="nlx-v0-ZOi" kind="presentation" id="1Vw-rV-HV8"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k0f-mO-uo7">
+                                        <rect key="frame" x="0.0" y="372" width="414" height="70"/>
+                                        <state key="normal" title="作者"/>
+                                    </button>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wE8-Ua-hJG">
+                                        <rect key="frame" x="312" y="293" width="49" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                    </switch>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="通知　ON/OFF" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qup-Iu-2CC">
+                                        <rect key="frame" x="0.0" y="291" width="304" height="31"/>
+                                        <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gb2-Lz-8SG">
+                                        <rect key="frame" x="-1" y="139" width="417" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="XiO-4K-KeL"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="17"/>
+                                        <state key="normal" title="Back to menu"/>
+                                        <connections>
+                                            <segue destination="Nqa-7y-3ST" kind="presentation" id="ErR-zW-KD9"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="khQ-gz-Hfc" firstAttribute="leading" secondItem="k0f-mO-uo7" secondAttribute="leading" id="0Rm-7D-Hec"/>
+                                    <constraint firstItem="qup-Iu-2CC" firstAttribute="top" secondItem="gb2-Lz-8SG" secondAttribute="bottom" constant="72" id="0Xs-Z1-WeC"/>
+                                    <constraint firstItem="khQ-gz-Hfc" firstAttribute="trailing" secondItem="k0f-mO-uo7" secondAttribute="trailing" id="48p-lw-OyA"/>
+                                    <constraint firstItem="gb2-Lz-8SG" firstAttribute="top" secondItem="5cy-pA-bin" secondAttribute="top" constant="139" id="Klb-Fq-hNJ"/>
+                                    <constraint firstItem="gb2-Lz-8SG" firstAttribute="leading" secondItem="GFD-Qv-agg" secondAttribute="leading" constant="-1" id="QCY-RQ-6z0"/>
+                                    <constraint firstAttribute="bottom" secondItem="khQ-gz-Hfc" secondAttribute="bottom" constant="133" id="VSQ-iI-Mgz"/>
+                                    <constraint firstItem="khQ-gz-Hfc" firstAttribute="centerX" secondItem="gb2-Lz-8SG" secondAttribute="centerX" id="WCf-lO-qkm"/>
+                                    <constraint firstItem="khQ-gz-Hfc" firstAttribute="leading" secondItem="qup-Iu-2CC" secondAttribute="leading" id="dB3-iA-YFX"/>
+                                    <constraint firstAttribute="trailing" secondItem="khQ-gz-Hfc" secondAttribute="trailing" id="ojT-zR-gai"/>
+                                    <constraint firstItem="khQ-gz-Hfc" firstAttribute="top" secondItem="k0f-mO-uo7" secondAttribute="bottom" constant="96" id="t6j-9O-N0h"/>
+                                    <constraint firstItem="khQ-gz-Hfc" firstAttribute="leading" secondItem="5cy-pA-bin" secondAttribute="leading" id="w64-lq-jc8"/>
+                                    <constraint firstItem="5cy-pA-bin" firstAttribute="bottom" secondItem="khQ-gz-Hfc" secondAttribute="bottom" constant="133" id="xLe-tz-Z3W"/>
+                                    <constraint firstItem="khQ-gz-Hfc" firstAttribute="centerX" secondItem="GFD-Qv-agg" secondAttribute="centerX" id="zXv-4K-w3F"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="aQ6-rC-PHF"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="5cy-pA-bin"/>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IkV-3V-O34">
+                                <rect key="frame" x="20" y="532" width="374" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="ログアウト"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="GFD-Qv-agg" firstAttribute="top" secondItem="xvK-VJ-aaE" secondAttribute="top" id="4dZ-aW-s1b"/>
+                            <constraint firstItem="GFD-Qv-agg" firstAttribute="leading" secondItem="xvK-VJ-aaE" secondAttribute="leading" id="D5b-df-wux"/>
+                            <constraint firstItem="GFD-Qv-agg" firstAttribute="centerX" secondItem="pNf-ps-4Ct" secondAttribute="centerX" id="TGO-jx-eOZ"/>
+                            <constraint firstItem="GFD-Qv-agg" firstAttribute="bottom" secondItem="xvK-VJ-aaE" secondAttribute="bottom" id="XoT-IO-sdb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xvK-VJ-aaE"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="設定" image="gia.png" selectedImage="gia.png" id="ovk-AP-7KL"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YYw-QQ-bm5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="882.60869565217399" y="1674.7767857142856"/>
+        </scene>
+        <!--スペシャルサンクス-->
+        <scene sceneID="gGA-QM-owW">
+            <objects>
+                <viewController title="スペシャルサンクス" id="mgR-Kc-V3i" customClass="suksViewController" customModule="KOZUKAITYOU" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MQx-to-vya">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RU3-os-M9i">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="両親・家族" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="12h-bt-ZTi">
+                                        <rect key="frame" x="-13" y="201" width="445" height="43"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="同好会のみんな" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="M9N-b7-2Kb">
+                                        <rect key="frame" x="-5" y="141" width="431" height="73"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x5F-fH-kKf">
+                                        <rect key="frame" x="2" y="591" width="410" height="78"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="78" id="Far-HM-zyi"/>
+                                        </constraints>
+                                        <state key="normal" title="→Back"/>
+                                        <connections>
+                                            <action selector="didTapBackToLogin:" destination="mgR-Kc-V3i" eventType="touchDragInside" id="Ymm-0q-0Lf"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="塙　エイト" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jVb-OA-Kpq">
+                                        <rect key="frame" x="-5" y="26" width="425" height="79"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="旗.png" translatesAutoresizingMaskIntoConstraints="NO" id="IXm-ND-YgD">
+                                        <rect key="frame" x="2" y="368" width="198" height="105"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="198" id="1i1-BS-wtJ"/>
+                                            <constraint firstAttribute="height" constant="105" id="Xgd-EC-LId"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="国旗.png" translatesAutoresizingMaskIntoConstraints="NO" id="F2t-3Y-KBb">
+                                        <rect key="frame" x="208" y="368" width="204" height="105"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="life is tech  メンターの皆さん" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OOQ-8K-uZ0">
+                                        <rect key="frame" x="-3" y="238" width="414" height="76"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="©︎  2017-2019   Sunlight.library        " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6RH-tV-wmd">
+                                        <rect key="frame" x="2" y="677" width="410" height="20.333333333333371"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qjk-WX-hvg">
+                                        <rect key="frame" x="2" y="114" width="410" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <state key="normal" title="協力してくれた人">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="x5F-fH-kKf" firstAttribute="centerX" secondItem="RU3-os-M9i" secondAttribute="centerX" id="527-hs-bXB"/>
+                                    <constraint firstItem="x5F-fH-kKf" firstAttribute="trailing" secondItem="F2t-3Y-KBb" secondAttribute="trailing" id="68e-di-tXM"/>
+                                    <constraint firstItem="IXm-ND-YgD" firstAttribute="top" secondItem="OOQ-8K-uZ0" secondAttribute="bottom" constant="54" id="8tv-cR-ofv"/>
+                                    <constraint firstItem="x5F-fH-kKf" firstAttribute="leading" secondItem="qjk-WX-hvg" secondAttribute="leading" id="LUD-ab-I9X"/>
+                                    <constraint firstAttribute="trailing" secondItem="x5F-fH-kKf" secondAttribute="trailing" id="RUY-Yy-IrV"/>
+                                    <constraint firstItem="x5F-fH-kKf" firstAttribute="leading" secondItem="6RH-tV-wmd" secondAttribute="leading" id="XOb-Za-S7r"/>
+                                    <constraint firstItem="qjk-WX-hvg" firstAttribute="top" secondItem="jVb-OA-Kpq" secondAttribute="bottom" constant="9" id="fpy-yF-HHg"/>
+                                    <constraint firstAttribute="bottom" secondItem="x5F-fH-kKf" secondAttribute="bottom" constant="128" id="fxf-Uf-zla"/>
+                                    <constraint firstItem="F2t-3Y-KBb" firstAttribute="bottom" secondItem="IXm-ND-YgD" secondAttribute="bottom" id="hE0-KS-5DS"/>
+                                    <constraint firstItem="F2t-3Y-KBb" firstAttribute="top" secondItem="IXm-ND-YgD" secondAttribute="top" id="k71-x0-oYb"/>
+                                    <constraint firstItem="x5F-fH-kKf" firstAttribute="leading" secondItem="IXm-ND-YgD" secondAttribute="leading" id="ncf-14-gy6"/>
+                                    <constraint firstItem="6RH-tV-wmd" firstAttribute="top" secondItem="x5F-fH-kKf" secondAttribute="bottom" constant="8" id="poA-QZ-j3B"/>
+                                    <constraint firstItem="F2t-3Y-KBb" firstAttribute="leading" secondItem="IXm-ND-YgD" secondAttribute="trailing" constant="8" id="rxK-RK-bvt"/>
+                                    <constraint firstItem="6RH-tV-wmd" firstAttribute="centerX" secondItem="x5F-fH-kKf" secondAttribute="centerX" id="s8o-ce-7mf"/>
+                                    <constraint firstItem="x5F-fH-kKf" firstAttribute="top" secondItem="RU3-os-M9i" secondAttribute="top" constant="591" id="twe-YK-U5S"/>
+                                    <constraint firstItem="6RH-tV-wmd" firstAttribute="centerX" secondItem="x5F-fH-kKf" secondAttribute="centerX" id="xeH-35-c53"/>
+                                    <constraint firstItem="x5F-fH-kKf" firstAttribute="leading" secondItem="nJm-hE-1JU" secondAttribute="leading" constant="2" id="yPg-Wn-zM3"/>
+                                    <constraint firstItem="x5F-fH-kKf" firstAttribute="trailing" secondItem="qjk-WX-hvg" secondAttribute="trailing" id="yhP-un-Glt"/>
+                                    <constraint firstItem="6RH-tV-wmd" firstAttribute="centerX" secondItem="RU3-os-M9i" secondAttribute="centerX" id="z7M-Fl-f9A"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="Gv5-Ks-292"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="nJm-hE-1JU"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.83442139625549316" green="0.95342689752578735" blue="0.95407599210739136" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="RU3-os-M9i" firstAttribute="trailing" secondItem="H7r-hH-P1t" secondAttribute="trailing" id="AJe-j3-qhS"/>
+                            <constraint firstItem="RU3-os-M9i" firstAttribute="top" secondItem="H7r-hH-P1t" secondAttribute="top" id="EdC-tx-8aA"/>
+                            <constraint firstItem="RU3-os-M9i" firstAttribute="bottom" secondItem="H7r-hH-P1t" secondAttribute="bottom" id="HHP-4H-K84"/>
+                            <constraint firstItem="RU3-os-M9i" firstAttribute="centerX" secondItem="MQx-to-vya" secondAttribute="centerX" id="hML-Xf-48F"/>
+                            <constraint firstItem="RU3-os-M9i" firstAttribute="leading" secondItem="H7r-hH-P1t" secondAttribute="leading" id="rSL-9N-e4a"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="H7r-hH-P1t"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PGP-Rl-EWO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3459" y="2577"/>
+        </scene>
+        <!--予算設定-->
+        <scene sceneID="moj-Vk-CTB">
+            <objects>
+                <viewController title="予算設定" id="IEL-Hs-VCZ" customClass="SavebudgetViewController" customModule="KOZUKAITYOU" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="su7-oh-82S">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nGG-tU-pns">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="yJj-kD-1xw">
+                                        <rect key="frame" x="29" y="8" width="357" height="750"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="　　　　予算は変えないでください！　　　　" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bCh-a2-9LB">
+                                                <rect key="frame" x="0.0" y="0.0" width="357" height="17"/>
+                                                <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y8f-OV-TYG">
+                                                <rect key="frame" x="0.0" y="57" width="357" height="27"/>
+                                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="15"/>
+                                                <state key="normal" title="SAVE"/>
+                                                <connections>
+                                                    <action selector="saveWorld:" destination="IEL-Hs-VCZ" eventType="touchUpInside" id="DAY-CI-Wwa"/>
+                                                </connections>
+                                            </button>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hg8-bD-pmK">
+                                                <rect key="frame" x="0.0" y="124" width="357" height="34"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="   A費（学費・学校関係）   " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qg9-mg-s9w">
+                                                        <rect key="frame" x="0.0" y="0.0" width="216" height="34"/>
+                                                        <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="16"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F6H-d9-0t3">
+                                                        <rect key="frame" x="216" y="0.0" width="124" height="34"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="円" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7MQ-B8-Y2m">
+                                                        <rect key="frame" x="340" y="0.0" width="17" height="34"/>
+                                                        <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="e66-aU-JTx">
+                                                <rect key="frame" x="0.0" y="198" width="357" height="34"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="　 B費（本・参考書等）   " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eNd-Ed-QY6">
+                                                        <rect key="frame" x="0.0" y="0.0" width="212.66666666666666" height="34"/>
+                                                        <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XDM-dj-vKJ">
+                                                        <rect key="frame" x="219.66666666666666" y="0.0" width="113.33333333333334" height="34"/>
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" returnKeyType="go"/>
+                                                    </textField>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" text="円" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xCl-ep-fMr">
+                                                        <rect key="frame" x="340" y="0.0" width="17" height="34"/>
+                                                        <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="hhE-Fc-3pL">
+                                                <rect key="frame" x="0.0" y="272" width="357" height="34"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="　　 　C費（衣服）　　 　" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n2g-kR-Nhd" userLabel="C費（衣服）">
+                                                        <rect key="frame" x="0.0" y="0.0" width="212.66666666666666" height="34"/>
+                                                        <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jtO-ZS-n6W">
+                                                        <rect key="frame" x="215.66666666666666" y="0.0" width="121.33333333333334" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="円" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RQL-Uw-9Nd">
+                                                        <rect key="frame" x="340" y="0.0" width="17" height="34"/>
+                                                        <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="oWx-3w-i4m">
+                                                <rect key="frame" x="0.0" y="346" width="357" height="34"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="　D費（医療・衛生用品等）" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F8G-Cm-o5m">
+                                                        <rect key="frame" x="0.0" y="0.0" width="212.66666666666666" height="34"/>
+                                                        <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q6A-hc-rKX">
+                                                        <rect key="frame" x="216.66666666666666" y="0.0" width="119.33333333333334" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="円" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dz0-r1-W3m">
+                                                        <rect key="frame" x="340" y="0.0" width="17" height="34"/>
+                                                        <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="sGy-gX-RP6">
+                                                <rect key="frame" x="0.0" y="420" width="357" height="34"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="　　　　E費（通信）　　　" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xtd-XL-sR6">
+                                                        <rect key="frame" x="0.0" y="0.0" width="212.66666666666666" height="34"/>
+                                                        <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aGF-V2-dGd">
+                                                        <rect key="frame" x="216.66666666666666" y="0.0" width="119.33333333333334" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="円" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Txp-nA-d6e">
+                                                        <rect key="frame" x="340" y="0.0" width="17" height="34"/>
+                                                        <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="MR6-jI-pXS">
+                                                <rect key="frame" x="0.0" y="494" width="357" height="34"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="　　　F費（交通費）　　　" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iVK-Ks-xgC">
+                                                        <rect key="frame" x="0.0" y="0.0" width="212.66666666666666" height="34"/>
+                                                        <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tv6-J5-wSr">
+                                                        <rect key="frame" x="218.66666666666666" y="0.0" width="115.33333333333334" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="円" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3A6-WM-0ft">
+                                                        <rect key="frame" x="340" y="0.0" width="17" height="34"/>
+                                                        <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="Juf-hD-jqw">
+                                                <rect key="frame" x="0.0" y="568" width="357" height="34"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="　G費（娯楽費・雑誌等）　" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7a7-YQ-FOf">
+                                                        <rect key="frame" x="0.0" y="0.0" width="212.66666666666666" height="34"/>
+                                                        <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z2U-ma-7sm">
+                                                        <rect key="frame" x="219.66666666666666" y="0.0" width="113.33333333333334" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="円" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KYi-ga-nGP">
+                                                        <rect key="frame" x="340" y="0.0" width="17" height="34"/>
+                                                        <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="0l3-Pb-pyw">
+                                                <rect key="frame" x="0.0" y="642" width="357" height="34"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="　　　H費（寄附等）　　　" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yUW-rj-m9v">
+                                                        <rect key="frame" x="0.0" y="0.0" width="212.66666666666666" height="34"/>
+                                                        <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d2S-sN-Yfx">
+                                                        <rect key="frame" x="214.66666666666666" y="0.0" width="123.33333333333334" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="円" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SqW-Ne-WDP">
+                                                        <rect key="frame" x="340" y="0.0" width="17" height="34"/>
+                                                        <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="bHe-f5-kTu">
+                                                <rect key="frame" x="0.0" y="716" width="357" height="34"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="　　　I費（特別費）　　　" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Is9-Gl-Di3">
+                                                        <rect key="frame" x="0.0" y="0.0" width="212.66666666666666" height="34"/>
+                                                        <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K2I-pE-vrA">
+                                                        <rect key="frame" x="215.66666666666666" y="0.0" width="121.33333333333334" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="円" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rrt-Iz-wmj">
+                                                        <rect key="frame" x="340" y="0.0" width="17" height="34"/>
+                                                        <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <viewLayoutGuide key="contentLayoutGuide" id="vCb-uP-RVg"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="Oc5-j2-hzO"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="7d7-j1-BTc"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="予算設定" image="gia.png" selectedImage="gia.png" id="piw-Q0-ihC"/>
+                    <connections>
+                        <outlet property="a" destination="F6H-d9-0t3" id="9lz-cb-zsS"/>
+                        <outlet property="b" destination="XDM-dj-vKJ" id="wTv-aj-xvr"/>
+                        <outlet property="c" destination="jtO-ZS-n6W" id="iJB-s4-K4P"/>
+                        <outlet property="d" destination="q6A-hc-rKX" id="P0E-vC-AfA"/>
+                        <outlet property="e" destination="aGF-V2-dGd" id="yTv-NM-AgV"/>
+                        <outlet property="f" destination="Tv6-J5-wSr" id="Afx-O4-TXj"/>
+                        <outlet property="g" destination="z2U-ma-7sm" id="2CY-jC-M5I"/>
+                        <outlet property="h" destination="d2S-sN-Yfx" id="VJS-0P-Z5s"/>
+                        <outlet property="i" destination="K2I-pE-vrA" id="Bso-Ub-1yf"/>
+                        <outlet property="save" destination="Y8f-OV-TYG" id="dsC-j0-7L6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vul-4r-GVp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2102.898550724638" y="1676.1160714285713"/>
+        </scene>
+        <!--入力-->
+        <scene sceneID="AEy-TY-mO8">
+            <objects>
+                <viewController id="dbh-v0-8SH" customClass="AddViewController" customModule="KOZUKAITYOU" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4tT-CI-LEB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="Bkx-cU-kXF">
+                                <rect key="frame" x="30" y="0.0" width="354" height="759"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="新規登録" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6NZ-u6-OjN">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="17"/>
+                                        <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P41-sV-Tn9">
+                                        <rect key="frame" x="0.0" y="62" width="354" height="58"/>
+                                        <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="17"/>
+                                        <state key="normal" title="SAVE"/>
+                                        <connections>
+                                            <action selector="saveWorld:" destination="dbh-v0-8SH" eventType="touchUpInside" id="6Wr-cy-ZYS"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="買ったもの" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1J0-cG-uIY">
+                                        <rect key="frame" x="0.0" y="165" width="354" height="17"/>
+                                        <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="810" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xOR-qy-sWL">
+                                        <rect key="frame" x="0.0" y="227" width="354" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EBj-fb-pZC">
+                                        <rect key="frame" x="0.0" y="306" width="354" height="34"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="買った個数" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p2Y-EN-TdV">
+                                                <rect key="frame" x="0.0" y="0.0" width="85" height="34"/>
+                                                <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gjw-ib-Kgo">
+                                                <rect key="frame" x="85" y="0.0" width="252" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="go"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="個" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ATx-HM-KEg">
+                                                <rect key="frame" x="337" y="0.0" width="17" height="34"/>
+                                                <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YUp-cZ-UoB">
+                                        <rect key="frame" x="0.0" y="385" width="354" height="34"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="一個あたり" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nrK-ge-I2u">
+                                                <rect key="frame" x="0.0" y="0.0" width="85" height="34"/>
+                                                <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Smd-Ur-Psf">
+                                                <rect key="frame" x="85" y="0.0" width="252" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="go"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="円" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ryu-Fv-ocW">
+                                                <rect key="frame" x="337" y="0.0" width="17" height="34"/>
+                                                <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Icw-dm-zIN">
+                                        <rect key="frame" x="0.0" y="464" width="354" height="216"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="費目" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vil-mF-eyH">
+                                                <rect key="frame" x="0.0" y="0.0" width="34" height="216"/>
+                                                <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <pickerView contentMode="scaleToFill" horizontalHuggingPriority="238" horizontalCompressionResistancePriority="600" translatesAutoresizingMaskIntoConstraints="NO" id="8ii-4F-Z88">
+                                                <rect key="frame" x="34" y="0.0" width="320" height="216"/>
+                                                <directionalEdgeInsets key="directionalLayoutMargins" top="7" leading="7" bottom="7" trailing="7"/>
+                                            </pickerView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="md6-h8-eR1">
+                                        <rect key="frame" x="0.0" y="725" width="354" height="34"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="使った日時" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iB0-AP-PnN">
+                                                <rect key="frame" x="0.0" y="0.0" width="85" height="34"/>
+                                                <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uqa-ht-PzM">
+                                                <rect key="frame" x="85" y="0.0" width="203" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="light" returnKeyType="go"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="月" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9kq-O5-qtP">
+                                                <rect key="frame" x="288" y="0.0" width="17" height="34"/>
+                                                <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Al-RL-4q1">
+                                                <rect key="frame" x="305" y="0.0" width="32" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="go"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="日" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NQb-Na-zos">
+                                                <rect key="frame" x="337" y="0.0" width="17" height="34"/>
+                                                <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Bkx-cU-kXF" firstAttribute="top" secondItem="U4H-d0-N5h" secondAttribute="top" id="CYk-Ky-v6l"/>
+                            <constraint firstItem="U4H-d0-N5h" firstAttribute="trailing" secondItem="Bkx-cU-kXF" secondAttribute="trailing" constant="30" id="ITW-zM-qzM"/>
+                            <constraint firstItem="Bkx-cU-kXF" firstAttribute="leading" secondItem="U4H-d0-N5h" secondAttribute="leading" constant="30" id="gp1-IY-7EJ"/>
+                            <constraint firstItem="Bkx-cU-kXF" firstAttribute="bottom" secondItem="U4H-d0-N5h" secondAttribute="bottom" id="uvj-Gw-pM4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="U4H-d0-N5h"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="入力" image="メモアイコン.png" landscapeImage="メモアイコン.png" largeContentSizeImage="メモアイコン.png" selectedImage="メモアイコン.png" id="aIG-WA-Wje"/>
+                    <connections>
+                        <outlet property="Niti" destination="8Al-RL-4q1" id="x6s-qB-Ylb"/>
+                        <outlet property="Save" destination="P41-sV-Tn9" id="vPc-gV-r3n"/>
+                        <outlet property="Tuki" destination="uqa-ht-PzM" id="beV-bI-bMx"/>
+                        <outlet property="kosu" destination="gjw-ib-Kgo" id="iTx-B0-nbn"/>
+                        <outlet property="name" destination="xOR-qy-sWL" id="9Dc-hR-3Bd"/>
+                        <outlet property="pickerView" destination="8ii-4F-Z88" id="xaO-ke-b5h"/>
+                        <outlet property="tanka" destination="Smd-Ur-Psf" id="cvz-7V-2UZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bgw-a4-JKC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3459.420289855073" y="1676.7857142857142"/>
+        </scene>
+        <!--月のまとめ-->
+        <scene sceneID="MeF-4n-CzC">
+            <objects>
+                <viewController id="F25-B9-2EC" customClass="MonthViewController" customModule="KOZUKAITYOU" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="I8K-gd-4OM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bss-xF-xp5">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="今月の使用額" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Wt-v1-Sag">
+                                        <rect key="frame" x="94" y="45" width="102" height="60"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="今月の使用額" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6dv-GE-SNA">
+                                        <rect key="frame" x="8" y="48" width="78" height="57"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="13"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DGB-3i-2YB" customClass="PieChartView" customModule="Charts">
+                                        <rect key="frame" x="8" y="113" width="398" height="388"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="＋" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Gf-aG-6Ug">
+                                        <rect key="frame" x="68" y="509" width="17.333333333333336" height="42"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="入金" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ny-gm-pr7">
+                                        <rect key="frame" x="110" y="508" width="34.666666666666664" height="42"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ー" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BJL-EX-gIW">
+                                        <rect key="frame" x="178" y="509" width="18" height="42"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="使用額" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T5h-RV-E0J">
+                                        <rect key="frame" x="247" y="509" width="166" height="42"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="＝" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DM2-w7-YxE">
+                                        <rect key="frame" x="8" y="613" width="78" height="57"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="月のまとめ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bv4-Ya-H5e">
+                                        <rect key="frame" x="94" y="613" width="86.666666666666686" height="57"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="繰り越し" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tme-Wo-qmD">
+                                        <rect key="frame" x="0.0" y="509" width="69.333333333333329" height="42"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <viewLayoutGuide key="contentLayoutGuide" id="35C-fb-9ij"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="WeP-p8-bWx"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="BFw-D4-vrf"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="月のまとめ" image="カレンダーのフリーアイコン19.png" selectedImage="カレンダーのフリーアイコン19.png" id="51X-A3-d8X">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="TMsiyougaku" destination="3Wt-v1-Sag" id="et2-1S-9dv"/>
+                        <outlet property="TMsiyougaku2" destination="T5h-RV-E0J" id="uZt-QR-ztd"/>
+                        <outlet property="chartView" destination="DGB-3i-2YB" id="TXk-KF-l25"/>
+                        <outlet property="kurikosi" destination="Tme-Wo-qmD" id="Mxw-2T-FQJ"/>
+                        <outlet property="matome" destination="Bv4-Ya-H5e" id="e4C-Dh-Hzn"/>
+                        <outlet property="nyuukin" destination="8ny-gm-pr7" id="KEm-Go-z64"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Msw-w3-WKA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4376.811594202899" y="-609.375"/>
+        </scene>
+        <!--メニュー-->
+        <scene sceneID="fhZ-6A-12G">
+            <objects>
+                <viewController storyboardIdentifier="second" title="メニュー" id="9XR-jP-VBP" customClass="mainViewController" customModule="KOZUKAITYOU" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XUq-9X-ESf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KRz-x6-1vn">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="759"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jxK-KD-tkv">
+                                        <rect key="frame" x="0.0" y="24" width="113" height="17"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="17" id="zcd-pX-LvI"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="17"/>
+                                        <state key="normal" title="今月の出費"/>
+                                        <connections>
+                                            <action selector="pushY" destination="9XR-jP-VBP" eventType="touchUpInside" id="JQX-03-tYr"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今月の出費　　　" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dVe-1I-Cdf">
+                                        <rect key="frame" x="99" y="18" width="307" height="29"/>
+                                        <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YoM-9b-tYF">
+                                        <rect key="frame" x="0.0" y="49" width="113" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="iUZ-cO-Gt0"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="17"/>
+                                        <state key="normal" title="今週の出費"/>
+                                        <connections>
+                                            <action selector="pushM" destination="9XR-jP-VBP" eventType="touchUpInside" id="6O2-VN-AUY"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今週の出費        " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZDQ-6P-ilO">
+                                        <rect key="frame" x="99" y="45" width="307" height="29"/>
+                                        <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UQj-hO-O2n">
+                                        <rect key="frame" x="2" y="162" width="414" height="597"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="jHm-7B-jqj" customClass="ListTableViewCell" customModule="KOZUKAITYOU" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jHm-7B-jqj" id="7fp-Ir-lei">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="9XR-jP-VBP" id="2XY-zj-zym"/>
+                                            <outlet property="delegate" destination="9XR-jP-VBP" id="J9P-En-YxN"/>
+                                        </connections>
+                                    </tableView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="R4U-FB-Qvd">
+                                        <rect key="frame" x="8" y="141" width="394" height="14"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="日付" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bk3-4H-iHh">
+                                                <rect key="frame" x="0.0" y="0.0" width="28" height="14"/>
+                                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="名称" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZTH-sr-3yi">
+                                                <rect key="frame" x="52" y="0.0" width="28" height="14"/>
+                                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="byG-z3-f45">
+                                                <rect key="frame" x="104" y="0.0" width="28" height="14"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="個数">
+                                                        <attributes>
+                                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                            <font key="NSFont" size="14" name="azuki_font"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="費目" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M04-90-cqB">
+                                                <rect key="frame" x="156" y="0.0" width="26" height="14"/>
+                                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="13"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="金額" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p1C-2Z-StH">
+                                                <rect key="frame" x="206" y="0.0" width="28" height="14"/>
+                                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="費目残高" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VGf-VJ-4ua">
+                                                <rect key="frame" x="258" y="0.0" width="56" height="14"/>
+                                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="財布の中" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WNi-5M-Cek">
+                                                <rect key="frame" x="338" y="0.0" width="56" height="14"/>
+                                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="jxK-KD-tkv" firstAttribute="top" secondItem="ksv-Ka-eNb" secondAttribute="top" constant="24" id="3Me-kX-SgW"/>
+                                    <constraint firstItem="UQj-hO-O2n" firstAttribute="bottom" secondItem="ksv-Ka-eNb" secondAttribute="bottom" id="5uv-uq-rwf"/>
+                                    <constraint firstItem="jxK-KD-tkv" firstAttribute="trailing" secondItem="YoM-9b-tYF" secondAttribute="trailing" id="762-Pr-hIa"/>
+                                    <constraint firstItem="jxK-KD-tkv" firstAttribute="leading" secondItem="ksv-Ka-eNb" secondAttribute="leading" id="E3y-UR-H1t"/>
+                                    <constraint firstItem="R4U-FB-Qvd" firstAttribute="leading" secondItem="KRz-x6-1vn" secondAttribute="leadingMargin" id="Eft-83-m2E"/>
+                                    <constraint firstItem="ksv-Ka-eNb" firstAttribute="trailing" secondItem="dVe-1I-Cdf" secondAttribute="trailing" constant="8" id="LVS-eA-XAi"/>
+                                    <constraint firstItem="dVe-1I-Cdf" firstAttribute="trailing" secondItem="KRz-x6-1vn" secondAttribute="trailingMargin" id="Rtx-RL-JCc"/>
+                                    <constraint firstItem="YoM-9b-tYF" firstAttribute="bottom" secondItem="ZDQ-6P-ilO" secondAttribute="bottom" id="SFl-38-Qfa"/>
+                                    <constraint firstItem="dVe-1I-Cdf" firstAttribute="leading" secondItem="ksv-Ka-eNb" secondAttribute="leading" constant="99" id="SKI-lN-ado"/>
+                                    <constraint firstItem="jxK-KD-tkv" firstAttribute="leading" secondItem="YoM-9b-tYF" secondAttribute="leading" id="TcQ-5z-J1U"/>
+                                    <constraint firstItem="UQj-hO-O2n" firstAttribute="leading" secondItem="ksv-Ka-eNb" secondAttribute="leading" constant="2" id="Uix-aK-4xS"/>
+                                    <constraint firstAttribute="trailing" secondItem="UQj-hO-O2n" secondAttribute="trailing" constant="-2" id="VUE-QQ-fSP"/>
+                                    <constraint firstItem="jxK-KD-tkv" firstAttribute="centerY" secondItem="dVe-1I-Cdf" secondAttribute="centerY" id="Vib-we-p42"/>
+                                    <constraint firstItem="dVe-1I-Cdf" firstAttribute="trailing" secondItem="ZDQ-6P-ilO" secondAttribute="trailing" id="YDO-jm-GIe"/>
+                                    <constraint firstItem="dVe-1I-Cdf" firstAttribute="top" secondItem="ksv-Ka-eNb" secondAttribute="top" constant="18" id="ZDr-sW-E7y"/>
+                                    <constraint firstItem="ksv-Ka-eNb" firstAttribute="trailing" secondItem="jxK-KD-tkv" secondAttribute="trailing" constant="301" id="Zgi-DH-gRm"/>
+                                    <constraint firstItem="ZDQ-6P-ilO" firstAttribute="top" secondItem="jxK-KD-tkv" secondAttribute="bottom" constant="4" id="ao5-tS-PNS"/>
+                                    <constraint firstItem="dVe-1I-Cdf" firstAttribute="leading" secondItem="ZDQ-6P-ilO" secondAttribute="leading" id="bIA-P7-OGg"/>
+                                    <constraint firstItem="R4U-FB-Qvd" firstAttribute="top" secondItem="YoM-9b-tYF" secondAttribute="bottom" constant="67" id="eOl-Pq-prZ"/>
+                                    <constraint firstItem="YoM-9b-tYF" firstAttribute="top" secondItem="dVe-1I-Cdf" secondAttribute="bottom" constant="2" id="hBx-St-uqZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="UQj-hO-O2n" secondAttribute="bottom" id="obw-5y-jhg"/>
+                                    <constraint firstItem="UQj-hO-O2n" firstAttribute="top" secondItem="R4U-FB-Qvd" secondAttribute="bottom" constant="7" id="tl7-FE-eBd"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="euC-4b-TJ7"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="ksv-Ka-eNb"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="KRz-x6-1vn" firstAttribute="leading" secondItem="diU-lV-cd4" secondAttribute="leading" id="BUU-F8-aUj"/>
+                            <constraint firstItem="KRz-x6-1vn" firstAttribute="top" secondItem="diU-lV-cd4" secondAttribute="top" id="D2I-PA-DBk"/>
+                            <constraint firstItem="KRz-x6-1vn" firstAttribute="bottom" secondItem="diU-lV-cd4" secondAttribute="bottom" id="T6W-Ne-Pio"/>
+                            <constraint firstItem="KRz-x6-1vn" firstAttribute="centerX" secondItem="XUq-9X-ESf" secondAttribute="centerX" id="lZA-nm-lKe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="diU-lV-cd4"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="メニュー" image="home3.png" id="aB4-wB-xFT"/>
+                    <connections>
+                        <outlet property="month" destination="dVe-1I-Cdf" id="Sd5-Il-xwx"/>
+                        <outlet property="switch_month" destination="YoM-9b-tYF" id="1Dh-w6-2dY"/>
+                        <outlet property="switch_years" destination="jxK-KD-tkv" id="A7E-Lf-kql"/>
+                        <outlet property="tableView" destination="UQj-hO-O2n" id="g4a-t7-D6V"/>
+                        <outlet property="week" destination="ZDQ-6P-ilO" id="LSh-Of-z8O"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pJV-Rz-CgD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3457.971014492754" y="-608.70535714285711"/>
+        </scene>
+        <!--年度のまとめ-->
+        <scene sceneID="SLX-km-8Ap">
+            <objects>
+                <viewController id="81D-Hp-ceQ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AkJ-hu-y59">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MbU-hm-xfs">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="759"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="ojc-6K-6Fm"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="csE-it-LSz"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="MbU-hm-xfs" firstAttribute="bottom" secondItem="pzb-we-6x2" secondAttribute="bottom" id="MgP-Ow-bb7"/>
+                            <constraint firstItem="MbU-hm-xfs" firstAttribute="leading" secondItem="pzb-we-6x2" secondAttribute="leading" id="we6-Qa-GHB"/>
+                            <constraint firstItem="MbU-hm-xfs" firstAttribute="trailing" secondItem="pzb-we-6x2" secondAttribute="trailing" id="yfB-CT-rDh"/>
+                            <constraint firstItem="MbU-hm-xfs" firstAttribute="top" secondItem="pzb-we-6x2" secondAttribute="top" id="zEu-fy-NUG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pzb-we-6x2"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="年度のまとめ" image="カレンダーのフリーアイコン19.png" selectedImage="カレンダーのフリーアイコン19.png" id="FY1-qv-uai"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lSG-XM-Is9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3457.971014492754" y="132.58928571428572"/>
+        </scene>
+        <!--入金-->
+        <scene sceneID="78U-7B-3mq">
+            <objects>
+                <viewController title="入金" id="AU9-ah-Zc8" customClass="InmoneyViewController" customModule="KOZUKAITYOU" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kkA-g9-erE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X9x-LQ-rad">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="759"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="入金" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4gv-RO-2iR">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="83"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="33"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="   入金額   " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EXp-nq-K9R">
+                                        <rect key="frame" x="8" y="402" width="102" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="円" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bNR-gk-XQL">
+                                        <rect key="frame" x="355" y="402" width="59" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hqP-L7-Zrf">
+                                        <rect key="frame" x="110" y="402" width="243" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="入金日                  " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gw0-ml-Rei">
+                                        <rect key="frame" x="8" y="211" width="102" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jYV-V4-ah6">
+                                        <rect key="frame" x="110" y="249" width="134" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="go"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W8L-qY-thu">
+                                        <rect key="frame" x="110" y="211" width="134" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="light" returnKeyType="go"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="月" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a8e-xV-ask">
+                                        <rect key="frame" x="245" y="211" width="17" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="日" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="INl-Sv-D0P">
+                                        <rect key="frame" x="245" y="249" width="17" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A2m-Zl-Ajf">
+                                        <rect key="frame" x="0.0" y="102" width="414" height="75"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <state key="normal" title="SAVE"/>
+                                        <connections>
+                                            <action selector="PUSHSAVE" destination="AU9-ah-Zc8" eventType="touchUpInside" id="70w-QV-fzd"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <viewLayoutGuide key="contentLayoutGuide" id="GBu-PW-osi"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="4EK-Lj-bTU"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="rfP-na-jiO"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="入金" image="麻袋型のドル袋の無料アイコン（ユーロ）.png" selectedImage="麻袋型のドル袋の無料アイコン（ユーロ）.png" id="E48-kZ-Mwz"/>
+                    <connections>
+                        <outlet property="Niti" destination="jYV-V4-ah6" id="WN6-DJ-wI3"/>
+                        <outlet property="Save" destination="A2m-Zl-Ajf" id="snm-0a-00E"/>
+                        <outlet property="Tuki" destination="W8L-qY-thu" id="yfu-Is-ZtD"/>
+                        <outlet property="inmoney" destination="hqP-L7-Zrf" id="Osb-uN-bAZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UpN-0I-8fC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3457.971014492754" y="874.55357142857144"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Err-1f-Z3P">
+            <objects>
+                <tabBarController id="Nqa-7y-3ST" sceneMemberID="viewController">
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <tabBar key="tabBar" tag="7" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="b4z-lX-hmE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="0.9004204549" green="1" blue="0.95232043489999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.23803070600000001" green="1" blue="0.82410599939999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.725401427975084" green="1" blue="0.99216070320686489" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="9XR-jP-VBP" kind="relationship" relationship="viewControllers" id="kdb-cA-Ony"/>
+                        <segue destination="dbh-v0-8SH" kind="relationship" relationship="viewControllers" id="403-K5-AT8"/>
+                        <segue destination="AU9-ah-Zc8" kind="relationship" relationship="viewControllers" id="hT5-Uj-rZ2"/>
+                        <segue destination="F25-B9-2EC" kind="relationship" relationship="viewControllers" id="q4k-8o-v7H"/>
+                        <segue destination="81D-Hp-ceQ" kind="relationship" relationship="viewControllers" id="Tj7-Fe-se5"/>
+                        <segue destination="hGp-SA-ITT" kind="relationship" relationship="viewControllers" id="yQv-d1-BSS"/>
+                        <segue destination="IEL-Hs-VCZ" kind="relationship" relationship="viewControllers" id="oG2-oO-1qu"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="58o-PI-GRf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="847" y="134"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="gia.png" width="32" height="32"/>
+        <image name="home3.png" width="32" height="32"/>
+        <image name="カレンダーのフリーアイコン19.png" width="32" height="32"/>
+        <image name="メモアイコン.png" width="32" height="32"/>
+        <image name="国旗.png" width="308.57144165039062" height="205.71427917480469"/>
+        <image name="旗.png" width="360" height="240"/>
+        <image name="麻袋型のドル袋の無料アイコン（ユーロ）.png" width="32" height="32"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="ErR-zW-KD9"/>
+        <segue reference="1Vw-rV-HV8"/>
+    </inferredMetricsTieBreakers>
+</document>

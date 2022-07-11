@@ -8,11 +8,13 @@
 
 import UIKit
 import RealmSwift
+import CoreData
+import Firebase
 
 class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate{
-
-    weak var mVC = mainViewController()
-   
+    
+    //    weak var mVC = mainViewController()
+    
     @IBOutlet var pickerView: UIPickerView!    
     @IBOutlet var name: UITextField!
     @IBOutlet var kosu: UITextField!
@@ -20,6 +22,7 @@ class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
     @IBOutlet var Tuki: UITextField!
     @IBOutlet var Niti: UITextField!
     @IBOutlet var Save: UIButton!
+    let realm = try! Realm()
     var day: String = "0"
     var kosuu: String = "0"
     var goukeib: String = "0"
@@ -28,43 +31,43 @@ class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
     var kingaku: Int = 0
     var kingaku1: String = "0"
     var goukei: Int = 0
-    var namebox: String = "0"
+    var tanka1:Int = 0
+    var exp :Int = 0
+    
     var himoku: String = "A費"
     var saihu: Int = 0
-    var kd: [Dictionary<String, Any>] = []
-    public var realm: Realm!//レルム
     //---PickerView----設定-----↓
-    let saveData = UserDefaults.standard
-     let dataList = ["A費",
-                     "B費",
-                     "C費",
-                     "D費",
-                     "E費",
-                     "F費",
-                     "G費",
-                     "H費",
-                     "I費"]
+    let dataList = ["A費",
+                    "B費",
+                    "C費",
+                    "D費",
+                    "E費",
+                    "F費",
+                    "G費",
+                    "H費",
+                    "I費"]
     
     //------viewDidLoad()---------↓
-    
+     var firebaseAPI = FirebaseAPI()
     override func viewDidLoad() {
-        super.viewDidLoad()
-        if saveData.array(forKey: "WORD") != nil {
-            kd = saveData.array(forKey: "WORD") as! [Dictionary<String,Any>]
-        }
+        
+        //      if saveData.array(forKey: "WORD") != nil {
+        //        mVC?.allData = saveData.array(forKey: "WORD") as! [Dictionary<String,Any>]
+        //      }
         pickerView.delegate = self
         pickerView.dataSource = self
         
-       
-
+        
+        
         // Do any additional setup after loading the view.
     }
-   
- 
     
-//========@IBAction========seveでーた=============↓↓
-    @IBAction func saveWorld(){
-     
+    
+    
+    //========@IBAction========seveでーた=============↓↓
+    @IBAction func saveWorld(_ sender: Any){
+        
+        
         // 文字列がカラだったら
         if kosu.text?.isEmpty == true {
             let alert = UIAlertController(title: "警告！", message:"個数が入力されていません！", preferredStyle: .alert)
@@ -129,58 +132,166 @@ class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
         print(formatString)
         
         let dateFormatter = DateFormatter()
-        saihu = saihu - kingaku
-        dateFormatter.dateFormat = formatString
         
+        dateFormatter.dateFormat = formatString
+        print(saihu)
+        print(kingaku)
         dateFormatter.string(from: date!)
-        namebox = name.text!
+        
+        print("処理１")
+        
+        
         
         kingaku = Int(kosu.text!)! * Int(tanka.text!)!
-        goukeib = String(kingaku) + "円"
-        namebox = name.text!
-        func MainItem(title:String) {
-          try! realm.write {
-            realm.add(name: namebox)
-            
-            
-          }
+        let results = realm.objects(MainItem.self)
+        for dataa in results {
+            let money = kingaku
+            saihu = dataa.Nowmoney - money
         }
-        let Datedic: [String: Any] = [
-            "saihu":saihu,
-            "name": name.text!,
-            "kosuu": kosuu,
-            "kingaku": goukeib,
-            "day": dateFormatter.string(from: date!),
-            "TIME": date as Any,
-            "himoku": himoku,
-            "goukei": goukeib]
-        kd.append(Datedic)
-        saveData.set(kd, forKey: "WORD")
-        let alert = UIAlertController(
-            title: "登録しましたよ！！",
-            
-            message:
-            "登録されました！\n" + "登録されたデータ\n" + "名称" + namebox + "\n" + "単価" + tanka.text! + "円\n" + "個数" + kosuu + "\n" + "小計" + goukeib + "\n日時" + dateFormatter.string(from: date!),
-            
-            preferredStyle: .alert
-            
-        )
-        alert.addAction(UIAlertAction(
-            title: "OK",
-            style: .default,
-            handler: nil
         
-        ))
-        present(alert, animated:  true, completion: {
-            self.name.text = ""
-            self.kosu.text = ""
-            self.tanka.text = ""
-            self.Tuki.text = ""
-            self.Niti.text = ""
-            self.view.endEditing(true)
-        })
-      
-        mVC?.tableView.reloadData()
+        
+        let results2 = realm.objects(SUBItem.self)
+        for data in results2{
+            let himoku2 = himoku
+            switch himoku2{
+            case "A費":
+                for data2 in results2 {
+                    let money = kingaku
+                    var a = data2.A2
+                    exp = a - money
+                    
+                }
+            case "B費":
+                for data2 in results2 {
+                    let money = kingaku
+                    var b = data2.B2
+                    exp = b - money
+                    
+                }
+            case "C費":
+                for data2 in results2 {
+                    let money = kingaku
+                    var c = data2.C2
+                    exp = c - money
+                    
+                }
+            case "D費":
+                for data2 in results2 {
+                    let money = kingaku
+                    var d = data2.D2
+                    exp = d - money
+                    
+                }
+            case "E費":
+                for data2 in results2 {
+                    let money = kingaku
+                    var e = data2.E2
+                    exp = e - money
+                    
+                }
+            case "F費":
+                for data2 in results2 {
+                    let money = kingaku
+                    var f = data2.F2
+                    exp = f - money
+                    
+                }
+            case"G費":
+                for data2 in results2 {
+                    let money = kingaku
+                    var g = data2.G2
+                    exp = g - money
+                    
+                }
+            case "H費":
+                for data2 in results2 {
+                    let money = kingaku
+                    var h = data2.H2
+                    exp = h - money
+                    
+                }
+            case "I費":
+                for data2 in results2 {
+                    let money = kingaku
+                    var I = data2.I2
+                    exp = I - money
+                    
+                }
+            case "　":
+                print("FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF")
+            default: // defaultは必須
+                print("全部違ったよ")
+                break
+            }
+        }
+        //            mVC?.allData.append(Datedic)
+        //        saveData.set(mVC?.allData, forKey: "WORD")
+        
+        let USERID:String = String((Auth.auth().currentUser?.uid)!) + "/" + "出費" + "/" + name.text!
+        print(USERID)
+        firebaseAPI.uploadToFirebase(path: "\(USERID)", write: ["Name" : name.text!,"Number":Int(kosu.text!)!,"Expense" : himoku,"Nowmoney":saihu,"NowExpence": exp,"total":kingaku,"Day":date!.timeIntervalSinceReferenceDate,"TIME":Date().timeIntervalSinceReferenceDate])
+        let newItem = MainItem()
+        newItem.Name = name.text!
+        newItem.Number = Int(kosu.text!)!
+        newItem.Expense = himoku
+        newItem.Nowmoney = saihu
+        newItem.NowExpense = exp
+        newItem.total =  kingaku
+        newItem.Day =  date!
+        newItem.TIME = Date()
+        print(Date())
+        print("処理２")
+        do{
+            let realm = try Realm()
+            try realm.write({ () -> Void in
+                realm.add(newItem)
+            })
+            print("登録")
+        }catch{
+        }
+        
+        let names :String = "名称" + String(name.text!) + "\n"
+        let tanka2 :String = "単価" + String(tanka.text!) + "円\n"
+        let kosuu2 :String = "個数" + kosuu + "\n"
+        let kei :String = "小計" + goukeib
+        let nitiji:String = "\n日時" + dateFormatter.string(from: date!)
+        
+        
+        //        let Datedic: [String: Any] = [
+        //            "saihu":saihu,
+        //            "name": name.text!,
+        //            "kosuu": kosuu,
+        //            "kingaku": goukeib,
+        //            "day": dateFormatter.string(from: date!),
+        //            "TIME": date as Any,
+        //            "himoku": himoku,
+        //            "goukei": goukeib]
+        //        kd.append(Datedic)
+        //        saveData.set(kd, forKey: "WORD")
+        
+        print("アラート")
+        let title = "登録したよ！"
+        let message = "登録されました！\n" + "登録されたデータ\n" + names + tanka2 + kosuu2 + kei + nitiji
+        
+        let okText = "ok"
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+        let okayButton = UIAlertAction(title: okText, style: UIAlertAction.Style.cancel, handler: nil)
+        alert.addAction(okayButton)
+        
+        present(alert, animated: true, completion: nil)
+        
+        
+        
+        self.name.text = ""
+        self.kosu.text = ""
+        self.tanka.text = ""
+        self.Tuki.text = ""
+        self.Niti.text = ""
+        self.view.endEditing(true)
+        
+        print("owari")
+        
         
     }
     // UIPickerViewの列の数
@@ -208,22 +319,36 @@ class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
         himoku = dataList[row]
     }
     
-
- 
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-                self.view.endEditing(true)
+    
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
     }
     
+    @objc func hideKeyboard() {
+        view.endEditing(true)
+    }
     
-
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    //     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    //
+    //         self.view.endEditing(true)
+    //     }
+    
+    
+    
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     MARK: - Navigation
+     
+     In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     Get the new view controller using segue.destination.
+     Pass the selected object to the new view controller.
+     }
+     */
 }

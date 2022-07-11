@@ -7,17 +7,9 @@
 //
 
 import UIKit
-import Charts
+import RealmSwift
+
 class ViewController: UIViewController {
-
-     @IBOutlet weak var myChartView: BarChartView!
-
-        override func viewDidLoad() {
-            super.viewDidLoad()
-            // y軸のプロットデータ
-
-        }
-
-      
-
+    
+    
 }

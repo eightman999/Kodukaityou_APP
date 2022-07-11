@@ -9,14 +9,9 @@
 import UIKit
 import Charts
 import RealmSwift
-class mainViewController: UIViewController, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
-    }
+
+class mainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
-    }
     
     
     //----------@IBOutlet-----------
@@ -24,17 +19,14 @@ class mainViewController: UIViewController, UITableViewDataSource {
     @IBOutlet var month: UILabel!
     @IBOutlet var switch_month: UIButton!
     @IBOutlet var switch_years: UIButton!
-    @IBOutlet var tableView: UITableView!
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var chartView: PieChartView!
-    var realm: Realm!
-   
+    var itemList: Results<MainItem>!
+    var itemLists: [MainItem] = [MainItem]()
+    let realm = try! Realm()
     var token: NotificationToken!
-
-
-    
-    
-    var kd: [Dictionary<String, Any>] = []
-    let saveData = UserDefaults.standard
+    //    var kd: [Dictionary<String, Any>] = []
+    //    let saveData = UserDefaults.standard
     var k__week: Int = 0//前週比
     var k__month: Int = 0//前月比
     var ch1: Bool = false//週切り替え判定
@@ -44,9 +36,14 @@ class mainViewController: UIViewController, UITableViewDataSource {
     var calendar = Calendar(identifier: .gregorian)//カレンダー呼び出し
     var thisMonthMoney: Int = 0 // 今月の出費
     var thisWeeksMoney: Int = 0//今週の出費
+    var WeekP:Double = 0.0
+    var MonthP:Double = 0.0
+    var lastMonthmoney:Int = 0
+    var lastWeekmoney:Int = 0
     var First_time:Int = 0
     var check: Date = Date()
-//=============================初回チェック用============↓
+    //=============================初回チェック用============↓
+    
     func getDateBeforeOrAfterSomeWeek(week:Double) -> Date {
         
         let now = Date()
@@ -57,107 +54,156 @@ class mainViewController: UIViewController, UITableViewDataSource {
         } else {
             resultDate = Date(timeInterval: -604800*fabs(week), since: now as Date)
         }
-        
         return resultDate
-        
     }
-//======================週の出費/月の出費/初回チェック/設定===========↓
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    //  @objc dynamic var Name = ""//名前//
+    //@objc dynamic var Number:Int = 0//個数//
+    //@objc dynamic var Expense = ""//費目//
+    //@objc dynamic var Nowmoney:Int = 0//財布残高//
+    //@objc dynamic var NowExpense:Int = 0//予算座布団//
+    //@objc dynamic var total:Int = 0//トータル//
+    //@objc dynamic var Day = ""//日時//
+    //@objc dynamic var  TIME :Date = Date()//TIME//
+    
+    //======================週の出費/月の出費/初回チェック/設定===========↓
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //---------------設定-----------------------↓
-        tableView.dataSource = self
-        if saveData.array(forKey: "WORD") != nil {
-            kd = saveData.array(forKey: "WORD") as! [Dictionary<String,Any>]
-            kd.reverse()
-        }
-        tableView.reloadData()
-        //-----------------month---------------------↓
-        for data in kd {
-            let time = data["TIME"] as! Date
-            
-            
-            if Calendar.current.isDate(time, inSameMonthAs: Date()){
-                // お金の取得
-                let money = Int((data["kingaku"] as! String).prefix((data["kingaku"] as! String).count - 1))
-                thisMonthMoney += money!
-                
-        //---------------Charts-----------------
-             super.viewDidLoad()
-                     
-                     var rect = view.bounds
-                     rect.origin.y += 20
-                     rect.size.height -= 20
-                     let entries = [
-                         PieChartDataEntry(value: 10, label: "A"),
-                         PieChartDataEntry(value: 20, label: "B"),
-                         PieChartDataEntry(value: 30, label: "C"),
-                         PieChartDataEntry(value: 40, label: "D"),
-                         PieChartDataEntry(value: 50, label: "E")
-                     ]
-                let set = PieChartDataSet(entries: entries, label: "Data")
-                     chartView.data = PieChartData(dataSet: set)
-                     view.addSubview(chartView)
-            }
-        }
-        //----------------------Week-----------------↓
-        for data2 in kd {
-            let  time2 = data2["TIME"] as! Date
-            if Calendar.current.isDate(time2, inSameWeekAs: Date()){
-                //お金の取得2
-                let money = Int((data2["kingaku"] as! String).prefix((data2["kingaku"] as! String).count - 1))
-                thisWeeksMoney += money!
-                
-            }
-       
-        }
-        //------------------Firsttime?--------------------------↓
-//        for data3 in kd {
-//            //let Datedic: [String: Any] = ["First_time?":First_time]
-//            First_time = data3["First_time?"] as! Int
-//        }
-//        
-//        print(First_time)
-//        
-//        
-//        if First_time == nil{
-//           check = (getDateBeforeOrAfterSomeWeek(week: -200)) // 200週間前
-//            let Datedic: [String: Any] = ["SAVE-DAY":check]
-//            First_time + 100
-//            let Datedic: [String: Any] = ["First_time?":First_time]
-//
-//        }
+        tableView.register(UINib(nibName: "ListTableViewCell", bundle: nil), forCellReuseIdentifier: "ListTableViewCell")
         
         //-----------テキスト設定-------------↓
-        month.text = "\(thisMonthMoney)"
-        week.text = "\(thisWeeksMoney)"
+        month.text = "\(thisMonthMoney)" + "円"
+        week.text = "\(thisWeeksMoney)" + "円"
         
         // Do any additional setup after loading the view.
+        //---TBV----
         
-        //-------K'odukaityou-D'ata中身確認-------------↓
-        print("kdは",kd)
+        tableView.delegate = self
+        tableView.dataSource = self
+        do{
+            itemList = realm.objects(MainItem.self).sorted(byKeyPath: "Day", ascending: false)
+            
+        } catch{
+        }
+        tableView.reloadData()
+        // tableViewにカスタムセルを登録
+        tableView.register(UINib(nibName: "ListTableViewCell", bundle: nil), forCellReuseIdentifier: "ListTableViewCell")
+        tableView.tableFooterView = UIView()
     }
- //========================viewWillAppear====================↓
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return itemList.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ListTableViewCell", for: indexPath ) as! ListTableViewCell
+        let dateFormatter = DateFormatter()
+        guard let formatString = DateFormatter.dateFormat(fromTemplate: "MMMdd", options: 0, locale: Locale.current) else { fatalError() }
+        dateFormatter.dateFormat = formatString
+        // カスタムセル内のプロパティ設定
+        
+        cell.name.text = itemList[indexPath.row].Name
+        cell.day.text = dateFormatter.string(from: (itemList[indexPath.row].Day))
+        cell.kingaku.text = String(itemList[indexPath.row].total)
+        cell.kosuu.text = String(itemList[indexPath.row].Number)
+        cell.himoku.text = itemList[indexPath.row].Expense
+        cell.saihu.text = String(itemList[indexPath.row].Nowmoney)
+        cell.himokuzandaka.text = String(itemList[indexPath.row].NowExpense)
+        return cell
+    }
+    
+    //========================viewWillAppear====================↓
     override func viewWillAppear(_ animated: Bool) {
+        thisMonthMoney = 0
+        thisWeeksMoney = 0
+        lastWeekmoney = 0
+        lastMonthmoney = 0
         
         super.viewWillAppear(animated)
+        let results = realm.objects(MainItem.self)
+        print(results)
         
         tableView.reloadData()
-        print("リロードデータ！")
         
+        for data in results {
+            let himoku = data.Expense
+            let time = data.Day
+            if himoku ==  "　"{}else{
+                if Calendar.current.isDate2(time, inSameMonthAs: Date()) {
+                    // お金の取得
+                    let money = data.total
+                    thisMonthMoney += money
+                }
+            }
+        }
+        //        ----------------------Week-----------------↓
+        for data2 in results {
+            let himoku = data2.Expense
+            let  time2 = data2.Day
+            if himoku ==  "　"{}else{
+                if Calendar.current.isDate2(time2, inSameWeekAs: Date()){
+                    //お金の取得2
+                    let money = data2.total
+                    thisWeeksMoney += money
+                    
+                }
+            }
+        }
+        for dataa in results {
+            let time = dataa.Day
+            let himoku = dataa.Expense
+            if himoku ==  "　"{}else{
+                if Calendar.current.isOneMonth(time, inSameMonthAs: Date()) {
+                    // お金の取得
+                    let money = dataa.total
+                    lastMonthmoney += money
+                    k__month = thisMonthMoney - lastMonthmoney
+                    MonthP = Double(thisMonthMoney / lastMonthmoney  * -100)
+                    print(lastMonthmoney)
+                } else {
+                    k__month = thisMonthMoney
+                    MonthP = 1000
+                }
+            }
+        }
+        //        ----------------------Week-----------------↓
+        for dataa2 in results {
+            let  time2 = dataa2.Day
+            let himoku = dataa2.Expense
+            if himoku ==  "　"{}else{
+                if Calendar.current.isOneweek(time2, inSameWeekAs: Date()){
+                    //お金の取得2
+                    let money = dataa2.total
+                    lastWeekmoney += money
+                    k__week = thisWeeksMoney -  lastWeekmoney 
+                    WeekP = Double(thisWeeksMoney / lastWeekmoney * -100)
+                    print(lastWeekmoney)
+                }else{
+                    k__week = thisWeeksMoney
+                    WeekP = 1000
+                    
+                    
+                }
+                pushM()
+                pushY()
+            }
+        }
+        print("リロードデータ！")
     }
+    
     
     //===============@IBAction====週・切り替え=========↓
     @IBAction func pushM(){
         if ch1 == false{
             
-        let str = "\(k__week)"
+            let str = "\(k__week)" + "円        "  +  "\(WeekP)"  + "%"
             
-        switch_month.setTitle("前週比", for: .normal)
-        week.text = str
-            
+            switch_month.setTitle("前週比", for: .normal)
+            week.text = str
             ch1 = true
-            
         }else{
             
             switch_month.setTitle("今週の出費", for: .normal)
@@ -166,13 +212,14 @@ class mainViewController: UIViewController, UITableViewDataSource {
             ch1 = false
         }
     }
+    
     //==========@IBAction====月・切り替え=====↓
     @IBAction func pushY(){
         if ch2 == false{
             
-        let str2 = "\(k__month)"
-        switch_years.setTitle("前月比", for: .normal)
-        month.text = str2
+            let str2 = "\(k__month)" + "円        "  +  "\(MonthP)"  + "%"
+            switch_years.setTitle("前月比", for: .normal)
+            month.text = str2
             
             ch2 = true
         }else{
@@ -182,30 +229,16 @@ class mainViewController: UIViewController, UITableViewDataSource {
             
             ch2 = false
         }
-    
-    }
-    //_____________________tableView_________↓
-   
-    
-    override func awakeFromNib() {
-      super.awakeFromNib()
-
-      // RealmのTodoリストを取得し，更新を監視
-      realm = try! Realm()
-      mainItem = realm.objects(MainItem.self)
-      token = mainItem.observe { [weak self] _ in
-        self?.reload()
-      }
-    }
-
-    func reload() {
-      tableView.reloadData()
+        //   print("kdは",allData)
+        
+        tableView.reloadData()
+        print("リロードデータ！")
+        
     }
 }
 
 //-----------extention-----------Date/Calendar!-------------↓
 extension Date {
-    
     //・・・・・・・・・TIMEZONE->localeにする・・・・・・・・↓
     var calendar: Calendar {
         var calendar = Calendar(identifier: .gregorian)
@@ -218,15 +251,36 @@ extension Date {
 extension Calendar {
     
     //==================月の判定用設定-------------------↓
-    func isDate(_ date1:Date, inSameMonthAs date2:Date) -> Bool {
+    func isDate2(_ date1:Date, inSameMonthAs date2:Date) -> Bool {
         return isDate(date1, equalTo: date2, toGranularity: .month)
     }
     
     //===================週の判定用設定-------------------↓
-    func isDate(_ date1:Date, inSameWeekAs date2:Date) -> Bool {
+    func isDate2(_ date1:Date, inSameWeekAs date2:Date) -> Bool {
         return isDate(date1, equalTo: date2, toGranularity: .weekOfYear)
+    }
+    
+    func isOneMonth(_ date1:Date, inSameMonthAs date2:Date) -> Bool {
+        //        return isDate(date1, equalTo: date2, toGranularity: .month)
+        let calender = Calendar(identifier: .gregorian)
+        let components = calender.dateComponents([.month], from: date1, to: date2).month
+        if components == 1 {
+            return true
+        } else {
+            return false
+        }
+    }
+    func isOneweek(_ date1:Date, inSameWeekAs date2:Date) -> Bool {
+        //        return isDate(date1, equalTo: date2, toGranularity: .month)
+        let calender = Calendar(identifier: .gregorian)
+        let components = calender.dateComponents([.weekOfYear], from: date1, to: date2).weekOfYear
+        if components == 1 {
+            return true
+        } else {
+            return false
+        }
     }
 }
 //=====================charts-------^^
-   
+
 
