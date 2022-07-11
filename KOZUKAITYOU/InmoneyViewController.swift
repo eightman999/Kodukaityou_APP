@@ -21,13 +21,9 @@ class InmoneyViewController: UIViewController {
     var saihu: Int = 0
     
     //-------Dictonary呼び出し-------↓
-    var kd: [Dictionary<String, Any>] = []
+ weak var mVC = mainViewController()
     let saveData = UserDefaults.standard
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
+    //-------------@IBAction PUSH_SAVE_BTN---------------
     @IBAction func PUSHSAVE(){
         //-------入力確認・警告----------------↓
         if Tuki.text?.isEmpty == true {
@@ -74,31 +70,32 @@ class InmoneyViewController: UIViewController {
         print(date!)
         
         guard let formatString = DateFormatter.dateFormat(fromTemplate: "MMMdd", options: 0, locale: Locale.current) else { fatalError() }
+        print(formatString)
         
-        //print(formatString)
-        
+        //=======dateFomatter===========↓
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = formatString
-        
-        dateFormatter.string(from: date!)
         
         //-------------計算---------------↓
         var bag: Int = 0
         
-        for data in kd {
+        for data in mVC!.kd {
             bag = data["saihu"] as! Int
         }
+        
         saihu = bag + Int(inmoney.text!)!
+       
         //-----------登録処理！-----------↓
-        let Datedic: [String: Any] = ["saihu":saihu,
+        let Datedic: [String: Any] = ["saihu": String(saihu),
                                       "name": "入金",
                                       "kosuu": "",
                                       "kingaku": inmoney.text!,
-                                       //"day": dateFormatter.string(from: date!),
+                                      "TIME": date!,
                                       "himoku": "",
-                                      "goukei": inmoney.text!]
-        kd.append(Datedic)
-        saveData.set(kd, forKey: "WORD")
+                                      "Check": 2
+                                    ]
+        mVC?.kd.append(Datedic)
+        saveData.set(mVC?.kd, forKey: "WORD")
         
         //------------入金報告！----------↓
         
@@ -122,6 +119,7 @@ class InmoneyViewController: UIViewController {
         present(alert, animated:  true, completion: {
             self.Tuki.text = ""
             self.Niti.text = ""
+            self.inmoney.text = ""
             self.view.endEditing(true)
         })
     }

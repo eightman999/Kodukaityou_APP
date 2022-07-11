@@ -10,7 +10,7 @@ import UIKit
 
 class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate{
 
-    weak var mVC = mainViewController()
+  
     
     @IBOutlet var pickerView: UIPickerView!    
     @IBOutlet var name: UITextField!
@@ -30,9 +30,10 @@ class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
     var namebox: String = "0"
     var himoku: String = "A費"
     var saihu: Int = 0
-    var kd: [Dictionary<String, Any>] = []
-    //---PickerView----設定-----↓
+    weak var mVC = mainViewController()
+    
     let saveData = UserDefaults.standard
+    //---PickerView----設定-----↓
      let dataList = ["A費",
                      "B費",
                      "C費",
@@ -48,7 +49,7 @@ class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
     override func viewDidLoad() {
         super.viewDidLoad()
         if saveData.array(forKey: "WORD") != nil {
-            kd = saveData.array(forKey: "WORD") as! [Dictionary<String,Any>]
+            mVC?.kd = saveData.array(forKey: "WORD") as! [Dictionary<String,Any>]
         }
         pickerView.delegate = self
         pickerView.dataSource = self
@@ -144,9 +145,10 @@ class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
             "day": dateFormatter.string(from: date!),
             "TIME": date as Any,
             "himoku": himoku,
-            "goukei": goukeib]
-        kd.append(Datedic)
-        saveData.set(kd, forKey: "WORD")
+            "goukei": goukeib,
+            "Check": 1]
+        mVC?.kd.append(Datedic)
+        saveData.set(mVC?.kd, forKey: "WORD")
         let alert = UIAlertController(
             title: "登録しましたよ！！",
             
@@ -170,8 +172,9 @@ class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
             self.Niti.text = ""
             self.view.endEditing(true)
         })
+        print("セーブしたよ" , mVC?.kd)
       
-        mVC?.tableView.reloadData()
+   
         
     }
     // UIPickerViewの列の数

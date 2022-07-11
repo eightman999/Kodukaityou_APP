@@ -1,4 +1,4 @@
-//
+//view
 //  mainViewController.swift
 //  KOZUKAITYOU
 //
@@ -9,13 +9,16 @@
 import UIKit
 
 class mainViewController: UIViewController, UITableViewDataSource {
+   
+    
     //----------@IBOutlet-----------
+   
     @IBOutlet var week: UILabel!
     @IBOutlet var month: UILabel!
     @IBOutlet var switch_month: UIButton!
     @IBOutlet var switch_years: UIButton!
     @IBOutlet var tableView: UITableView!
-    
+//    weak var sbVC = SavebudgetViewController()
     var kd: [Dictionary<String, Any>] = []
     let saveData = UserDefaults.standard
     var k__week: Int = 0//前週比
@@ -30,6 +33,7 @@ class mainViewController: UIViewController, UITableViewDataSource {
     var First_time:Int = 0
     var check: Date = Date()
 //=============================初回チェック用============↓
+    
     func getDateBeforeOrAfterSomeWeek(week:Double) -> Date {
         
         let now = Date()
@@ -44,9 +48,17 @@ class mainViewController: UIViewController, UITableViewDataSource {
         return resultDate
         
     }
-//======================週の出費/月の出費/初回チェック/設定===========↓
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    
+    //========================viewWillAppear====================↓
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        super.viewWillAppear(animated)
+        //======================週の出費/月の出費/初回チェック/設定===========↓
+        
+        
+        thisMonthMoney = 0
+        thisWeeksMoney = 0
         
         //---------------設定-----------------------↓
         tableView.dataSource = self
@@ -54,65 +66,80 @@ class mainViewController: UIViewController, UITableViewDataSource {
             kd = saveData.array(forKey: "WORD") as! [Dictionary<String,Any>]
             kd.reverse()
         }
+        
         tableView.reloadData()
+        
+        
         //-----------------month---------------------↓
         for data in kd {
             let time = data["TIME"] as! Date
+            let check = Int(data["Check"] as! String)
             
-            
-            if Calendar.current.isDate(time, inSameMonthAs: Date()){
-                // お金の取得
-                let money = Int((data["kingaku"] as! String).prefix((data["kingaku"] as! String).count - 1))
-                thisMonthMoney += money!
+            if check == 1{
+                if Calendar.current.isDate(time, inSameMonthAs: Date()){
+                    // お金の取得
+                    let money = Int((data["kingaku"] as! String).prefix((data["kingaku"] as! String).count - 1))
+                    thisMonthMoney += money!
                 
+                }
+            }else{
+                return
             }
         }
+        
         //----------------------Week-----------------↓
         for data2 in kd {
             let  time2 = data2["TIME"] as! Date
-            if Calendar.current.isDate(time2, inSameWeekAs: Date()){
-                //お金の取得2
-                let money = Int((data2["kingaku"] as! String).prefix((data2["kingaku"] as! String).count - 1))
-                thisWeeksMoney += money!
+            let check2 = Int(data2["Check"] as! String)
+            if check2 == 1{
+                if Calendar.current.isDate(time2, inSameWeekAs: Date()){
+                    //お金の取得2
+                    let money = Int((data2["kingaku"] as! String).prefix((data2["kingaku"] as!      String).count - 1))
+                    thisWeeksMoney += money!
                 
+                }
+            }else{
+                return
             }
-       
+            
         }
         //------------------Firsttime?--------------------------↓
-//        for data3 in kd {
-//            //let Datedic: [String: Any] = ["First_time?":First_time]
-//            First_time = data3["First_time?"] as! Int
-//        }
-//        
-//        print(First_time)
-//        
-//        
-//        if First_time == nil{
-//           check = (getDateBeforeOrAfterSomeWeek(week: -200)) // 200週間前
-//            let Datedic: [String: Any] = ["SAVE-DAY":check]
-//            First_time + 100
-//            let Datedic: [String: Any] = ["First_time?":First_time]
+//        let Datedics: [String: Any] = ["First_time?":First_time]
+//                for data3 in sbVC!.budget {
 //
-//        }
+//                    First_time = data3["First_time?"] as! Int
+//                }
+//
+//                print(First_time)
+//
+//
+//                if First_time == nil{
+//                   check = (getDateBeforeOrAfterSomeWeek(week: -200)) // 200週間前
+//                    let Datedics: [String: Any] = ["SAVE-DAY":check]
+//                    First_time + 100
+//                    let Datedics: [String: Any] = ["First_time?":First_time]
+//
+//                }
         
         //-----------テキスト設定-------------↓
-        month.text = "\(thisMonthMoney)"
-        week.text = "\(thisWeeksMoney)"
+        month.text = "\(thisMonthMoney)"  + "円"
+        week.text = "\(thisWeeksMoney)" + "円"
         
         // Do any additional setup after loading the view.
         
         //-------K'odukaityou-D'ata中身確認-------------↓
         print("kdは",kd)
-    }
- //========================viewWillAppear====================↓
-    override func viewWillAppear(_ animated: Bool) {
-        
-        super.viewWillAppear(animated)
-        
-        tableView.reloadData()
-        print("リロードデータ！")
         
     }
+   
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+       
+        
+    }
+
  
     //===============@IBAction====週・切り替え=========↓
     @IBAction func pushM(){
