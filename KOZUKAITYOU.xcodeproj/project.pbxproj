@@ -53,18 +53,19 @@
 		C173822923B33F6D0047E081 /* azuki.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C16AC2692376DD1E0035F03C /* azuki.ttf */; };
 		C187C98E23404C5500A10733 /* メモアイコン.png in Resources */ = {isa = PBXBuildFile; fileRef = C187C98D23404C5500A10733 /* メモアイコン.png */; };
 		C187C99023404C8700A10733 /* gia.png in Resources */ = {isa = PBXBuildFile; fileRef = C187C98F23404C8700A10733 /* gia.png */; };
-		C187C99423404E8000A10733 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C187C99323404E8000A10733 /* Realm.framework */; };
-		C187C99623404E8400A10733 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C187C99523404E8400A10733 /* RealmSwift.framework */; };
 		C187C99823406D7E00A10733 /* MainItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C187C99723406D7E00A10733 /* MainItem.swift */; };
-		C187C99C23406FB400A10733 /* Pods_KOZUKAITYOU.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C187C99B23406FB400A10733 /* Pods_KOZUKAITYOU.framework */; };
 		C1D364C924234EAE006EAD43 /* ListTableViewCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1D364C824234EAE006EAD43 /* ListTableViewCell2.xib */; };
 		C1D364CD24239A35006EAD43 /* AyearViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D364CC24239A35006EAD43 /* AyearViewController.swift */; };
 		C1D364CF24239A47006EAD43 /* ByearViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D364CE24239A47006EAD43 /* ByearViewController.swift */; };
 		C1F88A4F251EC95F00533C9A /* sunlight.png in Resources */ = {isa = PBXBuildFile; fileRef = C1F88A4E251EC95F00533C9A /* sunlight.png */; };
 		C1F88A57251ED3C900533C9A /* SE.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1F88A56251ED3C900533C9A /* SE.storyboard */; };
 		C1FED9CA287BC72000C73403 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1FED9C9287BC72000C73403 /* LaunchScreen.storyboard */; };
-		C1FED9CC287BC97300C73403 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1FED9CB287BC97300C73403 /* XCTest.framework */; };
-		C1FED9CD287BCA2B00C73403 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C187C99123404E7C00A10733 /* Charts.framework */; };
+		C1FED9CC287BC97300C73403 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1FED9CB287BC97300C73403 /* XCTest.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		C1FED9DB287BF1F800C73403 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1FED9DA287BF1F800C73403 /* Charts.framework */; };
+		C1FED9DD287BF20600C73403 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1FED9DC287BF20600C73403 /* Realm.framework */; };
+		C1FED9DF287BF20600C73403 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1FED9DE287BF20600C73403 /* RealmSwift.framework */; };
+		C1FED9E1287BF20D00C73403 /* Pods_KOZUKAITYOU.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1FED9E0287BF20D00C73403 /* Pods_KOZUKAITYOU.framework */; };
+		C1FED9E4287BF2B200C73403 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1FED9CB287BC97300C73403 /* XCTest.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -156,6 +157,14 @@
 		C1F88A56251ED3C900533C9A /* SE.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SE.storyboard; sourceTree = "<group>"; };
 		C1FED9C9287BC72000C73403 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C1FED9CB287BC97300C73403 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		C1FED9D0287BEF9200C73403 /* Realm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Realm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1FED9D2287BEF9F00C73403 /* RealmSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1FED9D4287BEFAA00C73403 /* Pods_KOZUKAITYOU.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_KOZUKAITYOU.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1FED9DA287BF1F800C73403 /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Charts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1FED9DC287BF20600C73403 /* Realm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Realm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1FED9DE287BF20600C73403 /* RealmSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1FED9E0287BF20D00C73403 /* Pods_KOZUKAITYOU.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_KOZUKAITYOU.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1FED9E2287BF22700C73403 /* libdyld.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libdyld.tbd; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/lib/system/libdyld.tbd; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,10 +172,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C187C99C23406FB400A10733 /* Pods_KOZUKAITYOU.framework in Frameworks */,
-				C1FED9CD287BCA2B00C73403 /* Charts.framework in Frameworks */,
-				C187C99623404E8400A10733 /* RealmSwift.framework in Frameworks */,
-				C187C99423404E8000A10733 /* Realm.framework in Frameworks */,
+				C1FED9E1287BF20D00C73403 /* Pods_KOZUKAITYOU.framework in Frameworks */,
+				C1FED9DD287BF20600C73403 /* Realm.framework in Frameworks */,
+				C1FED9DF287BF20600C73403 /* RealmSwift.framework in Frameworks */,
+				C1FED9DB287BF1F800C73403 /* Charts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,6 +191,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1FED9E4287BF2B200C73403 /* XCTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +285,14 @@
 		674B1ECE1F583B495D705114 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C1FED9E2287BF22700C73403 /* libdyld.tbd */,
+				C1FED9E0287BF20D00C73403 /* Pods_KOZUKAITYOU.framework */,
+				C1FED9DC287BF20600C73403 /* Realm.framework */,
+				C1FED9DE287BF20600C73403 /* RealmSwift.framework */,
+				C1FED9DA287BF1F800C73403 /* Charts.framework */,
+				C1FED9D4287BEFAA00C73403 /* Pods_KOZUKAITYOU.framework */,
+				C1FED9D2287BEF9F00C73403 /* RealmSwift.framework */,
+				C1FED9D0287BEF9200C73403 /* Realm.framework */,
 				C1FED9CB287BC97300C73403 /* XCTest.framework */,
 				AFA675DD237A47C300985F7B /* GoogleUtilities.framework */,
 				AFA675DA237A47BE00985F7B /* GoogleDataTransport.framework */,
@@ -351,6 +369,7 @@
 				4E0A7DF022EA812600AD0ECD /* Sources */,
 				4E0A7DF122EA812600AD0ECD /* Frameworks */,
 				4E0A7DF222EA812600AD0ECD /* Resources */,
+				C1FED9D9287BF0A200C73403 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -537,12 +556,12 @@
 				AF262464230E655700423B58 /* カレンダーのフリーアイコン19.png in Resources */,
 				C187C99023404C8700A10733 /* gia.png in Resources */,
 				AFA675E1237A4F1B00985F7B /* k23.png in Resources */,
+				C1F88A57251ED3C900533C9A /* SE.storyboard in Resources */,
 				4EBA8EB022EA82F200E85CC3 /* K1.png in Resources */,
 				AF82080E23837E030091C41B /* ararra.png in Resources */,
 				4EBA8EB422EA8D8900E85CC3 /* gurahu.jpeg in Resources */,
 				AF82081023837E210091C41B /* icon.png in Resources */,
 				4E0A7DEB22EA812600AD0ECD /* Assets.xcassets in Resources */,
-				C1F88A57251ED3C900533C9A /* SE.storyboard in Resources */,
 				AFF1E9BD237BA5D900124341 /* 旗.png in Resources */,
 				C1F88A4F251EC95F00533C9A /* sunlight.png in Resources */,
 				C16AC26F2376E2BA0035F03C /* ListTableViewCell.xib in Resources */,
@@ -582,6 +601,23 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KOZUKAITYOU/Pods-KOZUKAITYOU-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		C1FED9D9287BF0A200C73403 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
 		};
 		EE8A42E3877AC58B8CB3A143 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -862,6 +898,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = KOZUKAITYOUTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -882,6 +919,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = KOZUKAITYOUTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
