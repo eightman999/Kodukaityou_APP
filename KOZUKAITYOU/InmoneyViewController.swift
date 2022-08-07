@@ -74,11 +74,13 @@ class InmoneyViewController: UIViewController {
         print(date!)
         
         guard let formatString = DateFormatter.dateFormat(fromTemplate: "MMMdd", options: 0, locale: Locale.current) else { fatalError() }
-        print(formatString)
         
-        //=======dateFomatter===========↓
+        //print(formatString)
+        
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = formatString
+        
+        dateFormatter.string(from: date!)
         
         //-------------計算---------------↓
         var bag: Int = 0
@@ -86,19 +88,17 @@ class InmoneyViewController: UIViewController {
         for data in kd {
             bag = data["saihu"] as! Int
         }
-        
         saihu = bag + Int(inmoney.text!)!
-       
         //-----------登録処理！-----------↓
-        let Datedic: [String: Any] = ["saihu": String(saihu),
+        let Datedic: [String: Any] = ["saihu":saihu,
                                       "name": "入金",
                                       "kosuu": "",
                                       "kingaku": inmoney.text!,
-                                      "TIME": date!,
+                                       //"day": dateFormatter.string(from: date!),
                                       "himoku": "",
-                                    ]
+                                      "goukei": inmoney.text!]
         kd.append(Datedic)
-        saveData.set(kd, forKey: "WORD")
+        saveData.set(kd, forKey: "MONEY")
         
         //------------入金報告！----------↓
         

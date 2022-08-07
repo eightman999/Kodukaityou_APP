@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		182C257923101140002625C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 182C25782310113F002625C4 /* Main.storyboard */; };
+		0EF07A88F42463657C046C95 /* Pods_KOZUKAITYOU_KOZUKAITYOUUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A8B85A91048AA606CA3EF9B /* Pods_KOZUKAITYOU_KOZUKAITYOUUITests.framework */; };
+		3CDE17B0F31C6A6199946AF1 /* Pods_KOZUKAITYOU.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8318B6A6B11D01A7D554C0C1 /* Pods_KOZUKAITYOU.framework */; };
 		4E0A7DE122EA812400AD0ECD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0A7DE022EA812400AD0ECD /* AppDelegate.swift */; };
 		4E0A7DE322EA812400AD0ECD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0A7DE222EA812400AD0ECD /* ViewController.swift */; };
+		4E0A7DE622EA812400AD0ECD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E0A7DE422EA812400AD0ECD /* Main.storyboard */; };
 		4E0A7DE922EA812400AD0ECD /* KOZUKAITYOU.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4E0A7DE722EA812400AD0ECD /* KOZUKAITYOU.xcdatamodeld */; };
 		4E0A7DEB22EA812600AD0ECD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E0A7DEA22EA812600AD0ECD /* Assets.xcassets */; };
 		4E0A7DEE22EA812600AD0ECD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E0A7DEC22EA812600AD0ECD /* LaunchScreen.storyboard */; };
@@ -23,21 +25,21 @@
 		4EBA8EC822EAA0A100E85CC3 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBA8EC722EAA0A100E85CC3 /* AddViewController.swift */; };
 		4ED54AD922EBDB3600C2293B /* ダウンロード.png in Resources */ = {isa = PBXBuildFile; fileRef = 4ED54AD822EBDB3600C2293B /* ダウンロード.png */; };
 		4EDB91C322EAC837008FD94A /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EDB91C222EAC837008FD94A /* ListTableViewCell.swift */; };
-		4EDB91D322EAE0E3008FD94A /* edit.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EDB91CF22EAE0E3008FD94A /* edit.png */; };
-		7F841AD043D15432B4CB659A /* Pods_KOZUKAITYOUTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF3A473051493BE44301F997 /* Pods_KOZUKAITYOUTests.framework */; };
-		85112F86F93E25E61E3FD68E /* Pods_KOZUKAITYOUUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDFD7264481B8CE6D5E18AA4 /* Pods_KOZUKAITYOUUITests.framework */; };
+		70EB7D7FC1976F8D0DE2D811 /* Pods_KOZUKAITYOUTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FB11C1EF87FAC5A8B16F242 /* Pods_KOZUKAITYOUTests.framework */; };
 		AF1E6A21230F6B3700629476 /* InmoneyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1E6A20230F6B3700629476 /* InmoneyViewController.swift */; };
 		AF1E6A23230F79AE00629476 /* SavebudgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1E6A22230F79AE00629476 /* SavebudgetViewController.swift */; };
-		AF20CDE12334A8D500C0A727 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF20CDE02334A8D500C0A727 /* LaunchViewController.swift */; };
-		AF262452230E340500423B58 /* azuki.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF262451230E33F300423B58 /* azuki.ttf */; };
-		AF262453230E34C900423B58 /* azuki.ttf in Sources */ = {isa = PBXBuildFile; fileRef = AF262451230E33F300423B58 /* azuki.ttf */; };
-		AF26245B230E5E5400423B58 /* ゆず ポップ A [M] Extra Light.ttf in Sources */ = {isa = PBXBuildFile; fileRef = AF26245A230E5E4500423B58 /* ゆず ポップ A [M] Extra Light.ttf */; };
-		AF26245C230E5E5C00423B58 /* ゆず ポップ A [M] Extra Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF26245A230E5E4500423B58 /* ゆず ポップ A [M] Extra Light.ttf */; };
 		AF26245E230E644A00423B58 /* 麻袋型のドル袋の無料アイコン（ユーロ）.png in Resources */ = {isa = PBXBuildFile; fileRef = AF26245D230E644900423B58 /* 麻袋型のドル袋の無料アイコン（ユーロ）.png */; };
 		AF262464230E655700423B58 /* カレンダーのフリーアイコン19.png in Resources */ = {isa = PBXBuildFile; fileRef = AF262463230E655700423B58 /* カレンダーのフリーアイコン19.png */; };
-		AF2C413623123F91007735F9 /* ギアアイコン.png in Resources */ = {isa = PBXBuildFile; fileRef = AF2C413523123F91007735F9 /* ギアアイコン.png */; };
-		AF2C41382312400C007735F9 /* メモアイコン.png in Resources */ = {isa = PBXBuildFile; fileRef = AF2C41372312400C007735F9 /* メモアイコン.png */; };
-		C63B7F8F3E057B855EEC8BA6 /* Pods_KOZUKAITYOU.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA77B9A02C7C9A566515F41F /* Pods_KOZUKAITYOU.framework */; };
+		C187C98C23404B4100A10733 /* ll.png in Resources */ = {isa = PBXBuildFile; fileRef = C187C98B23404B4100A10733 /* ll.png */; };
+		C187C98E23404C5500A10733 /* メモアイコン.png in Resources */ = {isa = PBXBuildFile; fileRef = C187C98D23404C5500A10733 /* メモアイコン.png */; };
+		C187C99023404C8700A10733 /* gia.png in Resources */ = {isa = PBXBuildFile; fileRef = C187C98F23404C8700A10733 /* gia.png */; };
+		C187C99223404E7C00A10733 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C187C99123404E7C00A10733 /* Charts.framework */; };
+		C187C99423404E8000A10733 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C187C99323404E8000A10733 /* Realm.framework */; };
+		C187C99623404E8400A10733 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C187C99523404E8400A10733 /* RealmSwift.framework */; };
+		C187C99823406D7E00A10733 /* MainItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C187C99723406D7E00A10733 /* MainItem.swift */; };
+		C187C99A23406FAD00A10733 /* Pods_KOZUKAITYOUTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C187C99923406FAD00A10733 /* Pods_KOZUKAITYOUTests.framework */; };
+		C187C99C23406FB400A10733 /* Pods_KOZUKAITYOU.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C187C99B23406FB400A10733 /* Pods_KOZUKAITYOU.framework */; };
+		C187C99E23406FB900A10733 /* Pods_KOZUKAITYOU_KOZUKAITYOUUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C187C99D23406FB900A10733 /* Pods_KOZUKAITYOU_KOZUKAITYOUUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,10 +60,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		182C25782310113F002625C4 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		37EED341260D236EC4E3C59A /* Pods-KOZUKAITYOU.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KOZUKAITYOU.release.xcconfig"; path = "Target Support Files/Pods-KOZUKAITYOU/Pods-KOZUKAITYOU.release.xcconfig"; sourceTree = "<group>"; };
+		4C8AEE514B9DB45B8D4DD9AE /* Pods-KOZUKAITYOU.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KOZUKAITYOU.debug.xcconfig"; path = "Target Support Files/Pods-KOZUKAITYOU/Pods-KOZUKAITYOU.debug.xcconfig"; sourceTree = "<group>"; };
 		4E0A7DDD22EA812400AD0ECD /* KOZUKAITYOU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KOZUKAITYOU.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E0A7DE022EA812400AD0ECD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4E0A7DE222EA812400AD0ECD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4E0A7DE522EA812400AD0ECD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4E0A7DE822EA812400AD0ECD /* KOZUKAITYOU.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KOZUKAITYOU.xcdatamodel; sourceTree = "<group>"; };
 		4E0A7DEA22EA812600AD0ECD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4E0A7DED22EA812600AD0ECD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -78,28 +82,32 @@
 		4EBA8EBB22EA8F8100E85CC3 /* home3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = home3.png; path = ../home3.png; sourceTree = "<group>"; };
 		4EBA8EC322EA936500E85CC3 /* mainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainViewController.swift; sourceTree = "<group>"; };
 		4EBA8EC722EAA0A100E85CC3 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
-		4ED54AD822EBDB3600C2293B /* ダウンロード.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ダウンロード.png"; sourceTree = "<group>"; };
+		4ED54AD822EBDB3600C2293B /* ダウンロード.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ダウンロード.png"; path = "../ダウンロード.png"; sourceTree = "<group>"; };
 		4EDB91C222EAC837008FD94A /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
-		4EDB91CF22EAE0E3008FD94A /* edit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = edit.png; sourceTree = "<group>"; };
-		9A00AEB1E518B0729F407599 /* Pods-KOZUKAITYOUUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KOZUKAITYOUUITests.release.xcconfig"; path = "Target Support Files/Pods-KOZUKAITYOUUITests/Pods-KOZUKAITYOUUITests.release.xcconfig"; sourceTree = "<group>"; };
-		AA77B9A02C7C9A566515F41F /* Pods_KOZUKAITYOU.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KOZUKAITYOU.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5785A8B3D96C5DBFBDB9F766 /* Pods-KOZUKAITYOUTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KOZUKAITYOUTests.debug.xcconfig"; path = "Target Support Files/Pods-KOZUKAITYOUTests/Pods-KOZUKAITYOUTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5A8B85A91048AA606CA3EF9B /* Pods_KOZUKAITYOU_KOZUKAITYOUUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KOZUKAITYOU_KOZUKAITYOUUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6FB11C1EF87FAC5A8B16F242 /* Pods_KOZUKAITYOUTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KOZUKAITYOUTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8318B6A6B11D01A7D554C0C1 /* Pods_KOZUKAITYOU.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KOZUKAITYOU.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9EA3D147364B16ED95D6AC21 /* Pods-KOZUKAITYOUTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KOZUKAITYOUTests.release.xcconfig"; path = "Target Support Files/Pods-KOZUKAITYOUTests/Pods-KOZUKAITYOUTests.release.xcconfig"; sourceTree = "<group>"; };
 		AF1E6A20230F6B3700629476 /* InmoneyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InmoneyViewController.swift; sourceTree = "<group>"; };
 		AF1E6A22230F79AE00629476 /* SavebudgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavebudgetViewController.swift; sourceTree = "<group>"; };
-		AF20CDE02334A8D500C0A727 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
-		AF262451230E33F300423B58 /* azuki.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = azuki.ttf; path = ../azuki.ttf; sourceTree = "<group>"; };
-		AF26245A230E5E4500423B58 /* ゆず ポップ A [M] Extra Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ゆず ポップ A [M] Extra Light.ttf"; sourceTree = "<group>"; };
 		AF26245D230E644900423B58 /* 麻袋型のドル袋の無料アイコン（ユーロ）.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "麻袋型のドル袋の無料アイコン（ユーロ）.png"; path = "../麻袋型のドル袋の無料アイコン（ユーロ）.png"; sourceTree = "<group>"; };
 		AF262463230E655700423B58 /* カレンダーのフリーアイコン19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "カレンダーのフリーアイコン19.png"; path = "../カレンダーのフリーアイコン19.png"; sourceTree = "<group>"; };
-		AF2C413523123F91007735F9 /* ギアアイコン.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ギアアイコン.png"; sourceTree = "<group>"; };
-		AF2C41372312400C007735F9 /* メモアイコン.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "メモアイコン.png"; sourceTree = "<group>"; };
 		AFD79AA1230CE1DD002FB2E7 /* KOZUKAITYOU.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KOZUKAITYOU.entitlements; sourceTree = "<group>"; };
-		C5B7510E62C808315AA94954 /* Pods-KOZUKAITYOU.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KOZUKAITYOU.debug.xcconfig"; path = "Target Support Files/Pods-KOZUKAITYOU/Pods-KOZUKAITYOU.debug.xcconfig"; sourceTree = "<group>"; };
-		CAFBF11E1A432D8E9683E862 /* Pods-KOZUKAITYOU.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KOZUKAITYOU.release.xcconfig"; path = "Target Support Files/Pods-KOZUKAITYOU/Pods-KOZUKAITYOU.release.xcconfig"; sourceTree = "<group>"; };
-		D1E6DC9B46ED575612806C73 /* Pods-KOZUKAITYOUTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KOZUKAITYOUTests.debug.xcconfig"; path = "Target Support Files/Pods-KOZUKAITYOUTests/Pods-KOZUKAITYOUTests.debug.xcconfig"; sourceTree = "<group>"; };
-		DC4C8F4DE3CDB2F067F3B914 /* Pods-KOZUKAITYOUTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KOZUKAITYOUTests.release.xcconfig"; path = "Target Support Files/Pods-KOZUKAITYOUTests/Pods-KOZUKAITYOUTests.release.xcconfig"; sourceTree = "<group>"; };
-		DF3A473051493BE44301F997 /* Pods_KOZUKAITYOUTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KOZUKAITYOUTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E28293F0B7531D0E017DF80C /* Pods-KOZUKAITYOUUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KOZUKAITYOUUITests.debug.xcconfig"; path = "Target Support Files/Pods-KOZUKAITYOUUITests/Pods-KOZUKAITYOUUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		EDFD7264481B8CE6D5E18AA4 /* Pods_KOZUKAITYOUUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KOZUKAITYOUUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA14EF35838145E7495FDD2E /* Pods-KOZUKAITYOU-KOZUKAITYOUUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KOZUKAITYOU-KOZUKAITYOUUITests.debug.xcconfig"; path = "Target Support Files/Pods-KOZUKAITYOU-KOZUKAITYOUUITests/Pods-KOZUKAITYOU-KOZUKAITYOUUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		C187C9852340314500A10733 /* ゆず ポップ A [M] Extra Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ゆず ポップ A [M] Extra Light.ttf"; sourceTree = "<group>"; };
+		C187C9862340315300A10733 /* azuki.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = azuki.ttf; sourceTree = "<group>"; };
+		C187C98B23404B4100A10733 /* ll.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ll.png; sourceTree = "<group>"; };
+		C187C98D23404C5500A10733 /* メモアイコン.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "メモアイコン.png"; sourceTree = "<group>"; };
+		C187C98F23404C8700A10733 /* gia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gia.png; sourceTree = "<group>"; };
+		C187C99123404E7C00A10733 /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Charts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C187C99323404E8000A10733 /* Realm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Realm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C187C99523404E8400A10733 /* RealmSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C187C99723406D7E00A10733 /* MainItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainItem.swift; sourceTree = "<group>"; };
+		C187C99923406FAD00A10733 /* Pods_KOZUKAITYOUTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_KOZUKAITYOUTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C187C99B23406FB400A10733 /* Pods_KOZUKAITYOU.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_KOZUKAITYOU.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C187C99D23406FB900A10733 /* Pods_KOZUKAITYOU_KOZUKAITYOUUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_KOZUKAITYOU_KOZUKAITYOUUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7387719B1A0BAD5D59597D1 /* Pods-KOZUKAITYOU-KOZUKAITYOUUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KOZUKAITYOU-KOZUKAITYOUUITests.release.xcconfig"; path = "Target Support Files/Pods-KOZUKAITYOU-KOZUKAITYOUUITests/Pods-KOZUKAITYOU-KOZUKAITYOUUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +115,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C63B7F8F3E057B855EEC8BA6 /* Pods_KOZUKAITYOU.framework in Frameworks */,
+				C187C99E23406FB900A10733 /* Pods_KOZUKAITYOU_KOZUKAITYOUUITests.framework in Frameworks */,
+				C187C99C23406FB400A10733 /* Pods_KOZUKAITYOU.framework in Frameworks */,
+				C187C99A23406FAD00A10733 /* Pods_KOZUKAITYOUTests.framework in Frameworks */,
+				C187C99623404E8400A10733 /* RealmSwift.framework in Frameworks */,
+				C187C99423404E8000A10733 /* Realm.framework in Frameworks */,
+				C187C99223404E7C00A10733 /* Charts.framework in Frameworks */,
+				3CDE17B0F31C6A6199946AF1 /* Pods_KOZUKAITYOU.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,7 +129,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F841AD043D15432B4CB659A /* Pods_KOZUKAITYOUTests.framework in Frameworks */,
+				70EB7D7FC1976F8D0DE2D811 /* Pods_KOZUKAITYOUTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,31 +137,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85112F86F93E25E61E3FD68E /* Pods_KOZUKAITYOUUITests.framework in Frameworks */,
+				0EF07A88F42463657C046C95 /* Pods_KOZUKAITYOU_KOZUKAITYOUUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0E6D494E6C9FB1F635596F52 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				AA77B9A02C7C9A566515F41F /* Pods_KOZUKAITYOU.framework */,
-				DF3A473051493BE44301F997 /* Pods_KOZUKAITYOUTests.framework */,
-				EDFD7264481B8CE6D5E18AA4 /* Pods_KOZUKAITYOUUITests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		4E0A7DD422EA812400AD0ECD = {
 			isa = PBXGroup;
 			children = (
 				4E0A7DDF22EA812400AD0ECD /* KOZUKAITYOU */,
+				4E0A7DF722EA812600AD0ECD /* KOZUKAITYOUTests */,
 				4E0A7E0222EA812600AD0ECD /* KOZUKAITYOUUITests */,
 				4E0A7DDE22EA812400AD0ECD /* Products */,
-				5E5AAAF061497186963324A6 /* Pods */,
-				0E6D494E6C9FB1F635596F52 /* Frameworks */,
+				7D07C1C8D85B5D1CCC98B7FB /* Pods */,
+				674B1ECE1F583B495D705114 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -167,19 +172,18 @@
 				AFD79AA1230CE1DD002FB2E7 /* KOZUKAITYOU.entitlements */,
 				4E0A7DE022EA812400AD0ECD /* AppDelegate.swift */,
 				4E0A7DE222EA812400AD0ECD /* ViewController.swift */,
-				182C25782310113F002625C4 /* Main.storyboard */,
 				4EDB91C222EAC837008FD94A /* ListTableViewCell.swift */,
 				4EBA8EC722EAA0A100E85CC3 /* AddViewController.swift */,
+				C187C99723406D7E00A10733 /* MainItem.swift */,
 				4EBA8EC322EA936500E85CC3 /* mainViewController.swift */,
-				4E0A7DEA22EA812600AD0ECD /* Assets.xcassets */,
-				4E0A7DEC22EA812600AD0ECD /* LaunchScreen.storyboard */,
-				4ED54AD822EBDB3600C2293B /* ダウンロード.png */,
-				4E0A7DEF22EA812600AD0ECD /* Info.plist */,
-				4E0A7DE722EA812400AD0ECD /* KOZUKAITYOU.xcdatamodeld */,
 				AF1E6A20230F6B3700629476 /* InmoneyViewController.swift */,
 				AF1E6A22230F79AE00629476 /* SavebudgetViewController.swift */,
+				4E0A7DE422EA812400AD0ECD /* Main.storyboard */,
+				4E0A7DEA22EA812600AD0ECD /* Assets.xcassets */,
+				4E0A7DEC22EA812600AD0ECD /* LaunchScreen.storyboard */,
 				AF1E6A24230FB7E000629476 /* New Group */,
-				AF20CDE02334A8D500C0A727 /* LaunchViewController.swift */,
+				4E0A7DEF22EA812600AD0ECD /* Info.plist */,
+				4E0A7DE722EA812400AD0ECD /* KOZUKAITYOU.xcdatamodeld */,
 			);
 			path = KOZUKAITYOU;
 			sourceTree = "<group>";
@@ -202,15 +206,31 @@
 			path = KOZUKAITYOUUITests;
 			sourceTree = "<group>";
 		};
-		5E5AAAF061497186963324A6 /* Pods */ = {
+		674B1ECE1F583B495D705114 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C5B7510E62C808315AA94954 /* Pods-KOZUKAITYOU.debug.xcconfig */,
-				CAFBF11E1A432D8E9683E862 /* Pods-KOZUKAITYOU.release.xcconfig */,
-				D1E6DC9B46ED575612806C73 /* Pods-KOZUKAITYOUTests.debug.xcconfig */,
-				DC4C8F4DE3CDB2F067F3B914 /* Pods-KOZUKAITYOUTests.release.xcconfig */,
-				E28293F0B7531D0E017DF80C /* Pods-KOZUKAITYOUUITests.debug.xcconfig */,
-				9A00AEB1E518B0729F407599 /* Pods-KOZUKAITYOUUITests.release.xcconfig */,
+				C187C99D23406FB900A10733 /* Pods_KOZUKAITYOU_KOZUKAITYOUUITests.framework */,
+				C187C99B23406FB400A10733 /* Pods_KOZUKAITYOU.framework */,
+				C187C99923406FAD00A10733 /* Pods_KOZUKAITYOUTests.framework */,
+				C187C99523404E8400A10733 /* RealmSwift.framework */,
+				C187C99323404E8000A10733 /* Realm.framework */,
+				C187C99123404E7C00A10733 /* Charts.framework */,
+				8318B6A6B11D01A7D554C0C1 /* Pods_KOZUKAITYOU.framework */,
+				5A8B85A91048AA606CA3EF9B /* Pods_KOZUKAITYOU_KOZUKAITYOUUITests.framework */,
+				6FB11C1EF87FAC5A8B16F242 /* Pods_KOZUKAITYOUTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7D07C1C8D85B5D1CCC98B7FB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4C8AEE514B9DB45B8D4DD9AE /* Pods-KOZUKAITYOU.debug.xcconfig */,
+				37EED341260D236EC4E3C59A /* Pods-KOZUKAITYOU.release.xcconfig */,
+				BA14EF35838145E7495FDD2E /* Pods-KOZUKAITYOU-KOZUKAITYOUUITests.debug.xcconfig */,
+				D7387719B1A0BAD5D59597D1 /* Pods-KOZUKAITYOU-KOZUKAITYOUUITests.release.xcconfig */,
+				5785A8B3D96C5DBFBDB9F766 /* Pods-KOZUKAITYOUTests.debug.xcconfig */,
+				9EA3D147364B16ED95D6AC21 /* Pods-KOZUKAITYOUTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -218,16 +238,16 @@
 		AF1E6A24230FB7E000629476 /* New Group */ = {
 			isa = PBXGroup;
 			children = (
-				4E0A7DF722EA812600AD0ECD /* KOZUKAITYOUTests */,
-				AF262451230E33F300423B58 /* azuki.ttf */,
-				4EDB91CF22EAE0E3008FD94A /* edit.png */,
-				AF2C41372312400C007735F9 /* メモアイコン.png */,
-				AF26245A230E5E4500423B58 /* ゆず ポップ A [M] Extra Light.ttf */,
+				4ED54AD822EBDB3600C2293B /* ダウンロード.png */,
 				4EBA8EBB22EA8F8100E85CC3 /* home3.png */,
+				C187C9862340315300A10733 /* azuki.ttf */,
+				C187C98F23404C8700A10733 /* gia.png */,
 				AF26245D230E644900423B58 /* 麻袋型のドル袋の無料アイコン（ユーロ）.png */,
 				4EBA8EB122EA830B00E85CC3 /* icon.png */,
+				C187C98B23404B4100A10733 /* ll.png */,
+				C187C98D23404C5500A10733 /* メモアイコン.png */,
 				AF262463230E655700423B58 /* カレンダーのフリーアイコン19.png */,
-				AF2C413523123F91007735F9 /* ギアアイコン.png */,
+				C187C9852340314500A10733 /* ゆず ポップ A [M] Extra Light.ttf */,
 				4EBA8EB322EA8D8900E85CC3 /* gurahu.jpeg */,
 				4EBA8EAF22EA82F200E85CC3 /* K1.png */,
 			);
@@ -241,11 +261,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4E0A7E0822EA812600AD0ECD /* Build configuration list for PBXNativeTarget "KOZUKAITYOU" */;
 			buildPhases = (
-				3E7647D8E0D71877378E75EE /* [CP] Check Pods Manifest.lock */,
+				F4104ADD6BEDF455204EA972 /* [CP] Check Pods Manifest.lock */,
 				4E0A7DD922EA812400AD0ECD /* Sources */,
 				4E0A7DDA22EA812400AD0ECD /* Frameworks */,
 				4E0A7DDB22EA812400AD0ECD /* Resources */,
-				3FC2B1D248CAA5677E227233 /* [CP] Embed Pods Frameworks */,
+				A9E16B8F7C7385022BC39DF0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -260,7 +280,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4E0A7E0B22EA812600AD0ECD /* Build configuration list for PBXNativeTarget "KOZUKAITYOUTests" */;
 			buildPhases = (
-				CC2AFABA762E68C464E1505D /* [CP] Check Pods Manifest.lock */,
+				31DB2EB808DCF5BFB70736B3 /* [CP] Check Pods Manifest.lock */,
 				4E0A7DF022EA812600AD0ECD /* Sources */,
 				4E0A7DF122EA812600AD0ECD /* Frameworks */,
 				4E0A7DF222EA812600AD0ECD /* Resources */,
@@ -279,10 +299,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4E0A7E0E22EA812600AD0ECD /* Build configuration list for PBXNativeTarget "KOZUKAITYOUUITests" */;
 			buildPhases = (
-				E04EC321E064F869427EDA5D /* [CP] Check Pods Manifest.lock */,
+				E9C7494637FE625F8CD887E5 /* [CP] Check Pods Manifest.lock */,
 				4E0A7DFB22EA812600AD0ECD /* Sources */,
 				4E0A7DFC22EA812600AD0ECD /* Frameworks */,
 				4E0A7DFD22EA812600AD0ECD /* Resources */,
+				1780E7870712A9997C3F9BA3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -353,21 +374,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF2C41382312400C007735F9 /* メモアイコン.png in Resources */,
-				AF26245C230E5E5C00423B58 /* ゆず ポップ A [M] Extra Light.ttf in Resources */,
-				AF262452230E340500423B58 /* azuki.ttf in Resources */,
-				4EDB91D322EAE0E3008FD94A /* edit.png in Resources */,
+				C187C98E23404C5500A10733 /* メモアイコン.png in Resources */,
+				C187C98C23404B4100A10733 /* ll.png in Resources */,
 				AF26245E230E644A00423B58 /* 麻袋型のドル袋の無料アイコン（ユーロ）.png in Resources */,
-				AF2C413623123F91007735F9 /* ギアアイコン.png in Resources */,
 				4E0A7DEE22EA812600AD0ECD /* LaunchScreen.storyboard in Resources */,
 				4EBA8EBC22EA8F8100E85CC3 /* home3.png in Resources */,
 				4ED54AD922EBDB3600C2293B /* ダウンロード.png in Resources */,
-				182C257923101140002625C4 /* Main.storyboard in Resources */,
 				AF262464230E655700423B58 /* カレンダーのフリーアイコン19.png in Resources */,
 				4EBA8EB222EA830B00E85CC3 /* icon.png in Resources */,
+				C187C99023404C8700A10733 /* gia.png in Resources */,
 				4EBA8EB022EA82F200E85CC3 /* K1.png in Resources */,
 				4EBA8EB422EA8D8900E85CC3 /* gurahu.jpeg in Resources */,
 				4E0A7DEB22EA812600AD0ECD /* Assets.xcassets in Resources */,
+				4E0A7DE622EA812400AD0ECD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,46 +407,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3E7647D8E0D71877378E75EE /* [CP] Check Pods Manifest.lock */ = {
+		1780E7870712A9997C3F9BA3 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-KOZUKAITYOU-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		3FC2B1D248CAA5677E227233 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-KOZUKAITYOU/Pods-KOZUKAITYOU-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-KOZUKAITYOU-KOZUKAITYOUUITests/Pods-KOZUKAITYOU-KOZUKAITYOUUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-KOZUKAITYOU/Pods-KOZUKAITYOU-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-KOZUKAITYOU-KOZUKAITYOUUITests/Pods-KOZUKAITYOU-KOZUKAITYOUUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KOZUKAITYOU/Pods-KOZUKAITYOU-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KOZUKAITYOU-KOZUKAITYOUUITests/Pods-KOZUKAITYOU-KOZUKAITYOUUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		CC2AFABA762E68C464E1505D /* [CP] Check Pods Manifest.lock */ = {
+		31DB2EB808DCF5BFB70736B3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -449,7 +446,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E04EC321E064F869427EDA5D /* [CP] Check Pods Manifest.lock */ = {
+		A9E16B8F7C7385022BC39DF0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KOZUKAITYOU/Pods-KOZUKAITYOU-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KOZUKAITYOU/Pods-KOZUKAITYOU-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KOZUKAITYOU/Pods-KOZUKAITYOU-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E9C7494637FE625F8CD887E5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -464,7 +478,29 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-KOZUKAITYOUUITests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-KOZUKAITYOU-KOZUKAITYOUUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F4104ADD6BEDF455204EA972 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KOZUKAITYOU-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -478,15 +514,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF26245B230E5E5400423B58 /* ゆず ポップ A [M] Extra Light.ttf in Sources */,
 				AF1E6A21230F6B3700629476 /* InmoneyViewController.swift in Sources */,
-				AF262453230E34C900423B58 /* azuki.ttf in Sources */,
 				4E0A7DE922EA812400AD0ECD /* KOZUKAITYOU.xcdatamodeld in Sources */,
 				AF1E6A23230F79AE00629476 /* SavebudgetViewController.swift in Sources */,
 				4E0A7DE322EA812400AD0ECD /* ViewController.swift in Sources */,
 				4EBA8EC822EAA0A100E85CC3 /* AddViewController.swift in Sources */,
+				C187C99823406D7E00A10733 /* MainItem.swift in Sources */,
 				4E0A7DE122EA812400AD0ECD /* AppDelegate.swift in Sources */,
-				AF20CDE12334A8D500C0A727 /* LaunchViewController.swift in Sources */,
 				4EBA8EC422EA936500E85CC3 /* mainViewController.swift in Sources */,
 				4EDB91C322EAC837008FD94A /* ListTableViewCell.swift in Sources */,
 			);
@@ -524,6 +558,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		4E0A7DE422EA812400AD0ECD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4E0A7DE522EA812400AD0ECD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		4E0A7DEC22EA812600AD0ECD /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -589,7 +631,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -644,7 +686,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -654,18 +695,18 @@
 		};
 		4E0A7E0922EA812600AD0ECD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C5B7510E62C808315AA94954 /* Pods-KOZUKAITYOU.debug.xcconfig */;
+			baseConfigurationReference = 4C8AEE514B9DB45B8D4DD9AE /* Pods-KOZUKAITYOU.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = KOZUKAITYOU/KOZUKAITYOU.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = KOZUKAITYOU/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = "β0.7.8.09";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Sunlight.library.app.KOZUKAITYOU;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -675,18 +716,18 @@
 		};
 		4E0A7E0A22EA812600AD0ECD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CAFBF11E1A432D8E9683E862 /* Pods-KOZUKAITYOU.release.xcconfig */;
+			baseConfigurationReference = 37EED341260D236EC4E3C59A /* Pods-KOZUKAITYOU.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = KOZUKAITYOU/KOZUKAITYOU.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = KOZUKAITYOU/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = "β0.7.8.09";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Sunlight.library.app.KOZUKAITYOU;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -696,7 +737,7 @@
 		};
 		4E0A7E0C22EA812600AD0ECD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D1E6DC9B46ED575612806C73 /* Pods-KOZUKAITYOUTests.debug.xcconfig */;
+			baseConfigurationReference = 5785A8B3D96C5DBFBDB9F766 /* Pods-KOZUKAITYOUTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -717,7 +758,7 @@
 		};
 		4E0A7E0D22EA812600AD0ECD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DC4C8F4DE3CDB2F067F3B914 /* Pods-KOZUKAITYOUTests.release.xcconfig */;
+			baseConfigurationReference = 9EA3D147364B16ED95D6AC21 /* Pods-KOZUKAITYOUTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -738,7 +779,7 @@
 		};
 		4E0A7E0F22EA812600AD0ECD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E28293F0B7531D0E017DF80C /* Pods-KOZUKAITYOUUITests.debug.xcconfig */;
+			baseConfigurationReference = BA14EF35838145E7495FDD2E /* Pods-KOZUKAITYOU-KOZUKAITYOUUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -758,7 +799,7 @@
 		};
 		4E0A7E1022EA812600AD0ECD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9A00AEB1E518B0729F407599 /* Pods-KOZUKAITYOUUITests.release.xcconfig */;
+			baseConfigurationReference = D7387719B1A0BAD5D59597D1 /* Pods-KOZUKAITYOU-KOZUKAITYOUUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
