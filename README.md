@@ -6,7 +6,7 @@ Kodukaityou (小遣い帳) is an iOS application for managing your budget and ex
 
 - Xcode 15 or later
 - CocoaPods 1.11 or later
-- iOS 15.0 or later (tested on iOS 17)
+- iOS 17.0 or later (tested on iOS 17)
 
 ## Setup
 
@@ -16,10 +16,10 @@ Kodukaityou (小遣い帳) is an iOS application for managing your budget and ex
    sudo gem install cocoapods
    ```
 
-2. Install the dependencies:
+2. Install the dependencies (add `--repo-update` if you see pod errors):
 
    ```bash
-   pod install
+   pod install # or `pod install --repo-update`
    ```
 
 3. Open the generated `KOZUKAITYOU.xcworkspace` in Xcode:
@@ -28,7 +28,7 @@ Kodukaityou (小遣い帳) is an iOS application for managing your budget and ex
    open KOZUKAITYOU.xcworkspace
    ```
 
-4. Select a device running iOS 15 or later and build the project.
+4. Select a device running iOS 17 or later and build the project.
 
 The repository already includes a `GoogleService-Info.plist` file for Firebase configuration. If you wish to use your own Firebase project, replace this file with one generated from the Firebase console.
 
