@@ -10,36 +10,17 @@ import UIKit
 import CoreData
 import Firebase
 import IQKeyboardManager
+import SwiftUI
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-        let display: CGRect = UIScreen.main.bounds
-              // 取得ディスプレイに対応したStoryBoardをrootViewController(最初に表示されるもの)にする。
-//              if display.size.height == 568 {
-//                  // iPhone 4S の場合 (Unit is Point.)
-//                  let storyboard = UIStoryboard(name: "SE", bundle: nil)
-//                  let rootViewController: UIViewController? = storyboard.instantiateInitialViewController()
-//                  window?.rootViewController = rootViewController
-//              }
-//              else if display.size.height == 667 {
-//                  // iPhone 6 の場合
-//                  let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//                  let rootViewController: UIViewController? = storyboard.instantiateInitialViewController()
-//                  window?.rootViewController = rootViewController
-//              }
-//              else if display.size.height == 736 {
-//                  // iPhone 6 Plus の場合
-//                  let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//                  let rootViewController: UIViewController? = storyboard.instantiateInitialViewController()
-//                  window?.rootViewController = rootViewController
-//              }else{
-                let storyboad = UIStoryboard(name: "Main", bundle: nil)
-                let rootViewController: UIViewController? = storyboad.instantiateInitialViewController()
-                window?.rootViewController = rootViewController
-//              }
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = UIHostingController(rootView: ContentView())
+        window?.makeKeyAndVisible()
+
         IQKeyboardManager.shared().isEnabled = true
         FirebaseApp.configure()
         return true

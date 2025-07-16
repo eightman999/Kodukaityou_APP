@@ -38,6 +38,8 @@ The repository already includes a `GoogleService-Info.plist` file for Firebase c
 - Charts for visualizing spending
 - Support for Firebase Analytics and FirebaseUI authentication
 - UI utilities such as IQKeyboardManager and SVProgressHUD
+- SwiftUI interface with placeholder screens
+  - Tab-based navigation replacing storyboard
 
 ## License
 
