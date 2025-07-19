@@ -5,6 +5,8 @@
 //  Created by 塙　詠斗 on 2019/11/13.
 //  Copyright © 2019 塙　詠斗. All rights reserved.
 //
+// © eightman 2005-2025. Furin-lab All rights reserved.
+// Operation: 入力画面のキーボード閉じ処理を提供
 
 import UIKit
 

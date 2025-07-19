@@ -5,6 +5,8 @@
 //  Created by 塙　詠斗 on 2020/03/19.
 //  Copyright © 2020 塙　詠斗. All rights reserved.
 //
+// © eightman 2005-2025. Furin-lab All rights reserved.
+// Operation: B費の週/月出費をテーブル表示する
 
 import Foundation
 import UIKit

@@ -5,6 +5,8 @@
 //  Created by 塙　詠斗 on 2020/04/12.
 //  Copyright © 2020 塙　詠斗. All rights reserved.
 //
+// © eightman 2005-2025. Furin-lab All rights reserved.
+// Operation: 費目別内訳を円グラフで表示する画面
 
 import Foundation
 import UIKit

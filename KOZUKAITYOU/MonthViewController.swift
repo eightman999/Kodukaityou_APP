@@ -5,6 +5,8 @@
 //  Created by 塙　詠斗 on 2019/11/18.
 //  Copyright © 2019 塙　詠斗. All rights reserved.
 //
+// © eightman 2005-2025. Furin-lab All rights reserved.
+// Operation: 今月の収支をグラフ表示する
 
 import UIKit
 import Charts
