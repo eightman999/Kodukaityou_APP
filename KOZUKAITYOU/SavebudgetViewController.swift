@@ -5,6 +5,8 @@
 //  Created by 塙　詠斗 on 2019/08/23.
 //  Copyright © 2019 塙　詠斗. All rights reserved.
 //
+// © eightman 2005-2025. Furin-lab All rights reserved.
+// Operation: 費目別予算を入力・保存する画面
 
 import UIKit
 import RealmSwift

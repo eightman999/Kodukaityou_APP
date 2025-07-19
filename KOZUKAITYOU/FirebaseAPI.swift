@@ -5,6 +5,8 @@
 //  Created by Kento Katsumata on 2018/10/22.
 //  Copyright © 2018 Kento Katsumata. All rights reserved.
 //
+// © eightman 2005-2025. Furin-lab All rights reserved.
+// Operation: Firebase Realtime Databaseへのアクセス処理
 
 import Foundation
 import FirebaseDatabase
