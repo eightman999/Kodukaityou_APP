@@ -12,16 +12,27 @@
 
 import RealmSwift
 import Foundation
+
+/// 1件の出費情報を表すRealmモデル
 class MainItem: Object {
-    @objc dynamic var Name:String = ""//名前//
-    @objc dynamic var Number:Int = 0//個数//
-    @objc dynamic var Expense = ""//費目//
-    @objc dynamic var Nowmoney:Int = 0//財布残高//
-    @objc dynamic var NowExpense:Int = 0//予算座布団//
-    @objc dynamic var total:Int = 0//トータル//
-    @objc dynamic var Day:Date = Date()//日時//
-    @objc dynamic var  TIME :Date = Date()//TIME//
-    @objc dynamic var year :Int = 0
+    /// 名称
+    @objc dynamic var Name: String = ""
+    /// 個数
+    @objc dynamic var Number: Int = 0
+    /// 費目
+    @objc dynamic var Expense = ""
+    /// 入力後の財布残高
+    @objc dynamic var Nowmoney: Int = 0
+    /// 入力後の残予算
+    @objc dynamic var NowExpense: Int = 0
+    /// 小計
+    @objc dynamic var total: Int = 0
+    /// 日時
+    @objc dynamic var Day: Date = Date()
+    /// 登録時刻
+    @objc dynamic var TIME: Date = Date()
+    /// 年
+    @objc dynamic var year: Int = 0
     
     
     

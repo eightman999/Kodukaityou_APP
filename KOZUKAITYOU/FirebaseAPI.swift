@@ -11,25 +11,30 @@
 import Foundation
 import FirebaseDatabase
 
+/// Firebase Realtime Database への簡易アクセス用構造体
 struct FirebaseAPI {
+    /// ルート参照
     private var ref: DatabaseReference!
-    private var handler:DatabaseHandle!
+    /// ハンドラ保持用（未使用）
+    private var handler: DatabaseHandle!
     
+    /// インスタンス生成時に Database 参照を取得
     init() {
         self.ref = Database.database().reference()
     }
     
-    func uploadToFirebase(path:String, write:[String:Any]){
+    /// 指定パスにデータを書き込む
+    func uploadToFirebase(path: String, write: [String:Any]) {
         ref.child(path).updateChildValues(write)
     }
     
-    func readFromFirebase(path:String,completionHandler:@escaping (Any?)->Void){
-        
+    /// 指定パスからデータを読み込む
+    func readFromFirebase(path: String, completionHandler: @escaping (Any?) -> Void) {
         let path = ref.child(path)
-        path.observeSingleEvent(of: .value) { (Snapshot) in
-            if let data = Snapshot.value{
+        path.observeSingleEvent(of: .value) { snapshot in
+            if let data = snapshot.value {
                 completionHandler(data)
-            }else{
+            } else {
                 completionHandler("error")
             }
         }
