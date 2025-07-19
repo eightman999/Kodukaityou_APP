@@ -14,81 +14,116 @@ import CoreData
 import Firebase
 
 class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate{
+    // MARK: - IBOutlet
+    /// 費目選択用のピッカー
     @IBOutlet var pickerView: UIPickerView!
-    @IBOutlet var pickerView2:UIDatePicker!
+    /// 日付入力用のピッカー
+    @IBOutlet var pickerView2: UIDatePicker!
+    /// 購入した物の名称入力欄
     @IBOutlet var name: UITextField!
+    /// 個数入力欄
     @IBOutlet var kosu: UITextField!
+    /// 単価入力欄
     @IBOutlet var tanka: UITextField!
+    /// 保存ボタン
     @IBOutlet var Save: UIButton!
-    
+
+    // MARK: - Realm
+    /// Realmインスタンス
     let realm = try! Realm()
-    
-    var listcount:Int = 0
+
+    // MARK: - 入力値保持用プロパティ
+    /// リスト登録数
+    var listcount: Int = 0
+    /// 画面上部の日付入力用ピッカー
     var datePicker: UIDatePicker = UIDatePicker()
+    /// 日付文字列
     var day: String = "0"
+    /// 個数文字列
     var kosuu: String = "0"
+    /// 小計文字列
     var goukeib: String = "0"
+    /// 日
     var niti: Int = 0
+    /// 月
     var tuki: Int = 0
-    var tosi:Int = 0
+    /// 年
+    var tosi: Int = 0
+    /// 金額計算用
     var kingaku: Int = 0
+    /// 金額文字列
     var kingaku1: String = "0"
+    /// 合計金額
     var goukei: Int = 0
-    var tanka1:Int = 0
-    var exp :Int = 0
-    var EXP:String = ""
+    /// 単価
+    var tanka1: Int = 0
+    /// 残予算
+    var exp: Int = 0
+    /// 残予算登録先識別子
+    var EXP: String = ""
+    /// 選択された費目
     var himoku: String = "A費"
+    /// 財布残高
     var saihu: Int = 0
     
 
     //---PickerView----設定-----↓
-    let dataList = ["A費", "B費","C費", "D費","E費", "F費", "G費","H費","I費"]
-    //------viewDidLoad()---------↓
+    /// PickerViewに表示する費目リスト
+    let dataList = ["A費", "B費", "C費", "D費", "E費", "F費", "G費", "H費", "I費"]
+
+    // MARK: - LifeCycle
+    /// Firebase通信を行うヘルパー
     var firebaseAPI = FirebaseAPI()
+
+    /// 画面表示後の初期設定
     override func viewDidLoad() {
-    // ピッカー設定
+        // ピッカー設定
         datePicker.datePickerMode = UIDatePicker.Mode.date
-              datePicker.timeZone = NSTimeZone.local
-              datePicker.locale = Locale.current
-      // 決定バーの生成
-        
-              let toolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 35))
-              let spacelItem = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
-              let doneItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(done1))
-              toolbar.setItems([spacelItem, doneItem], animated: true)
-        
-           
-             pickerView.delegate = self
-             pickerView.dataSource = self
-             
-            
-    
-          // Do any additional setup after loading the view.
+        datePicker.timeZone = NSTimeZone.local
+        datePicker.locale = Locale.current
+
+        // キーボードに表示する完了ボタン
+        let toolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 35))
+        let spacelItem = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: self, action: nil)
+        let doneItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(done1))
+        toolbar.setItems([spacelItem, doneItem], animated: true)
+
+        pickerView.delegate = self
+        pickerView.dataSource = self
     }
+
+    // MARK: - Picker Done Button
+    /// 日付ピッカーの完了ボタンタップ時処理
     @objc func done1() {
-        // 日付のフォーマット
         let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd"    }
-     //========@IBAction========seveでーた=============↓↓
+        formatter.dateFormat = "yyyy-MM-dd"
+    }
+
+    // MARK: - TextField Done Button
+    /// キーボードの完了ボタンタップ時処理（未使用）
     @objc func done() {
-        // 日付のフォーマット
         let formatter = DateFormatter()
-       }
+    }
+
+    // MARK: - 保存処理
+    /// 入力内容をRealmとFirebaseに保存
     @IBAction func saveWorld(_ sender: Any){
-        //-------警告---------//
-        // 文字列がカラだったら
+        // 入力チェック
+        // 個数が未入力の場合は警告を表示
         if kosu.text?.isEmpty == true {
             let alert = UIAlertController(title: "警告！", message:"個数が入力されていません！", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK!", style: .default, handler: nil))
             present(alert, animated: true, completion: nil)
             self.view.endEditing(true)
             return
+        // 単価が未入力の場合は警告を表示
         }else if tanka.text?.isEmpty == true{
             let alert = UIAlertController(title: "警告！", message:"単価が入力されていません！", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK!", style: .default, handler: nil))
             present(alert, animated: true, completion: nil)
             self.view.endEditing(true)
             return
+        // 名称が未入力の場合は警告を表示
         }else if name.text?.isEmpty == true {
             let alert = UIAlertController(title: "警告！", message:"名称が入力されていません！", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK!", style: .default, handler: nil))
@@ -96,8 +131,10 @@ class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
             self.view.endEditing(true)
             return
         }
+        // 個数テキストを加工
         kosuu = kosu.text! + "個"
-        //====================今いつ？======================↓
+
+        // ==== 日付情報の生成 ====
         let calendar = Calendar(identifier: .gregorian)
         let pickerDate = datePicker.date
         var myDateComponents =  calendar.dateComponents([.year, .month, .day], from: pickerDate )
@@ -109,6 +146,7 @@ class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
           let date = Calendar.current.date(from: myDateComponents)
         guard let formatString = DateFormatter.dateFormat(fromTemplate: "YYMMdd", options: 0, locale: Locale.current) else { fatalError() }
         print(formatString)
+        // 表示用フォーマット作成
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = formatString
         print(saihu)
@@ -116,15 +154,20 @@ class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
         dateFormatter.string(from: date!)
         
         print("処理１")
-    kingaku = Int(kosu.text!)! * Int(tanka.text!)!
+        // 金額計算
+        kingaku = Int(kosu.text!)! * Int(tanka.text!)!
+        // 現在の残高を取得し更新
         let results = realm.objects(MainItem.self)
         for dataa in results {
             let money = kingaku
             saihu = dataa.Nowmoney - money
         }
+
+        // 各費目の残予算を更新
         let results2 = realm.objects(SUBItem.self)
         for data in results2{
             let himoku2 = himoku
+            // 選択された費目ごとに残高を更新
             switch himoku2{
             case "A費":
                 for data2 in results2 {
@@ -198,14 +241,21 @@ class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
         }
         //            mVC?.allData.append(Datedic)
         //        saveData.set(mVC?.allData, forKey: "WORD")
-        let USERID:String = String((Auth.auth().currentUser?.uid)!) + "/" + "出費" + "/" + String(listcount)
-        print(USERID)
-        firebaseAPI.uploadToFirebase(path: "\(USERID)", write: ["Name" : name.text!,"Number":Int(kosu.text!)!,"Expense" : himoku,"Nowmoney":saihu,"NowExpence": exp,"total":kingaku,"Day":date!.timeIntervalSinceReferenceDate,"TIME":Date().timeIntervalSinceReferenceDate])
-        let USERID2:String = String((Auth.auth().currentUser?.uid)!) + "/" + "EXP" + "/" + EXP
-            print(USERID2)
+                // Firebaseへデータを保存
+        let USERID: String = String((Auth.auth().currentUser?.uid)!) + "/" + "出費" + "/" + String(listcount)
+        firebaseAPI.uploadToFirebase(path: "\(USERID)", write: [
+            "Name": name.text!,
+            "Number": Int(kosu.text!)!,
+            "Expense": himoku,
+            "Nowmoney": saihu,
+            "NowExpence": exp,
+            "total": kingaku,
+            "Day": date!.timeIntervalSinceReferenceDate,
+            "TIME": Date().timeIntervalSinceReferenceDate
+        ])
+        let USERID2: String = String((Auth.auth().currentUser?.uid)!) + "/" + "EXP" + "/" + EXP
         firebaseAPI.uploadToFirebase(path: "\(USERID2)", write: [ "NowExpence":exp,"Day":date!.timeIntervalSinceReferenceDate,"TIME":Date().timeIntervalSinceReferenceDate])
-          let USERID3:String = String((Auth.auth().currentUser?.uid)!) + "/" + "NOWMONEY" + "/" + "NM"
-                    print(USERID3)
+          let USERID3: String = String((Auth.auth().currentUser?.uid)!) + "/" + "NOWMONEY" + "/" + "NM"
                 firebaseAPI.uploadToFirebase(path: "\(USERID3)", write: [ "Nowmoney":saihu,"Day":date!.timeIntervalSinceReferenceDate,"TIME":Date().timeIntervalSinceReferenceDate])
         let newItem = MainItem()
         newItem.Name = name.text!
@@ -253,38 +303,40 @@ class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
         
         
     }
-    // UIPickerViewの列の数
+    // MARK: - UIPickerViewDelegate
+    /// ピッカーの列数を返す
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
-    
-    // UIPickerViewの行数、リストの数
+
+    /// ピッカーの行数を返す
     func pickerView(_ pickerView: UIPickerView,
                     numberOfRowsInComponent component: Int) -> Int {
         return dataList.count
     }
-    
-    // UIPickerViewの最初の表示
+
+    /// ピッカーに表示する文字列
     func pickerView(_ pickerView: UIPickerView,
                     titleForRow row: Int,
                     forComponent component: Int) -> String? {
-        
+
         return dataList[row]
     }
-    // UIPickerViewのRowが選択された時の挙動
+    /// ピッカーで行が選択された際の処理
     func pickerView(_ pickerView: UIPickerView,
                     didSelectRow row: Int,
                     inComponent component: Int) {
         himoku = dataList[row]
     }
+    /// メモリ不足警告時に呼ばれる
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-    //     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-    //
-    //         self.view.endEditing(true)
-    //     }
+    // 画面タップでキーボードを閉じたい場合のサンプル実装
+    // override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    //     self.view.endEditing(true)
+    // }
     
     
     
