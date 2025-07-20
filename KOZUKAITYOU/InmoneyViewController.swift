@@ -41,13 +41,17 @@ class InmoneyViewController: UIViewController {
     @IBAction func PUSHSAVE(){
         //-------入力確認・警告----------------↓
         if Tuki.text?.isEmpty == true {
-            let alert = UIAlertController(title: "警告！", message:"月が入力されていません！", preferredStyle: .alert)
+            let alert = UIAlertController(title: localized(japanese: "警告！", english: "Warning!"),
+                                          message: localized(japanese: "月が入力されていません！", english: "Month is missing!"),
+                                          preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK!", style: .default, handler: nil))
             present(alert, animated: true, completion: nil)
             self.view.endEditing(true)
             return
         }else if Niti.text?.isEmpty == true {
-            let alert = UIAlertController(title: "警告！", message:"日付が入力されていません！", preferredStyle: .alert)
+            let alert = UIAlertController(title: localized(japanese: "警告！", english: "Warning!"),
+                                          message: localized(japanese: "日付が入力されていません！", english: "Day is missing!"),
+                                          preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK!", style: .default, handler: nil))
             present(alert, animated: true, completion: nil)
             self.view.endEditing(true)
@@ -57,13 +61,17 @@ class InmoneyViewController: UIViewController {
         niti = Int(Niti.text!)!
         tuki = Int(Tuki.text!)!
         if niti > 31 {
-            let alert = UIAlertController(title: "警告！", message:"日付が存在しません！",   preferredStyle: .alert)
+            let alert = UIAlertController(title: localized(japanese: "警告！", english: "Warning!"),
+                                          message: localized(japanese: "日付が存在しません！", english: "Invalid day!"),
+                                          preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK!", style: .default, handler: nil))
             present(alert, animated: true, completion: nil)
             self.view.endEditing(true)
             return
         }else if tuki > 12{
-            let alert = UIAlertController(title: "警告！", message:"そんな月はねえ！", preferredStyle: .alert)
+            let alert = UIAlertController(title: localized(japanese: "警告！", english: "Warning!"),
+                                          message: localized(japanese: "そんな月はねえ！", english: "Invalid month!"),
+                                          preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK!", style: .default, handler: nil))
             present(alert, animated: true, completion: nil)
             self.view.endEditing(true)
