@@ -1,6 +1,6 @@
 # Kodukaityou
 
-Kodukaityou (小遣い帳) is an iOS application for managing your budget and expenses. The project is written in Swift and uses CocoaPods to manage its dependencies.
+Kodukaityou (小遣い帳) is an iOS application for managing your budget and expenses. The project is written in Swift and uses CocoaPods to manage its dependencies. The app now detects the device language and shows alerts in English when running on an English device.
 
 ## Requirements
 
@@ -38,6 +38,7 @@ The repository already includes a `GoogleService-Info.plist` file for Firebase c
 - Charts for visualizing spending
 - Support for Firebase Analytics and FirebaseUI authentication
 - UI utilities such as IQKeyboardManager and SVProgressHUD
+- Automatic English mode when the device language is set to English
 
 ## License
 

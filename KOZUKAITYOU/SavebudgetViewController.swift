@@ -50,55 +50,73 @@ class SavebudgetViewController: UIViewController {
     @IBAction func saveWorld(_ sender: Any){
         //---------===================isEmpty警告ーーーーーーーーーーーーーーーーーーーー
         if a.text?.isEmpty == true {
-            let alert = UIAlertController(title: "警告！", message:"A費が入力されていません！", preferredStyle: .alert)
+            let alert = UIAlertController(title: localized(japanese: "警告！", english: "Warning!"),
+                                          message: localized(japanese: "A費が入力されていません！", english: "Field A is empty!"),
+                                          preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK!", style: .default, handler: nil))
             present(alert, animated: true, completion: nil)
             self.view.endEditing(true)
             return
         }else if b.text?.isEmpty == true{
-            let alert = UIAlertController(title: "警告！", message:"B費が入力されていません！", preferredStyle: .alert)
+            let alert = UIAlertController(title: localized(japanese: "警告！", english: "Warning!"),
+                                          message: localized(japanese: "B費が入力されていません！", english: "Field B is empty!"),
+                                          preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK!", style: .default, handler: nil))
             present(alert, animated: true, completion: nil)
             self.view.endEditing(true)
             return
         }else if c.text?.isEmpty == true{
-            let alert = UIAlertController(title: "警告！", message:"C費が入力されていません！", preferredStyle: .alert)
+            let alert = UIAlertController(title: localized(japanese: "警告！", english: "Warning!"),
+                                          message: localized(japanese: "C費が入力されていません！", english: "Field C is empty!"),
+                                          preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK!", style: .default, handler: nil))
             present(alert, animated: true, completion: nil)
             self.view.endEditing(true)
             return
         }else if d.text?.isEmpty == true{
-            let alert = UIAlertController(title: "警告！", message:"D費が入力されていません！", preferredStyle: .alert)
+            let alert = UIAlertController(title: localized(japanese: "警告！", english: "Warning!"),
+                                          message: localized(japanese: "D費が入力されていません！", english: "Field D is empty!"),
+                                          preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK!", style: .default, handler: nil))
             present(alert, animated: true, completion: nil)
             self.view.endEditing(true)
             return
         }else if e.text?.isEmpty == true{
-            let alert = UIAlertController(title: "警告！", message:"E費が入力されていません！", preferredStyle: .alert)
+            let alert = UIAlertController(title: localized(japanese: "警告！", english: "Warning!"),
+                                          message: localized(japanese: "E費が入力されていません！", english: "Field E is empty!"),
+                                          preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK!", style: .default, handler: nil))
             present(alert, animated: true, completion: nil)
             self.view.endEditing(true)
             return
         }else if f.text?.isEmpty == true{
-            let alert = UIAlertController(title: "警告！", message:"F費が入力されていません！", preferredStyle: .alert)
+            let alert = UIAlertController(title: localized(japanese: "警告！", english: "Warning!"),
+                                          message: localized(japanese: "F費が入力されていません！", english: "Field F is empty!"),
+                                          preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK!", style: .default, handler: nil))
             present(alert, animated: true, completion: nil)
             self.view.endEditing(true)
             return
         }else if g.text?.isEmpty == true{
-            let alert = UIAlertController(title: "警告！", message:"G費が入力されていません！", preferredStyle: .alert)
+            let alert = UIAlertController(title: localized(japanese: "警告！", english: "Warning!"),
+                                          message: localized(japanese: "G費が入力されていません！", english: "Field G is empty!"),
+                                          preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK!", style: .default, handler: nil))
             present(alert, animated: true, completion: nil)
             self.view.endEditing(true)
             return
         }else if h.text?.isEmpty == true{
-            let alert = UIAlertController(title: "警告！", message:"H費が入力されていません！", preferredStyle: .alert)
+            let alert = UIAlertController(title: localized(japanese: "警告！", english: "Warning!"),
+                                          message: localized(japanese: "H費が入力されていません！", english: "Field H is empty!"),
+                                          preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK!", style: .default, handler: nil))
             present(alert, animated: true, completion: nil)
             self.view.endEditing(true)
             return
         }else if i.text?.isEmpty == true{
-            let alert = UIAlertController(title: "警告！", message:"I費が入力されていません！", preferredStyle: .alert)
+            let alert = UIAlertController(title: localized(japanese: "警告！", english: "Warning!"),
+                                          message: localized(japanese: "I費が入力されていません！", english: "Field I is empty!"),
+                                          preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK!", style: .default, handler: nil))
             present(alert, animated: true, completion: nil)
             self.view.endEditing(true)

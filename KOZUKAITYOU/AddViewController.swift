@@ -111,21 +111,30 @@ class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
         // 入力チェック
         // 個数が未入力の場合は警告を表示
         if kosu.text?.isEmpty == true {
-            let alert = UIAlertController(title: "警告！", message:"個数が入力されていません！", preferredStyle: .alert)
+            let alert = UIAlertController(title: localized(japanese: "警告！", english: "Warning!"),
+                                          message: localized(japanese: "個数が入力されていません！",
+                                                                english: "Count is missing!"),
+                                          preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK!", style: .default, handler: nil))
             present(alert, animated: true, completion: nil)
             self.view.endEditing(true)
             return
         // 単価が未入力の場合は警告を表示
         }else if tanka.text?.isEmpty == true{
-            let alert = UIAlertController(title: "警告！", message:"単価が入力されていません！", preferredStyle: .alert)
+            let alert = UIAlertController(title: localized(japanese: "警告！", english: "Warning!"),
+                                          message: localized(japanese: "単価が入力されていません！",
+                                                                english: "Unit price is missing!"),
+                                          preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK!", style: .default, handler: nil))
             present(alert, animated: true, completion: nil)
             self.view.endEditing(true)
             return
         // 名称が未入力の場合は警告を表示
         }else if name.text?.isEmpty == true {
-            let alert = UIAlertController(title: "警告！", message:"名称が入力されていません！", preferredStyle: .alert)
+            let alert = UIAlertController(title: localized(japanese: "警告！", english: "Warning!"),
+                                          message: localized(japanese: "名称が入力されていません！",
+                                                                english: "Name is missing!"),
+                                          preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK!", style: .default, handler: nil))
             present(alert, animated: true, completion: nil)
             self.view.endEditing(true)
@@ -280,11 +289,11 @@ class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
         let tanka2 :String = "単価" + String(tanka.text!) + "円\n"
         let kosuu2 :String = "個数" + kosuu + "\n"
         let kei :String = "小計" + goukeib
-        let nitiji:String = "\n日時" + dateFormatter.string(from: date!)
-  print("アラート")
-        let title = "登録したよ！"
-        let message = "登録されました！\n" + "登録されたデータ\n" + names + tanka2 + kosuu2 + kei + nitiji
-       let okText = "ok"
+        let nitiji:String = "\n" + localized(japanese: "日時", english: "Date") + dateFormatter.string(from: date!)
+        print("アラート")
+        let title = localized(japanese: "登録したよ！", english: "Saved!")
+        let message = localized(japanese: "登録されました！\n登録されたデータ\n", english: "Saved!\nSaved data\n") + names + tanka2 + kosuu2 + kei + nitiji
+        let okText = "OK"
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
         let okayButton = UIAlertAction(title: okText, style: UIAlertAction.Style.cancel, handler: nil)
         alert.addAction(okayButton)
