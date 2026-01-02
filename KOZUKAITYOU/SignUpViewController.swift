@@ -19,7 +19,20 @@ class SignUpViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        applyModernUIStyles()
+    }
+
+    private func applyModernUIStyles() {
+        // Apply modern styles to text fields
+        emailField?.applyModernStyle()
+        emailField?.placeholder = "メールアドレス"
+
+        passwordField?.applyModernStyle()
+        passwordField?.placeholder = "パスワード（6文字以上）"
+        passwordField?.isSecureTextEntry = true
+
+        // Update view background
+        view.backgroundColor = .systemBackground
     }
 
     @IBAction func didTapSignUp(_ sender: UIButton) {

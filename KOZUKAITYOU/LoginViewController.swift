@@ -20,7 +20,20 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        applyModernUIStyles()
+    }
+
+    private func applyModernUIStyles() {
+        // Apply modern styles to text fields
+        emailField?.applyModernStyle()
+        emailField?.placeholder = "メールアドレス"
+
+        passwordField?.applyModernStyle()
+        passwordField?.placeholder = "パスワード"
+        passwordField?.isSecureTextEntry = true
+
+        // Update view background
+        view.backgroundColor = .systemBackground
     }
 
     override func viewDidAppear(_ animated: Bool) {

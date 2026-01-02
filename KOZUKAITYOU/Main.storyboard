@@ -8,14 +8,6 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="azuki.ttf">
-            <string>azuki_font</string>
-        </array>
-        <array key="ゆず ポップ A [M] Extra Light.ttf">
-            <string>YuzuPopA_M_ExtraLight</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -32,7 +24,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0kd-ME-R3V">
                                         <rect key="frame" x="0.0" y="386" width="414" height="52"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <state key="normal" title="ログイン　新規登録">
                                             <color key="titleColor" systemColor="systemBlueColor"/>
                                             <color key="titleShadowColor" systemColor="systemIndigoColor"/>
@@ -44,7 +36,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a9w-FK-w3e">
                                         <rect key="frame" x="0.0" y="165" width="414" height="65"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <state key="normal" title="小遣い帳をつける">
                                             <color key="titleShadowColor" systemColor="systemIndigoColor"/>
                                         </state>
@@ -291,7 +283,7 @@
                                     </switch>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="通知　ON/OFF" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qup-Iu-2CC">
                                         <rect key="frame" x="0.0" y="291" width="304" height="31"/>
-                                        <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -300,7 +292,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="XiO-4K-KeL"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <state key="normal" title="Back to menu"/>
                                         <connections>
                                             <segue destination="Nqa-7y-3ST" kind="presentation" id="ErR-zW-KD9"/>
@@ -311,7 +303,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="88" id="FF2-iX-fEO"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <state key="normal" title="ログイン　新規登録"/>
                                         <connections>
                                             <segue destination="nlx-v0-ZOi" kind="presentation" id="1Vw-rV-HV8"/>
@@ -437,13 +429,13 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="　　　　予算は変えないでください！　　　　" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bCh-a2-9LB">
                                                 <rect key="frame" x="0.0" y="0.0" width="357" height="17"/>
-                                                <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y8f-OV-TYG">
                                                 <rect key="frame" x="0.0" y="57" width="357" height="27"/>
-                                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="15"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <state key="normal" title="SAVE"/>
                                                 <connections>
                                                     <action selector="saveWorld:" destination="IEL-Hs-VCZ" eventType="touchUpInside" id="DAY-CI-Wwa"/>
@@ -454,7 +446,7 @@
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="   A費（学費・学校関係）   " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qg9-mg-s9w">
                                                         <rect key="frame" x="0.0" y="0.0" width="216" height="34"/>
-                                                        <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="16"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -466,7 +458,7 @@
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="円" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7MQ-B8-Y2m">
                                                         <rect key="frame" x="340" y="0.0" width="17" height="34"/>
-                                                        <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -477,7 +469,7 @@
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="　 B費（本・参考書等）   " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eNd-Ed-QY6">
                                                         <rect key="frame" x="0.0" y="0.0" width="212.66666666666666" height="34"/>
-                                                        <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -489,7 +481,7 @@
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" text="円" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xCl-ep-fMr">
                                                         <rect key="frame" x="340" y="0.0" width="17" height="34"/>
-                                                        <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -500,7 +492,7 @@
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="　　 　C費（衣服）　　 　" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n2g-kR-Nhd" userLabel="C費（衣服）">
                                                         <rect key="frame" x="0.0" y="0.0" width="212.66666666666666" height="34"/>
-                                                        <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -511,7 +503,7 @@
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="円" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RQL-Uw-9Nd">
                                                         <rect key="frame" x="340" y="0.0" width="17" height="34"/>
-                                                        <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -522,7 +514,7 @@
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="　D費（医療・衛生用品等）" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F8G-Cm-o5m">
                                                         <rect key="frame" x="0.0" y="0.0" width="212.66666666666666" height="34"/>
-                                                        <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -533,7 +525,7 @@
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="円" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dz0-r1-W3m">
                                                         <rect key="frame" x="340" y="0.0" width="17" height="34"/>
-                                                        <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -544,7 +536,7 @@
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="　　　　E費（通信）　　　" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xtd-XL-sR6">
                                                         <rect key="frame" x="0.0" y="0.0" width="212.66666666666666" height="34"/>
-                                                        <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -555,7 +547,7 @@
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="円" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Txp-nA-d6e">
                                                         <rect key="frame" x="340" y="0.0" width="17" height="34"/>
-                                                        <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -566,7 +558,7 @@
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="　　　F費（交通費）　　　" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iVK-Ks-xgC">
                                                         <rect key="frame" x="0.0" y="0.0" width="212.66666666666666" height="34"/>
-                                                        <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -577,7 +569,7 @@
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="円" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3A6-WM-0ft">
                                                         <rect key="frame" x="340" y="0.0" width="17" height="34"/>
-                                                        <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -588,7 +580,7 @@
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="　G費（娯楽費・雑誌等）　" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7a7-YQ-FOf">
                                                         <rect key="frame" x="0.0" y="0.0" width="212.66666666666666" height="34"/>
-                                                        <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -599,7 +591,7 @@
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="円" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KYi-ga-nGP">
                                                         <rect key="frame" x="340" y="0.0" width="17" height="34"/>
-                                                        <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -610,7 +602,7 @@
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="　　　H費（寄附等）　　　" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yUW-rj-m9v">
                                                         <rect key="frame" x="0.0" y="0.0" width="212.66666666666666" height="34"/>
-                                                        <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -621,7 +613,7 @@
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="円" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SqW-Ne-WDP">
                                                         <rect key="frame" x="340" y="0.0" width="17" height="34"/>
-                                                        <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -632,7 +624,7 @@
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="　　　I費（特別費）　　　" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Is9-Gl-Di3">
                                                         <rect key="frame" x="0.0" y="0.0" width="212.66666666666666" height="34"/>
-                                                        <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -643,7 +635,7 @@
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="円" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rrt-Iz-wmj">
                                                         <rect key="frame" x="340" y="0.0" width="17" height="34"/>
-                                                        <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -690,13 +682,13 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="新規登録" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6NZ-u6-OjN">
                                         <rect key="frame" x="0.0" y="0.0" width="354" height="17"/>
-                                        <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P41-sV-Tn9">
                                         <rect key="frame" x="0.0" y="62" width="354" height="29"/>
-                                        <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <state key="normal" title="SAVE"/>
                                         <connections>
                                             <action selector="saveWorld:" destination="dbh-v0-8SH" eventType="touchUpInside" id="6Wr-cy-ZYS"/>
@@ -704,7 +696,7 @@
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="買ったもの" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1J0-cG-uIY">
                                         <rect key="frame" x="0.0" y="136" width="354" height="17"/>
-                                        <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -718,7 +710,7 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="買った個数" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p2Y-EN-TdV">
                                                 <rect key="frame" x="0.0" y="0.0" width="85" height="17"/>
-                                                <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -729,7 +721,7 @@
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="個" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ATx-HM-KEg">
                                                 <rect key="frame" x="337" y="0.0" width="17" height="17"/>
-                                                <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -740,7 +732,7 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="一個あたり" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nrK-ge-I2u">
                                                 <rect key="frame" x="0.0" y="0.0" width="85" height="17"/>
-                                                <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -751,7 +743,7 @@
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="円" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ryu-Fv-ocW">
                                                 <rect key="frame" x="337" y="0.0" width="17" height="17"/>
-                                                <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -762,7 +754,7 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="費目" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vil-mF-eyH">
                                                 <rect key="frame" x="0.0" y="0.0" width="34" height="17"/>
-                                                <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -777,7 +769,7 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="日時" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iB0-AP-PnN">
                                                 <rect key="frame" x="0.0" y="0.0" width="34" height="204"/>
-                                                <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -827,14 +819,14 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="今月の使用額" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Wt-v1-Sag">
                                         <rect key="frame" x="94" y="45" width="102" height="60"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="今月の使用額" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6dv-GE-SNA">
                                         <rect key="frame" x="8" y="48" width="78" height="57"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="13"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -932,7 +924,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="17" id="zcd-pX-LvI"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <state key="normal" title="今月の出費"/>
                                         <connections>
                                             <action selector="pushY" destination="9XR-jP-VBP" eventType="touchUpInside" id="JQX-03-tYr"/>
@@ -940,7 +932,7 @@
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今月の出費　　　" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dVe-1I-Cdf">
                                         <rect key="frame" x="99" y="18" width="307" height="29"/>
-                                        <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -949,7 +941,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="iUZ-cO-Gt0"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <state key="normal" title="今週の出費"/>
                                         <connections>
                                             <action selector="pushM" destination="9XR-jP-VBP" eventType="touchUpInside" id="6O2-VN-AUY"/>
@@ -957,7 +949,7 @@
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今週の出費        " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZDQ-6P-ilO">
                                         <rect key="frame" x="99" y="45" width="307" height="29"/>
-                                        <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -984,13 +976,13 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="日付" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bk3-4H-iHh">
                                                 <rect key="frame" x="0.0" y="0.0" width="28" height="14"/>
-                                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="名称" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZTH-sr-3yi">
                                                 <rect key="frame" x="52" y="0.0" width="28" height="14"/>
-                                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -1000,7 +992,7 @@
                                                     <fragment content="個数">
                                                         <attributes>
                                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                            <font key="NSFont" size="14" name="azuki_font"/>
+                                                            <font key="NSFont" metaFont="system" size="14"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
@@ -1009,25 +1001,25 @@
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="費目" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M04-90-cqB">
                                                 <rect key="frame" x="156" y="0.0" width="26" height="14"/>
-                                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="13"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="金額" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p1C-2Z-StH">
                                                 <rect key="frame" x="206" y="0.0" width="28" height="14"/>
-                                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="費目残高" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VGf-VJ-4ua">
                                                 <rect key="frame" x="258" y="0.0" width="56" height="14"/>
-                                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="財布の中" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WNi-5M-Cek">
                                                 <rect key="frame" x="338" y="0.0" width="56" height="14"/>
-                                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -1097,7 +1089,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="HLt-Aw-Su9"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="41"/>
                                 <state key="normal" title="B費"/>
                                 <connections>
                                     <segue destination="gxP-7O-S3R" kind="presentation" id="EuP-b6-Eoa"/>
@@ -1108,7 +1100,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="4fT-qr-Mxs"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="41"/>
                                 <state key="normal" title="F費"/>
                                 <connections>
                                     <segue destination="Rnj-BX-RSo" kind="presentation" id="E9a-cu-qzm"/>
@@ -1119,7 +1111,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="DQZ-1F-IFq"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="41"/>
                                 <state key="normal" title="E費"/>
                                 <connections>
                                     <segue destination="YHX-HD-N8a" kind="presentation" id="qqz-Fm-EKf"/>
@@ -1130,7 +1122,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="2of-Fi-0XZ"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="41"/>
                                 <state key="normal" title="G費"/>
                                 <connections>
                                     <segue destination="Op9-4p-ndN" kind="presentation" id="fEA-1X-Y4B"/>
@@ -1141,7 +1133,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="yMy-hF-8cL"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="41"/>
                                 <state key="normal" title="D費"/>
                                 <connections>
                                     <segue destination="7gh-3m-JZs" kind="presentation" id="8I1-69-iPC"/>
@@ -1152,7 +1144,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="IXz-5j-VxV"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="41"/>
                                 <state key="normal" title="C費"/>
                                 <connections>
                                     <segue destination="JbV-K0-pAp" kind="presentation" id="HHN-nC-8qW"/>
@@ -1160,7 +1152,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mrb-lC-5Pe">
                                 <rect key="frame" x="161" y="494" width="92" height="34"/>
-                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="41"/>
                                 <state key="normal" title="H費"/>
                                 <connections>
                                     <segue destination="RNu-Xq-UEz" kind="presentation" id="WAj-rl-ozw"/>
@@ -1171,7 +1163,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="16j-3L-xsU"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="41"/>
                                 <state key="normal" title="I費"/>
                                 <connections>
                                     <segue destination="VHm-dF-cbZ" kind="presentation" id="shs-YC-Afn"/>
@@ -1182,7 +1174,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="3fH-rM-KeX"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="41"/>
                                 <state key="normal" title="A費"/>
                                 <connections>
                                     <segue destination="1jE-Tw-SrD" kind="presentation" id="1tJ-q5-qfY"/>
@@ -1193,7 +1185,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="seZ-Hv-lBH"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="41"/>
                                 <state key="normal" title="総合"/>
                                 <connections>
                                     <segue destination="o5R-Ny-1S8" kind="presentation" id="dmU-cK-DMo"/>
@@ -1247,7 +1239,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="17" id="J1y-kW-hSr"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="今年の出費"/>
                                 <connections>
                                     <action selector="pushM" destination="1jE-Tw-SrD" eventType="touchUpInside" id="Oh6-36-vaZ"/>
@@ -1256,7 +1248,7 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="今年の出費　　　" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="54O-8q-NFE">
                                 <rect key="frame" x="109" y="78" width="307" height="29"/>
-                                <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1265,7 +1257,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="yd5-oH-KUI"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="今月の出費"/>
                                 <connections>
                                     <action selector="pushM" destination="9XR-jP-VBP" eventType="touchUpInside" id="rEi-mc-4uF"/>
@@ -1274,7 +1266,7 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="今月の出費        " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fLu-bc-mtl">
                                 <rect key="frame" x="109" y="105" width="307" height="29"/>
-                                <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1306,13 +1298,13 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="日付" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4iH-U6-G4q">
                                                 <rect key="frame" x="0.0" y="0.0" width="28" height="14"/>
-                                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="名称" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kAk-Gn-56S">
                                                 <rect key="frame" x="52" y="0.0" width="28" height="14"/>
-                                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -1322,7 +1314,7 @@
                                                     <fragment content="個数">
                                                         <attributes>
                                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                            <font key="NSFont" size="14" name="azuki_font"/>
+                                                            <font key="NSFont" metaFont="system" size="14"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
@@ -1331,25 +1323,25 @@
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="費目" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X7S-sS-3DX">
                                                 <rect key="frame" x="156" y="0.0" width="26" height="14"/>
-                                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="13"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="金額" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CCC-iS-UB8">
                                                 <rect key="frame" x="206" y="0.0" width="28" height="14"/>
-                                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="費目残高" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hKt-Q8-t1j">
                                                 <rect key="frame" x="258" y="0.0" width="56" height="14"/>
-                                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="財布の中" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IUN-Fv-GNd">
                                                 <rect key="frame" x="338" y="0.0" width="56" height="14"/>
-                                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -1400,60 +1392,60 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="入金" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4gv-RO-2iR">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="83"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="33"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="33"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="   入金額   " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EXp-nq-K9R">
                                         <rect key="frame" x="8" y="402" width="102" height="30"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="円" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bNR-gk-XQL">
                                         <rect key="frame" x="355" y="402" width="59" height="30"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hqP-L7-Zrf">
                                         <rect key="frame" x="110" y="402" width="243" height="30"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="入金日                  " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gw0-ml-Rei">
                                         <rect key="frame" x="8" y="211" width="102" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jYV-V4-ah6">
                                         <rect key="frame" x="110" y="249" width="134" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="go"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W8L-qY-thu">
                                         <rect key="frame" x="110" y="211" width="134" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="light" returnKeyType="go"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="月" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a8e-xV-ask">
                                         <rect key="frame" x="245" y="211" width="17" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="日" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="INl-Sv-D0P">
                                         <rect key="frame" x="245" y="249" width="17" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -1548,13 +1540,13 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="日付" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bPc-aO-hCB">
                                                 <rect key="frame" x="0.0" y="0.0" width="28" height="14"/>
-                                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="名称" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zV8-re-4JF">
                                                 <rect key="frame" x="52" y="0.0" width="28" height="14"/>
-                                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -1564,7 +1556,7 @@
                                                     <fragment content="個数">
                                                         <attributes>
                                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                            <font key="NSFont" size="14" name="azuki_font"/>
+                                                            <font key="NSFont" metaFont="system" size="14"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
@@ -1573,25 +1565,25 @@
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="費目" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xgh-rz-Lc4">
                                                 <rect key="frame" x="156" y="0.0" width="26" height="14"/>
-                                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="13"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="金額" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="prn-nY-Sjm">
                                                 <rect key="frame" x="206" y="0.0" width="28" height="14"/>
-                                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="費目残高" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L4J-we-4Xb">
                                                 <rect key="frame" x="258" y="0.0" width="56" height="14"/>
-                                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="財布の中" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NZa-Wx-S2e">
                                                 <rect key="frame" x="338" y="0.0" width="56" height="14"/>
-                                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -1606,7 +1598,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="17" id="8Zg-zr-Ted"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="今月の出費"/>
                                 <connections>
                                     <action selector="pushY" destination="9XR-jP-VBP" eventType="touchUpInside" id="LNQ-oo-87s"/>
@@ -1615,7 +1607,7 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="今月の出費　　　" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GTZ-aH-lIK">
                                 <rect key="frame" x="109" y="78" width="307" height="29"/>
-                                <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1624,7 +1616,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="B5G-59-3Fm"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="今週の出費"/>
                                 <connections>
                                     <action selector="pushM" destination="9XR-jP-VBP" eventType="touchUpInside" id="M9Y-y6-kY5"/>
@@ -1633,7 +1625,7 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="今週の出費        " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xv5-FL-fwc">
                                 <rect key="frame" x="109" y="105" width="307" height="29"/>
-                                <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1699,13 +1691,13 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="日付" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MST-eB-Zi9">
                                                 <rect key="frame" x="0.0" y="0.0" width="28" height="14"/>
-                                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="名称" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ph-VV-Ni9">
                                                 <rect key="frame" x="52" y="0.0" width="28" height="14"/>
-                                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -1715,7 +1707,7 @@
                                                     <fragment content="個数">
                                                         <attributes>
                                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                            <font key="NSFont" size="14" name="azuki_font"/>
+                                                            <font key="NSFont" metaFont="system" size="14"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
@@ -1724,25 +1716,25 @@
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="費目" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WKp-q0-oZB">
                                                 <rect key="frame" x="156" y="0.0" width="26" height="14"/>
-                                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="13"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="金額" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1yc-VC-NZg">
                                                 <rect key="frame" x="206" y="0.0" width="28" height="14"/>
-                                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="費目残高" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0yd-kq-GJG">
                                                 <rect key="frame" x="258" y="0.0" width="56" height="14"/>
-                                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="財布の中" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XaN-LG-2VB">
                                                 <rect key="frame" x="338" y="0.0" width="56" height="14"/>
-                                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -1757,7 +1749,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="17" id="tTV-SE-4eW"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="今月の出費"/>
                                 <connections>
                                     <action selector="pushM" destination="YHX-HD-N8a" eventType="touchUpInside" id="fn9-E7-o16"/>
@@ -1766,7 +1758,7 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="今月の出費　　　" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Qh-bZ-8hy">
                                 <rect key="frame" x="109" y="78" width="307" height="29"/>
-                                <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1775,7 +1767,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="TUb-FX-Phg"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="今週の出費"/>
                                 <connections>
                                     <action selector="pushM" destination="9XR-jP-VBP" eventType="touchUpInside" id="iMu-KX-hom"/>
@@ -1784,7 +1776,7 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="今週の出費        " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qx9-U4-b0f">
                                 <rect key="frame" x="109" y="105" width="307" height="29"/>
-                                <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1850,13 +1842,13 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="日付" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JbZ-v5-yUu">
                                                 <rect key="frame" x="0.0" y="0.0" width="28" height="14"/>
-                                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="名称" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hQK-0I-52u">
                                                 <rect key="frame" x="52" y="0.0" width="28" height="14"/>
-                                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -1866,7 +1858,7 @@
                                                     <fragment content="個数">
                                                         <attributes>
                                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                            <font key="NSFont" size="14" name="azuki_font"/>
+                                                            <font key="NSFont" metaFont="system" size="14"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
@@ -1875,25 +1867,25 @@
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="費目" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UsG-z9-8QP">
                                                 <rect key="frame" x="156" y="0.0" width="26" height="14"/>
-                                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="13"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="金額" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SyH-Bv-cKQ">
                                                 <rect key="frame" x="206" y="0.0" width="28" height="14"/>
-                                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="費目残高" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E6a-PR-lTP">
                                                 <rect key="frame" x="258" y="0.0" width="56" height="14"/>
-                                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="財布の中" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WNN-du-RPg">
                                                 <rect key="frame" x="338" y="0.0" width="56" height="14"/>
-                                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -1908,7 +1900,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="17" id="6Lr-a6-3Ap"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="今月の出費"/>
                                 <connections>
                                     <action selector="pushM" destination="7gh-3m-JZs" eventType="touchUpInside" id="gZh-RU-ud9"/>
@@ -1917,7 +1909,7 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="今月の出費　　　" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mn3-6J-1ax">
                                 <rect key="frame" x="109" y="78" width="307" height="29"/>
-                                <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1926,7 +1918,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="dCQ-zY-zmb"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="今週の出費"/>
                                 <connections>
                                     <action selector="pushM" destination="9XR-jP-VBP" eventType="touchUpInside" id="rtj-WT-D6t"/>
@@ -1935,7 +1927,7 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="今週の出費        " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OYV-1Q-laW">
                                 <rect key="frame" x="109" y="105" width="307" height="29"/>
-                                <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -2001,13 +1993,13 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="日付" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k5R-0h-Hbr">
                                                 <rect key="frame" x="0.0" y="0.0" width="28" height="14"/>
-                                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="名称" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ei-Ue-TCk">
                                                 <rect key="frame" x="52" y="0.0" width="28" height="14"/>
-                                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -2017,7 +2009,7 @@
                                                     <fragment content="個数">
                                                         <attributes>
                                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                            <font key="NSFont" size="14" name="azuki_font"/>
+                                                            <font key="NSFont" metaFont="system" size="14"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
@@ -2026,25 +2018,25 @@
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="費目" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T1X-yF-noD">
                                                 <rect key="frame" x="156" y="0.0" width="26" height="14"/>
-                                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="13"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="金額" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jbh-wJ-XAh">
                                                 <rect key="frame" x="206" y="0.0" width="28" height="14"/>
-                                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="費目残高" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pcI-9D-7AU">
                                                 <rect key="frame" x="258" y="0.0" width="56" height="14"/>
-                                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="財布の中" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4dX-Lt-gfy">
                                                 <rect key="frame" x="338" y="0.0" width="56" height="14"/>
-                                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -2059,7 +2051,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="17" id="u8u-4y-WrG"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="今月の出費"/>
                                 <connections>
                                     <action selector="pushM" destination="Rnj-BX-RSo" eventType="touchUpInside" id="oU6-Vn-fdT"/>
@@ -2068,7 +2060,7 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="今月の出費　　　" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ueF-yp-0Xg">
                                 <rect key="frame" x="109" y="78" width="307" height="29"/>
-                                <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -2077,7 +2069,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="2Nh-JI-zcc"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="今週の出費"/>
                                 <connections>
                                     <action selector="pushM" destination="9XR-jP-VBP" eventType="touchUpInside" id="J0o-br-4zC"/>
@@ -2086,7 +2078,7 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="今週の出費        " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L5J-V0-b6m">
                                 <rect key="frame" x="109" y="105" width="307" height="29"/>
-                                <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -2152,13 +2144,13 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="日付" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BYg-bJ-hXr">
                                                 <rect key="frame" x="0.0" y="0.0" width="28" height="14"/>
-                                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="名称" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TL3-On-PM6">
                                                 <rect key="frame" x="52" y="0.0" width="28" height="14"/>
-                                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -2168,7 +2160,7 @@
                                                     <fragment content="個数">
                                                         <attributes>
                                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                            <font key="NSFont" size="14" name="azuki_font"/>
+                                                            <font key="NSFont" metaFont="system" size="14"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
@@ -2177,25 +2169,25 @@
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="費目" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DbL-uC-w55">
                                                 <rect key="frame" x="156" y="0.0" width="26" height="14"/>
-                                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="13"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="金額" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ipc-gC-WTR">
                                                 <rect key="frame" x="206" y="0.0" width="28" height="14"/>
-                                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="費目残高" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edr-LP-JEj">
                                                 <rect key="frame" x="258" y="0.0" width="56" height="14"/>
-                                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="財布の中" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Aa-Um-fEE">
                                                 <rect key="frame" x="338" y="0.0" width="56" height="14"/>
-                                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -2210,7 +2202,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="17" id="Q0X-O8-i2o"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="今月の出費"/>
                                 <connections>
                                     <action selector="pushM" destination="JbV-K0-pAp" eventType="touchUpInside" id="BKY-jb-XYb"/>
@@ -2219,7 +2211,7 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="今月の出費　　　" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k44-d7-WkH">
                                 <rect key="frame" x="109" y="78" width="307" height="29"/>
-                                <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -2228,7 +2220,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="Kf9-v4-CT6"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="今週の出費"/>
                                 <connections>
                                     <action selector="pushM" destination="9XR-jP-VBP" eventType="touchUpInside" id="0AH-aJ-g3l"/>
@@ -2237,7 +2229,7 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="今週の出費        " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HKu-rh-L7q">
                                 <rect key="frame" x="109" y="105" width="307" height="29"/>
-                                <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -2282,14 +2274,14 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="今月の使用額" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y9g-8n-pJY">
                                         <rect key="frame" x="94" y="45" width="102" height="60"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="今月の使用額" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hvj-3z-3L5">
                                         <rect key="frame" x="8" y="48" width="78" height="57"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="13"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -2396,13 +2388,13 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="日付" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YXQ-lp-epv">
                                                 <rect key="frame" x="0.0" y="0.0" width="28" height="14"/>
-                                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="名称" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fr1-qV-dCu">
                                                 <rect key="frame" x="52" y="0.0" width="28" height="14"/>
-                                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -2412,7 +2404,7 @@
                                                     <fragment content="個数">
                                                         <attributes>
                                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                            <font key="NSFont" size="14" name="azuki_font"/>
+                                                            <font key="NSFont" metaFont="system" size="14"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
@@ -2421,25 +2413,25 @@
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="費目" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hk9-ip-QFA">
                                                 <rect key="frame" x="156" y="0.0" width="26" height="14"/>
-                                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="13"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="金額" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zfb-6q-y3h">
                                                 <rect key="frame" x="206" y="0.0" width="28" height="14"/>
-                                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="費目残高" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Akr-S5-ORt">
                                                 <rect key="frame" x="258" y="0.0" width="56" height="14"/>
-                                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="財布の中" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gz7-rJ-7KO">
                                                 <rect key="frame" x="338" y="0.0" width="56" height="14"/>
-                                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -2454,7 +2446,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="17" id="koh-47-WFH"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="今月の出費"/>
                                 <connections>
                                     <action selector="pushY" destination="9XR-jP-VBP" eventType="touchUpInside" id="Dfq-pZ-61w"/>
@@ -2462,7 +2454,7 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="今月の出費　　　" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u1L-90-EuO">
                                 <rect key="frame" x="109" y="78" width="307" height="29"/>
-                                <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -2471,7 +2463,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="E5H-Kc-5DZ"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="今週の出費"/>
                                 <connections>
                                     <action selector="pushM" destination="9XR-jP-VBP" eventType="touchUpInside" id="nnJ-Ul-PTj"/>
@@ -2480,7 +2472,7 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="今週の出費        " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="euQ-j4-OOT">
                                 <rect key="frame" x="109" y="105" width="307" height="29"/>
-                                <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -2546,13 +2538,13 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="日付" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Occ-3b-rqC">
                                                 <rect key="frame" x="0.0" y="0.0" width="28" height="14"/>
-                                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="名称" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GSF-Yq-Fcs">
                                                 <rect key="frame" x="52" y="0.0" width="28" height="14"/>
-                                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -2562,7 +2554,7 @@
                                                     <fragment content="個数">
                                                         <attributes>
                                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                            <font key="NSFont" size="14" name="azuki_font"/>
+                                                            <font key="NSFont" metaFont="system" size="14"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
@@ -2571,25 +2563,25 @@
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="費目" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hrc-X4-1fu">
                                                 <rect key="frame" x="156" y="0.0" width="26" height="14"/>
-                                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="13"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="金額" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UQH-0E-Qgc">
                                                 <rect key="frame" x="206" y="0.0" width="28" height="14"/>
-                                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="費目残高" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zPk-DS-Sn5">
                                                 <rect key="frame" x="258" y="0.0" width="56" height="14"/>
-                                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="財布の中" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HuI-lN-UA7">
                                                 <rect key="frame" x="338" y="0.0" width="56" height="14"/>
-                                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -2604,7 +2596,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="17" id="yHj-Q2-22z"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="今月の出費"/>
                                 <connections>
                                     <action selector="pushM" destination="VHm-dF-cbZ" eventType="touchUpInside" id="bWH-mz-iPl"/>
@@ -2613,7 +2605,7 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="今月の出費　　　" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1IZ-SV-S0N">
                                 <rect key="frame" x="109" y="78" width="307" height="29"/>
-                                <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -2622,7 +2614,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="fnr-bu-RtC"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="今週の出費"/>
                                 <connections>
                                     <action selector="pushM" destination="9XR-jP-VBP" eventType="touchUpInside" id="cKs-14-feL"/>
@@ -2631,7 +2623,7 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="今週の出費        " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vu9-Yf-H25">
                                 <rect key="frame" x="109" y="105" width="307" height="29"/>
-                                <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -2697,13 +2689,13 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="日付" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n4Q-Ul-dus">
                                                 <rect key="frame" x="0.0" y="0.0" width="28" height="14"/>
-                                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="名称" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SvX-Db-kcZ">
                                                 <rect key="frame" x="52" y="0.0" width="28" height="14"/>
-                                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -2713,7 +2705,7 @@
                                                     <fragment content="個数">
                                                         <attributes>
                                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                            <font key="NSFont" size="14" name="azuki_font"/>
+                                                            <font key="NSFont" metaFont="system" size="14"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
@@ -2722,25 +2714,25 @@
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="費目" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rbs-PV-zXX">
                                                 <rect key="frame" x="156" y="0.0" width="26" height="14"/>
-                                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="13"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="金額" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Cb-tc-lzp">
                                                 <rect key="frame" x="206" y="0.0" width="28" height="14"/>
-                                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="費目残高" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ld7-QX-uTu">
                                                 <rect key="frame" x="258" y="0.0" width="56" height="14"/>
-                                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="財布の中" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9xl-YE-wBD">
                                                 <rect key="frame" x="338" y="0.0" width="56" height="14"/>
-                                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="14"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -2755,7 +2747,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="17" id="kRi-EX-4xe"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="今月の出費"/>
                                 <connections>
                                     <action selector="pushM" destination="Op9-4p-ndN" eventType="touchUpInside" id="o6m-y1-2uS"/>
@@ -2764,7 +2756,7 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="今月の出費　　　" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ij6-cU-DAd">
                                 <rect key="frame" x="109" y="78" width="307" height="29"/>
-                                <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -2773,7 +2765,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="w2a-yF-LhA"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="azuki_font" family="azuki_font" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="今週の出費"/>
                                 <connections>
                                     <action selector="pushM" destination="9XR-jP-VBP" eventType="touchUpInside" id="seb-Ay-Jxq"/>
@@ -2782,7 +2774,7 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="今週の出費        " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m5e-h1-8Yw">
                                 <rect key="frame" x="109" y="105" width="307" height="29"/>
-                                <fontDescription key="fontDescription" name="YuzuPopA_M_ExtraLight" family="Yuzu Pop A [M] Extra Light" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>

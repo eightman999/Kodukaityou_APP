@@ -121,6 +121,22 @@ class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
 
         pickerView.delegate = self
         pickerView.dataSource = self
+
+        // Apply modern UI styles
+        applyModernUIStyles()
+    }
+
+    private func applyModernUIStyles() {
+        // Apply modern styles to text fields
+        name?.applyModernStyle()
+        kosu?.applyModernStyle()
+        tanka?.applyModernStyle()
+
+        // Apply modern button style
+        Save?.applyPrimaryStyle()
+
+        // Update view background
+        view.backgroundColor = .systemBackground
     }
 
     // MARK: - Picker Done Button
