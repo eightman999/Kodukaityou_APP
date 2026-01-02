@@ -11,7 +11,7 @@
 import UIKit
 import CoreData
 import Firebase
-import IQKeyboardManager
+import IQKeyboardManagerSwift
 import GoogleSignIn
 
 @main
@@ -26,8 +26,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = rootViewController
 
         // IQKeyboardManager の設定（バージョン8以降）
-        IQKeyboardManager.shared.isEnabled = true
-        IQKeyboardManager.shared.shouldResignOnTouchOutside = true
+//        IQKeyboardManagerS.shared.isEnabled = true
+//        IQKeyboardManager.shared.shouldResignOnTouchOutside = true
 
         // Firebase の初期化
         FirebaseApp.configure()
