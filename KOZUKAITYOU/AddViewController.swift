@@ -16,6 +16,17 @@ import Firebase
 import FirebaseAuth
 #endif
 
+/// Simple localization helper used in this file.
+/// Returns the Japanese string when the primary language is Japanese; otherwise returns the English string.
+public func localized(japanese ja: String, english en: String) -> String {
+    let preferred = Locale.preferredLanguages.first?.lowercased() ?? Locale.current.identifier.lowercased()
+    if preferred.hasPrefix("ja") {
+        return ja
+    } else {
+        return en
+    }
+}
+
 class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate{
     // MARK: - Firebase Auth Helper
     private func currentUserID() -> String? {

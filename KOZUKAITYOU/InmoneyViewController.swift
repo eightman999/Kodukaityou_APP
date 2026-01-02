@@ -11,6 +11,8 @@
 import UIKit
 import RealmSwift
 import Firebase
+import FirebaseAuth
+
 class InmoneyViewController: UIViewController {
     //----------@IBOutlet-----------↓
       var firebaseAPI = FirebaseAPI()
@@ -114,9 +116,27 @@ class InmoneyViewController: UIViewController {
         }
         saihu = bag + Int(inmoney.text!)!
         //-----------登録処理！-----------↓
-        let USERIDA:String = String((Auth.auth().currentUser?.uid)!) + "/"
-        let USERID:String = USERIDA + "入金" + "/" + UUID().uuidString
-              print(USERID)
+        // FirebaseAuth availability check
+        if kFirebaseAuthAvailable == false {
+            let alert = UIAlertController(title: localized(japanese: "警告！", english: "Warning!"),
+                                          message: localized(japanese: "認証機能が利用できないため、入金を保存できません。FirebaseAuth を追加してください。", english: "Authentication is unavailable, so the deposit cannot be saved. Please add FirebaseAuth to the project."),
+                                          preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            present(alert, animated: true, completion: nil)
+            return
+        }
+        // 安全にUIDを取得（未ログイン時は処理中断）
+        guard let uid = Auth.auth().currentUser?.uid else {
+            let alert = UIAlertController(title: localized(japanese: "警告！", english: "Warning!"),
+                                          message: localized(japanese: "サインインされていません。入金を保存するにはログインしてください。", english: "You are not signed in. Please sign in to save the deposit."),
+                                          preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            present(alert, animated: true, completion: nil)
+            return
+        }
+        let USERIDA: String = uid + "/"
+        let USERID: String = USERIDA + "入金" + "/" + UUID().uuidString
+        print(USERID)
         firebaseAPI.uploadToFirebase(path: "\(USERID)", write: ["Name" : "入金","Number":Int(1),"Expense" : "　","Nowmoney":saihu,"total":Int(inmoney.text!)!,"Day":date!.timeIntervalSinceReferenceDate,"TIME":Date().timeIntervalSinceReferenceDate])
         let newItem = MainItem()
         newItem.Name = "入金"
@@ -199,3 +219,4 @@ class InmoneyViewController: UIViewController {
     
     
 }
+
