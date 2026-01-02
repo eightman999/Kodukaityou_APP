@@ -12,6 +12,8 @@ target 'KOZUKAITYOU' do
   pod 'OCMock'
   pod 'FirebaseUI'
   pod 'Firebase'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Database'    # 必要に応じて
   pod 'YMTGetDeviceName'
   pod 'IQKeyboardManager'
   pod 'Firebase/Analytics'
