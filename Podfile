@@ -12,7 +12,7 @@ target 'KOZUKAITYOU' do
   pod 'RealmSwift'
 
   # Keyboard management
-  pod 'IQKeyboardManager', '~> 8.0'
+  pod 'IQKeyboardManagerSwift', '~> 6.5'
 
   # Firebase services
   pod 'Firebase'
