@@ -12,6 +12,7 @@ import UIKit
 import RealmSwift
 import CoreData
 import Firebase
+import FirebaseAuth
 
 class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate{
     // MARK: - IBOutlet
