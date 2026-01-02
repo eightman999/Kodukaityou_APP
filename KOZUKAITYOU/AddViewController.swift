@@ -177,31 +177,60 @@ class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
             self.view.endEditing(true)
             return
         }
+        // Validate numeric inputs
+        guard let kosuValue = Int(kosu.text ?? ""), let tankaValue = Int(tanka.text ?? "") else {
+            let alert = UIAlertController(title: localized(japanese: "警告！", english: "Warning!"),
+                                          message: localized(japanese: "個数と単価に有効な数値を入力してください！", english: "Please enter valid numbers for count and price!"),
+                                          preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK!", style: .default, handler: nil))
+            present(alert, animated: true, completion: nil)
+            self.view.endEditing(true)
+            return
+        }
+
         // 個数テキストを加工
-        kosuu = kosu.text! + "個"
+        kosuu = (kosu.text ?? "") + "個"
 
         // ==== 日付情報の生成 ====
         let calendar = Calendar(identifier: .gregorian)
         let pickerDate = datePicker.date
         var myDateComponents =  calendar.dateComponents([.year, .month, .day], from: pickerDate )
-       print(myDateComponents.year)
-        print(myDateComponents.month)
-        print(myDateComponents.day)
+       print(myDateComponents.year ?? 0)
+        print(myDateComponents.month ?? 0)
+        print(myDateComponents.day ?? 0)
         myDateComponents.timeZone = Calendar.current.timeZone
         print(myDateComponents)
-          let date = Calendar.current.date(from: myDateComponents)
-        guard let formatString = DateFormatter.dateFormat(fromTemplate: "YYMMdd", options: 0, locale: Locale.current) else { fatalError() }
+
+        guard let date = Calendar.current.date(from: myDateComponents) else {
+            let alert = UIAlertController(title: localized(japanese: "エラー", english: "Error"),
+                                          message: localized(japanese: "無効な日付です", english: "Invalid date"),
+                                          preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK!", style: .default, handler: nil))
+            present(alert, animated: true, completion: nil)
+            self.view.endEditing(true)
+            return
+        }
+
+        guard let formatString = DateFormatter.dateFormat(fromTemplate: "YYMMdd", options: 0, locale: Locale.current) else {
+            let alert = UIAlertController(title: localized(japanese: "エラー", english: "Error"),
+                                          message: localized(japanese: "日付フォーマットエラー", english: "Date format error"),
+                                          preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK!", style: .default, handler: nil))
+            present(alert, animated: true, completion: nil)
+            self.view.endEditing(true)
+            return
+        }
         print(formatString)
         // 表示用フォーマット作成
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = formatString
         print(saihu)
         print(kingaku)
-        dateFormatter.string(from: date!)
-        
+        dateFormatter.string(from: date)
+
         print("処理１")
         // 金額計算
-        kingaku = Int(kosu.text!)! * Int(tanka.text!)!
+        kingaku = kosuValue * tankaValue
         // 現在の残高を取得し更新
         let results = realm.objects(MainItem.self)
         for dataa in results {
@@ -290,27 +319,27 @@ class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
                 // Firebaseへデータを保存
         let USERID: String = uid + "/" + "出費" + "/" + String(listcount)
         firebaseAPI.uploadToFirebase(path: "\(USERID)", write: [
-            "Name": name.text!,
-            "Number": Int(kosu.text!)!,
+            "Name": name.text ?? "",
+            "Number": kosuValue,
             "Expense": himoku,
             "Nowmoney": saihu,
             "NowExpence": exp,
             "total": kingaku,
-            "Day": date!.timeIntervalSinceReferenceDate,
+            "Day": date.timeIntervalSinceReferenceDate,
             "TIME": Date().timeIntervalSinceReferenceDate
         ])
         let USERID2: String = uid + "/" + "EXP" + "/" + EXP
-        firebaseAPI.uploadToFirebase(path: "\(USERID2)", write: [ "NowExpence":exp,"Day":date!.timeIntervalSinceReferenceDate,"TIME":Date().timeIntervalSinceReferenceDate])
+        firebaseAPI.uploadToFirebase(path: "\(USERID2)", write: [ "NowExpence":exp,"Day":date.timeIntervalSinceReferenceDate,"TIME":Date().timeIntervalSinceReferenceDate])
           let USERID3: String = uid + "/" + "NOWMONEY" + "/" + "NM"
-                firebaseAPI.uploadToFirebase(path: "\(USERID3)", write: [ "Nowmoney":saihu,"Day":date!.timeIntervalSinceReferenceDate,"TIME":Date().timeIntervalSinceReferenceDate])
+                firebaseAPI.uploadToFirebase(path: "\(USERID3)", write: [ "Nowmoney":saihu,"Day":date.timeIntervalSinceReferenceDate,"TIME":Date().timeIntervalSinceReferenceDate])
         let newItem = MainItem()
-        newItem.Name = name.text!
-        newItem.Number = Int(kosu.text!)!
+        newItem.Name = name.text ?? ""
+        newItem.Number = kosuValue
         newItem.Expense = himoku
         newItem.Nowmoney = saihu
         newItem.NowExpense = exp
         newItem.total =  kingaku
-        newItem.Day =  date!
+        newItem.Day =  date
         newItem.TIME = Date()
         print(Date())
         print("処理２")
@@ -322,11 +351,11 @@ class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
             print("登録")
         }catch{
         }
-        let names :String = "名称" + String(name.text!) + "\n"
-        let tanka2 :String = "単価" + String(tanka.text!) + "円\n"
+        let names :String = "名称" + (name.text ?? "") + "\n"
+        let tanka2 :String = "単価" + String(tankaValue) + "円\n"
         let kosuu2 :String = "個数" + kosuu + "\n"
         let kei :String = "小計" + goukeib
-        let nitiji:String = "\n" + localized(japanese: "日時", english: "Date") + dateFormatter.string(from: date!)
+        let nitiji:String = "\n" + localized(japanese: "日時", english: "Date") + dateFormatter.string(from: date)
         print("アラート")
         let title = localized(japanese: "登録したよ！", english: "Saved!")
         let message = localized(japanese: "登録されました！\n登録されたデータ\n", english: "Saved!\nSaved data\n") + names + tanka2 + kosuu2 + kei + nitiji
