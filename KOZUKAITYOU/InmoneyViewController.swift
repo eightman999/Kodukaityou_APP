@@ -60,8 +60,17 @@ class InmoneyViewController: UIViewController {
             return
         }
         //---------日時特殊処理・警告-----------↓
-        niti = Int(Niti.text!)!
-        tuki = Int(Tuki.text!)!
+        guard let nitiValue = Int(Niti.text ?? ""), let tukiValue = Int(Tuki.text ?? "") else {
+            let alert = UIAlertController(title: localized(japanese: "警告！", english: "Warning!"),
+                                          message: localized(japanese: "有効な数値を入力してください！", english: "Please enter valid numbers!"),
+                                          preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK!", style: .default, handler: nil))
+            present(alert, animated: true, completion: nil)
+            self.view.endEditing(true)
+            return
+        }
+        niti = nitiValue
+        tuki = tukiValue
         if niti > 31 {
             let alert = UIAlertController(title: localized(japanese: "警告！", english: "Warning!"),
                                           message: localized(japanese: "日付が存在しません！", english: "Invalid day!"),
@@ -83,38 +92,65 @@ class InmoneyViewController: UIViewController {
         //---------Date関連の何か？(作者にもわからない)-------↓
         var myDateComponents = DateComponents()
         myDateComponents.year = 2019
-        myDateComponents.month = Int(Tuki.text!)!
-        myDateComponents.day = Int(Niti.text!)!
+        myDateComponents.month = tuki
+        myDateComponents.day = niti
         myDateComponents.timeZone = Calendar.current.timeZone
-        
+
         print(myDateComponents)
-        
-        let date = Calendar.current.date(from: myDateComponents)
-        
-        print(date!)
-        
-        guard let formatString = DateFormatter.dateFormat(fromTemplate: "MMMdd", options: 0, locale: Locale.current) else { fatalError() }
-        
+
+        guard let date = Calendar.current.date(from: myDateComponents) else {
+            let alert = UIAlertController(title: localized(japanese: "警告！", english: "Warning!"),
+                                          message: localized(japanese: "無効な日付です！", english: "Invalid date!"),
+                                          preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK!", style: .default, handler: nil))
+            present(alert, animated: true, completion: nil)
+            self.view.endEditing(true)
+            return
+        }
+
+        print(date)
+
+        guard let formatString = DateFormatter.dateFormat(fromTemplate: "MMMdd", options: 0, locale: Locale.current) else {
+            let alert = UIAlertController(title: localized(japanese: "エラー", english: "Error"),
+                                          message: localized(japanese: "日付フォーマットエラー", english: "Date format error"),
+                                          preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK!", style: .default, handler: nil))
+            present(alert, animated: true, completion: nil)
+            self.view.endEditing(true)
+            return
+        }
+
         //print(formatString)
-        
+
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = formatString
-        
-        dateFormatter.string(from: date!)
+
+        dateFormatter.string(from: date)
+
+        guard let inmoneyValue = Int(inmoney.text ?? "") else {
+            let alert = UIAlertController(title: localized(japanese: "警告！", english: "Warning!"),
+                                          message: localized(japanese: "入金額に有効な数値を入力してください！", english: "Please enter a valid amount!"),
+                                          preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK!", style: .default, handler: nil))
+            present(alert, animated: true, completion: nil)
+            self.view.endEditing(true)
+            return
+        }
+
         let results = realm.objects(MainItem.self)
         for dataa in results {
-            let money = Int(inmoney.text!)!
+            let money = inmoneyValue
             saihu = dataa.Nowmoney + money
         }
         
         
         //-------------計算---------------↓
         var bag: Int = 0
-        
+
         for data in kd {
-            bag = data["saihu"] as! Int
+            bag = data["saihu"] as? Int ?? 0
         }
-        saihu = bag + Int(inmoney.text!)!
+        saihu = bag + inmoneyValue
 
 
         //-----------登録処理！-----------↓
@@ -144,8 +180,8 @@ class InmoneyViewController: UIViewController {
                 "Number": 1,
                 "Expense": "　",
                 "Nowmoney": saihu,
-                "total": Int(inmoney.text ?? "") ?? 0,
-                "Day": date?.timeIntervalSinceReferenceDate ?? Date().timeIntervalSinceReferenceDate,
+                "total": inmoneyValue,
+                "Day": date.timeIntervalSinceReferenceDate,
                 "TIME": Date().timeIntervalSinceReferenceDate
             ]
         )
@@ -155,9 +191,9 @@ class InmoneyViewController: UIViewController {
         newItem.Number = Int(1)
         newItem.Expense = "　"
         newItem.Nowmoney = saihu
-        
-        newItem.total = Int(inmoney.text!)!
-        newItem.Day = date!
+
+        newItem.total = inmoneyValue
+        newItem.Day = date
         print("処理２")
         print(Date())
         print("処理２")
@@ -171,15 +207,15 @@ class InmoneyViewController: UIViewController {
         }
         
         //------------入金報告！----------↓
-        
+
         let alert = UIAlertController(
             title: "入金しましたよ！！",
-            
+
             message:
-            "入金されました！\n" + "金額" + inmoney.text! + "円\n" +  "日付" + dateFormatter.string(from: date!),
-            
+            "入金されました！\n" + "金額" + String(inmoneyValue) + "円\n" +  "日付" + dateFormatter.string(from: date),
+
             preferredStyle: .alert
-            
+
         )
         alert.addAction(UIAlertAction(
             title: "OK",
