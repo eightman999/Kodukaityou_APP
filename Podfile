@@ -4,19 +4,21 @@ target 'KOZUKAITYOU' do
   use_frameworks!
 
   # Pods for KOZUKAITYOU
+
+  # Charts for data visualization
   pod 'DGCharts'
+
+  # Local database
   pod 'RealmSwift'
-  pod 'TTTAttributedLabel'
-  pod 'SVProgressHUD'  # ← Git指定を削除
-  pod 'EAIntroView'
-  pod 'OCMock'
-  pod 'FirebaseUI'
+
+  # Keyboard management
+  pod 'IQKeyboardManager', '~> 8.0'
+
+  # Firebase services
   pod 'Firebase'
-  pod 'Firebase/Auth'
-  pod 'Firebase/Database'    # 必要に応じて
-  pod 'YMTGetDeviceName'
-  pod 'IQKeyboardManager'
   pod 'Firebase/Analytics'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Database'
 end
 
 post_install do |installer|
@@ -27,7 +29,7 @@ post_install do |installer|
       end
     end
   end
-  
+
   # Xcode 15対応 - DT_TOOLCHAIN_DIR エラー修正
   installer.pods_project.targets.each do |target|
     target.build_configurations.each do |config|
