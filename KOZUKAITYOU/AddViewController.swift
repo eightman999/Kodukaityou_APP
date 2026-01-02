@@ -12,9 +12,28 @@ import UIKit
 import RealmSwift
 import CoreData
 import Firebase
+#if canImport(FirebaseAuth)
 import FirebaseAuth
+#endif
 
 class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate{
+    // MARK: - Firebase Auth Helper
+    private func currentUserID() -> String? {
+        #if canImport(FirebaseAuth)
+        return Auth.auth().currentUser?.uid
+        #else
+        return nil
+        #endif
+    }
+
+    private func showMissingAuthAlert() {
+        let alert = UIAlertController(title: localized(japanese: "エラー", english: "Error"),
+                                      message: localized(japanese: "FirebaseAuth が利用できないため保存できません。", english: "Cannot save because FirebaseAuth isn't available."),
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alert, animated: true)
+    }
+
     // MARK: - IBOutlet
     /// 費目選択用のピッカー
     @IBOutlet var pickerView: UIPickerView!
@@ -109,6 +128,12 @@ class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
     // MARK: - 保存処理
     /// 入力内容をRealmとFirebaseに保存
     @IBAction func saveWorld(_ sender: Any){
+        // Ensure FirebaseAuth is available and user is signed in
+        guard let uid = currentUserID() else {
+            showMissingAuthAlert()
+            self.view.endEditing(true)
+            return
+        }
         // 入力チェック
         // 個数が未入力の場合は警告を表示
         if kosu.text?.isEmpty == true {
@@ -252,7 +277,7 @@ class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
         //            mVC?.allData.append(Datedic)
         //        saveData.set(mVC?.allData, forKey: "WORD")
                 // Firebaseへデータを保存
-        let USERID: String = String((Auth.auth().currentUser?.uid)!) + "/" + "出費" + "/" + String(listcount)
+        let USERID: String = uid + "/" + "出費" + "/" + String(listcount)
         firebaseAPI.uploadToFirebase(path: "\(USERID)", write: [
             "Name": name.text!,
             "Number": Int(kosu.text!)!,
@@ -263,9 +288,9 @@ class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
             "Day": date!.timeIntervalSinceReferenceDate,
             "TIME": Date().timeIntervalSinceReferenceDate
         ])
-        let USERID2: String = String((Auth.auth().currentUser?.uid)!) + "/" + "EXP" + "/" + EXP
+        let USERID2: String = uid + "/" + "EXP" + "/" + EXP
         firebaseAPI.uploadToFirebase(path: "\(USERID2)", write: [ "NowExpence":exp,"Day":date!.timeIntervalSinceReferenceDate,"TIME":Date().timeIntervalSinceReferenceDate])
-          let USERID3: String = String((Auth.auth().currentUser?.uid)!) + "/" + "NOWMONEY" + "/" + "NM"
+          let USERID3: String = uid + "/" + "NOWMONEY" + "/" + "NM"
                 firebaseAPI.uploadToFirebase(path: "\(USERID3)", write: [ "Nowmoney":saihu,"Day":date!.timeIntervalSinceReferenceDate,"TIME":Date().timeIntervalSinceReferenceDate])
         let newItem = MainItem()
         newItem.Name = name.text!
