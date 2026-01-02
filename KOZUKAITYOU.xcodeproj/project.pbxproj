@@ -66,6 +66,7 @@
 		C1FED9DD287BF20600C73403 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1FED9DC287BF20600C73403 /* Realm.framework */; };
 		C1FED9DF287BF20600C73403 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1FED9DE287BF20600C73403 /* RealmSwift.framework */; };
 		C1FED9E4287BF2B200C73403 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1FED9CB287BC97300C73403 /* XCTest.framework */; };
+		CLOC1234567890ABCDEF0001 /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = CLOC1234567890ABCDEF0002 /* Localization.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -162,6 +163,7 @@
 		C1FED9DC287BF20600C73403 /* Realm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Realm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1FED9DE287BF20600C73403 /* RealmSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1FED9E2287BF22700C73403 /* libdyld.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libdyld.tbd; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/lib/system/libdyld.tbd; sourceTree = DEVELOPER_DIR; };
+		CLOC1234567890ABCDEF0002 /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,6 +225,7 @@
 				AFD79AA1230CE1DD002FB2E7 /* KOZUKAITYOU.entitlements */,
 				4E0A7DE022EA812400AD0ECD /* AppDelegate.swift */,
 				C10B315323B633B0002B6232 /* FirebaseAPI.swift */,
+				CLOC1234567890ABCDEF0002 /* Localization.swift */,
 				C187C99723406D7E00A10733 /* MainItem.swift */,
 				AFD71AB5237E4ACC00706A30 /* SUBItem.swift */,
 				C10ADBD624337696002E839D /* YearItem.swift */,
@@ -669,6 +672,7 @@
 				C10B315423B633B0002B6232 /* FirebaseAPI.swift in Sources */,
 				C10ADBD724337696002E839D /* YearItem.swift in Sources */,
 				4EBA8EC422EA936500E85CC3 /* mainViewController.swift in Sources */,
+				CLOC1234567890ABCDEF0001 /* Localization.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
