@@ -16,26 +16,10 @@ import RealmSwift
 
 class SignUpViewController: UIViewController {
 
-    @IBOutlet weak var emailField: UITextField!
-    @IBOutlet weak var passwordField: UITextField!
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        applyModernUIStyles()
-        configureGoogleSignIn()
-    }
-
-    private func applyModernUIStyles() {
-        // Apply modern styles to text fields
-        emailField?.applyModernStyle()
-        emailField?.placeholder = "メールアドレス"
-
-        passwordField?.applyModernStyle()
-        passwordField?.placeholder = "パスワード（6文字以上）"
-        passwordField?.isSecureTextEntry = true
-
-        // Update view background
         view.backgroundColor = .systemBackground
+        configureGoogleSignIn()
     }
 
     private func configureGoogleSignIn() {
@@ -88,36 +72,6 @@ class SignUpViewController: UIViewController {
         }
     }
 
-    @IBAction func didTapSignUp(_ sender: UIButton) {
-        guard let email = emailField.text, !email.isEmpty,
-              let password = passwordField.text, !password.isEmpty else {
-            showAlert("メールアドレスとパスワードを入力してください")
-            return
-        }
-
-        Auth.auth().createUser(withEmail: email, password: password) { [weak self] (authResult, error) in
-            guard let self = self else { return }
-
-            if let error = error {
-                if let errCode = AuthErrorCode(rawValue: error._code) {
-                    switch errCode {
-                    case .invalidEmail:
-                        self.showAlert("有効なメールアドレスを入力してください。")
-                    case .emailAlreadyInUse:
-                        self.showAlert("そのメールアドレスは既に使用されています。")
-                    case .weakPassword:
-                        self.showAlert("パスワードは6文字以上で入力してください。")
-                    default:
-                        self.showAlert("エラー: \(error.localizedDescription)")
-                    }
-                }
-                return
-            }
-
-            // 登録成功
-            self.showSuccessAlert()
-        }
-    }
 
     @IBAction func didTapBackToLogin(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
@@ -139,17 +93,5 @@ class SignUpViewController: UIViewController {
 
     func signIn() {
         performSegue(withIdentifier: "SignInFromSignUp", sender: nil)
-    }
-
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
-    }
-}
-
-// MARK: - UITextFieldDelegate
-extension SignUpViewController: UITextFieldDelegate {
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
     }
 }
