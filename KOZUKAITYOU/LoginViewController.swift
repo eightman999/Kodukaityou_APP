@@ -55,7 +55,7 @@ class LoginViewController: UIViewController {
             guard let self = self else { return }
 
             if let error = error {
-                if let errCode = AuthErrorCode.Code(rawValue: error._code) {
+                if let errCode = AuthErrorCode(rawValue: error._code) {
                     switch errCode {
                     case .userNotFound:
                         self.showAlert("ユーザーアカウントが見つかりません。新規登録してください")
@@ -107,7 +107,7 @@ class LoginViewController: UIViewController {
 
             Auth.auth().sendPasswordReset(withEmail: userInput) { error in
                 if let error = error {
-                    if let errCode = AuthErrorCode.Code(rawValue: error._code) {
+                    if let errCode = AuthErrorCode(rawValue: error._code) {
                         switch errCode {
                         case .userNotFound:
                             DispatchQueue.main.async {
