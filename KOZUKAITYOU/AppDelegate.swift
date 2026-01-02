@@ -12,6 +12,7 @@ import UIKit
 import CoreData
 import Firebase
 import IQKeyboardManager
+import GoogleSignIn
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -32,6 +33,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
 
         return true
+    }
+
+    // Google Sign-In URL handling
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        return GIDSignIn.sharedInstance.handle(url)
     }
     
     
