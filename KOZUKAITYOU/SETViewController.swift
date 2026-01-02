@@ -10,9 +10,9 @@
 
 import UIKit
 import Firebase
+#if canImport(FirebaseAuth)
 import FirebaseAuth
-import FirebaseAuthUI
-import FirebaseDatabaseUI
+#endif
 class SETViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -21,11 +21,15 @@ class SETViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     @IBAction func logout(){
+#if canImport(FirebaseAuth)
           do {
            try Auth.auth().signOut()
-       } catch let error {
-         print("エラーでたよお")
+       } catch {
+         print("FirebaseAuth signOut failed: \(error)")
        }
+#else
+       print("FirebaseAuth not available; logout is a no-op in this build.")
+#endif
     }
     
 

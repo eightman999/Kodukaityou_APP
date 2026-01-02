@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22B5BF43694F39865EA66B59 /* Pods_KOZUKAITYOU.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F6A736F82C8A1104659216E /* Pods_KOZUKAITYOU.framework */; };
 		4E0A7DE122EA812400AD0ECD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0A7DE022EA812400AD0ECD /* AppDelegate.swift */; };
 		4E0A7DE322EA812400AD0ECD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0A7DE222EA812400AD0ECD /* ViewController.swift */; };
 		4E0A7DE922EA812400AD0ECD /* KOZUKAITYOU.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4E0A7DE722EA812400AD0ECD /* KOZUKAITYOU.xcdatamodeld */; };
@@ -64,7 +65,6 @@
 		C1FED9DB287BF1F800C73403 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1FED9DA287BF1F800C73403 /* Charts.framework */; };
 		C1FED9DD287BF20600C73403 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1FED9DC287BF20600C73403 /* Realm.framework */; };
 		C1FED9DF287BF20600C73403 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1FED9DE287BF20600C73403 /* RealmSwift.framework */; };
-		C1FED9E1287BF20D00C73403 /* Pods_KOZUKAITYOU.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1FED9E0287BF20D00C73403 /* Pods_KOZUKAITYOU.framework */; };
 		C1FED9E4287BF2B200C73403 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1FED9CB287BC97300C73403 /* XCTest.framework */; };
 /* End PBXBuildFile section */
 
@@ -86,8 +86,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		37EED341260D236EC4E3C59A /* Pods-KOZUKAITYOU.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KOZUKAITYOU.release.xcconfig"; path = "Target Support Files/Pods-KOZUKAITYOU/Pods-KOZUKAITYOU.release.xcconfig"; sourceTree = "<group>"; };
-		4C8AEE514B9DB45B8D4DD9AE /* Pods-KOZUKAITYOU.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KOZUKAITYOU.debug.xcconfig"; path = "Target Support Files/Pods-KOZUKAITYOU/Pods-KOZUKAITYOU.debug.xcconfig"; sourceTree = "<group>"; };
+		0F6A736F82C8A1104659216E /* Pods_KOZUKAITYOU.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KOZUKAITYOU.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D8374B6DD7A67FE6053C312 /* Pods-KOZUKAITYOU.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KOZUKAITYOU.release.xcconfig"; path = "Target Support Files/Pods-KOZUKAITYOU/Pods-KOZUKAITYOU.release.xcconfig"; sourceTree = "<group>"; };
 		4E0A7DDD22EA812400AD0ECD /* KOZUKAITYOU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KOZUKAITYOU.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E0A7DE022EA812400AD0ECD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4E0A7DE222EA812400AD0ECD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -106,7 +106,7 @@
 		4EBA8EC322EA936500E85CC3 /* mainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainViewController.swift; sourceTree = "<group>"; };
 		4EBA8EC722EAA0A100E85CC3 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		4ED54AD822EBDB3600C2293B /* ダウンロード.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ダウンロード.png"; path = "../ダウンロード.png"; sourceTree = "<group>"; };
-		8318B6A6B11D01A7D554C0C1 /* Pods_KOZUKAITYOU.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KOZUKAITYOU.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF07731C467A7DC94D16C7CC /* Pods-KOZUKAITYOU.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KOZUKAITYOU.debug.xcconfig"; path = "Target Support Files/Pods-KOZUKAITYOU/Pods-KOZUKAITYOU.debug.xcconfig"; sourceTree = "<group>"; };
 		AF1E6A20230F6B3700629476 /* InmoneyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InmoneyViewController.swift; sourceTree = "<group>"; };
 		AF1E6A22230F79AE00629476 /* SavebudgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavebudgetViewController.swift; sourceTree = "<group>"; };
 		AF26245D230E644900423B58 /* 麻袋型のドル袋の無料アイコン（ユーロ）.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "麻袋型のドル袋の無料アイコン（ユーロ）.png"; path = "../麻袋型のドル袋の無料アイコン（ユーロ）.png"; sourceTree = "<group>"; };
@@ -149,7 +149,6 @@
 		C187C99323404E8000A10733 /* Realm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Realm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C187C99523404E8400A10733 /* RealmSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C187C99723406D7E00A10733 /* MainItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainItem.swift; sourceTree = "<group>"; };
-		C187C99B23406FB400A10733 /* Pods_KOZUKAITYOU.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_KOZUKAITYOU.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1D364C824234EAE006EAD43 /* ListTableViewCell2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListTableViewCell2.xib; sourceTree = "<group>"; };
 		C1D364CC24239A35006EAD43 /* AyearViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AyearViewController.swift; sourceTree = "<group>"; };
 		C1D364CE24239A47006EAD43 /* ByearViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ByearViewController.swift; sourceTree = "<group>"; };
@@ -159,11 +158,9 @@
 		C1FED9CB287BC97300C73403 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		C1FED9D0287BEF9200C73403 /* Realm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Realm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1FED9D2287BEF9F00C73403 /* RealmSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C1FED9D4287BEFAA00C73403 /* Pods_KOZUKAITYOU.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_KOZUKAITYOU.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1FED9DA287BF1F800C73403 /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Charts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1FED9DC287BF20600C73403 /* Realm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Realm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1FED9DE287BF20600C73403 /* RealmSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C1FED9E0287BF20D00C73403 /* Pods_KOZUKAITYOU.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_KOZUKAITYOU.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1FED9E2287BF22700C73403 /* libdyld.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libdyld.tbd; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/lib/system/libdyld.tbd; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
@@ -172,10 +169,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1FED9E1287BF20D00C73403 /* Pods_KOZUKAITYOU.framework in Frameworks */,
 				C1FED9DD287BF20600C73403 /* Realm.framework in Frameworks */,
 				C1FED9DF287BF20600C73403 /* RealmSwift.framework in Frameworks */,
 				C1FED9DB287BF1F800C73403 /* Charts.framework in Frameworks */,
+				22B5BF43694F39865EA66B59 /* Pods_KOZUKAITYOU.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,22 +283,19 @@
 			isa = PBXGroup;
 			children = (
 				C1FED9E2287BF22700C73403 /* libdyld.tbd */,
-				C1FED9E0287BF20D00C73403 /* Pods_KOZUKAITYOU.framework */,
 				C1FED9DC287BF20600C73403 /* Realm.framework */,
 				C1FED9DE287BF20600C73403 /* RealmSwift.framework */,
 				C1FED9DA287BF1F800C73403 /* Charts.framework */,
-				C1FED9D4287BEFAA00C73403 /* Pods_KOZUKAITYOU.framework */,
 				C1FED9D2287BEF9F00C73403 /* RealmSwift.framework */,
 				C1FED9D0287BEF9200C73403 /* Realm.framework */,
 				C1FED9CB287BC97300C73403 /* XCTest.framework */,
 				AFA675DD237A47C300985F7B /* GoogleUtilities.framework */,
 				AFA675DA237A47BE00985F7B /* GoogleDataTransport.framework */,
 				AFA675D6237A47B900985F7B /* SVProgressHUD.framework */,
-				C187C99B23406FB400A10733 /* Pods_KOZUKAITYOU.framework */,
 				C187C99523404E8400A10733 /* RealmSwift.framework */,
 				C187C99323404E8000A10733 /* Realm.framework */,
 				C187C99123404E7C00A10733 /* Charts.framework */,
-				8318B6A6B11D01A7D554C0C1 /* Pods_KOZUKAITYOU.framework */,
+				0F6A736F82C8A1104659216E /* Pods_KOZUKAITYOU.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -309,8 +303,8 @@
 		7D07C1C8D85B5D1CCC98B7FB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				4C8AEE514B9DB45B8D4DD9AE /* Pods-KOZUKAITYOU.debug.xcconfig */,
-				37EED341260D236EC4E3C59A /* Pods-KOZUKAITYOU.release.xcconfig */,
+				AF07731C467A7DC94D16C7CC /* Pods-KOZUKAITYOU.debug.xcconfig */,
+				2D8374B6DD7A67FE6053C312 /* Pods-KOZUKAITYOU.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -346,12 +340,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4E0A7E0822EA812600AD0ECD /* Build configuration list for PBXNativeTarget "KOZUKAITYOU" */;
 			buildPhases = (
-				F4104ADD6BEDF455204EA972 /* [CP] Check Pods Manifest.lock */,
+				1F4F251469D1043A6C18348B /* [CP] Check Pods Manifest.lock */,
 				4E0A7DD922EA812400AD0ECD /* Sources */,
 				4E0A7DDA22EA812400AD0ECD /* Frameworks */,
 				4E0A7DDB22EA812400AD0ECD /* Resources */,
-				A9E16B8F7C7385022BC39DF0 /* [CP] Embed Pods Frameworks */,
-				EE8A42E3877AC58B8CB3A143 /* [CP] Copy Pods Resources */,
+				394C67BCBF57AF88FFEA8580 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -586,7 +579,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		A9E16B8F7C7385022BC39DF0 /* [CP] Embed Pods Frameworks */ = {
+		1F4F251469D1043A6C18348B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KOZUKAITYOU-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		394C67BCBF57AF88FFEA8580 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -594,13 +609,9 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-KOZUKAITYOU/Pods-KOZUKAITYOU-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-KOZUKAITYOU/Pods-KOZUKAITYOU-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -623,49 +634,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
-		};
-		EE8A42E3877AC58B8CB3A143 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-KOZUKAITYOU/Pods-KOZUKAITYOU-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-KOZUKAITYOU/Pods-KOZUKAITYOU-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KOZUKAITYOU/Pods-KOZUKAITYOU-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F4104ADD6BEDF455204EA972 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-KOZUKAITYOU-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -860,7 +828,7 @@
 		};
 		4E0A7E0922EA812600AD0ECD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4C8AEE514B9DB45B8D4DD9AE /* Pods-KOZUKAITYOU.debug.xcconfig */;
+			baseConfigurationReference = AF07731C467A7DC94D16C7CC /* Pods-KOZUKAITYOU.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = KOZUKAITYOU/KOZUKAITYOU.entitlements;
@@ -884,7 +852,7 @@
 		};
 		4E0A7E0A22EA812600AD0ECD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 37EED341260D236EC4E3C59A /* Pods-KOZUKAITYOU.release.xcconfig */;
+			baseConfigurationReference = 2D8374B6DD7A67FE6053C312 /* Pods-KOZUKAITYOU.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = KOZUKAITYOU/KOZUKAITYOU.entitlements;

@@ -9,7 +9,7 @@
 // Operation: 今月の収支をグラフ表示する
 
 import UIKit
-import Charts
+import DGCharts
 import RealmSwift
 
 class MonthViewController: UIViewController{

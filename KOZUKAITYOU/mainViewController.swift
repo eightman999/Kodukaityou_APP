@@ -9,7 +9,7 @@
 // Operation: メインの一覧画面、週/月切替付き
 
 import UIKit
-import Charts
+import DGCharts
 import RealmSwift
 
 class mainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {

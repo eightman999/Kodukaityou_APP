@@ -1,26 +1,20 @@
-# Uncomment the next line to define a global platform for your project
 platform :ios, '17.0'
 
 target 'KOZUKAITYOU' do
-  # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
   # Pods for KOZUKAITYOU
-  pod 'Charts'
+  pod 'DGCharts'
   pod 'RealmSwift'
   pod 'TTTAttributedLabel'
-  pod 'SVProgressHUD', :git => 'https://github.com/SVProgressHUD/SVProgressHUD.git'
-  pod 'EAIntroView' # ここに追加！
+  pod 'SVProgressHUD'  # ← Git指定を削除
+  pod 'EAIntroView'
   pod 'OCMock'
   pod 'FirebaseUI'
   pod 'Firebase'
   pod 'YMTGetDeviceName'
   pod 'IQKeyboardManager'
-  # add the Firebase pod for Google Analytics
   pod 'Firebase/Analytics'
-  # add pods for any other desired Firebase products
-  # https://firebase.google.com/docs/ios/setup#available-pods
-  # pod 'Google-Mobile-Ads-SDK'
 end
 
 post_install do |installer|
@@ -28,6 +22,18 @@ post_install do |installer|
     project.targets.each do |target|
       target.build_configurations.each do |config|
         config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '17.0'
+      end
+    end
+  end
+  
+  # Xcode 15対応 - DT_TOOLCHAIN_DIR エラー修正
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      xcconfig_path = config.base_configuration_reference&.real_path
+      if xcconfig_path && File.exist?(xcconfig_path)
+        xcconfig = File.read(xcconfig_path)
+        xcconfig_mod = xcconfig.gsub(/DT_TOOLCHAIN_DIR/, "TOOLCHAIN_DIR")
+        File.open(xcconfig_path, "w") { |file| file << xcconfig_mod }
       end
     end
   end

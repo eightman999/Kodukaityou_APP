@@ -10,7 +10,7 @@
 
 import Foundation
 import UIKit
-import Charts
+import DGCharts
 import RealmSwift
 
 class yearViewController: UIViewController{
