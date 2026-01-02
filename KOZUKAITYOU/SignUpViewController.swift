@@ -33,7 +33,7 @@ class SignUpViewController: UIViewController {
             guard let self = self else { return }
 
             if let error = error {
-                if let errCode = AuthErrorCode.Code(rawValue: error._code) {
+                if let errCode = AuthErrorCode(rawValue: error._code) {
                     switch errCode {
                     case .invalidEmail:
                         self.showAlert("有効なメールアドレスを入力してください。")
