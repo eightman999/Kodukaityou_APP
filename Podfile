@@ -19,9 +19,6 @@ target 'KOZUKAITYOU' do
   pod 'Firebase/Analytics'
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
-
-  # Google Sign-In
-  pod 'GoogleSignIn'
 end
 
 post_install do |installer|
