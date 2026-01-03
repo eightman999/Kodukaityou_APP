@@ -12,7 +12,6 @@ import UIKit
 import CoreData
 import Firebase
 import IQKeyboardManagerSwift
-import GoogleSignIn
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -26,18 +25,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = rootViewController
 
         // IQKeyboardManager の設定（バージョン8以降）
-//        IQKeyboardManagerS.shared.isEnabled = true
-//        IQKeyboardManager.shared.shouldResignOnTouchOutside = true
+        IQKeyboardManager.shared.isEnabled = true
+        IQKeyboardManager.shared.shouldResignOnTouchOutside = true
 
         // Firebase の初期化
         FirebaseApp.configure()
 
         return true
-    }
-
-    // Google Sign-In URL handling
-    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-        return GIDSignIn.sharedInstance.handle(url)
     }
     
     
