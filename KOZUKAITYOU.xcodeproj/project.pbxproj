@@ -48,9 +48,6 @@
 		C16AC26E2376E2BA0035F03C /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16AC26C2376E2BA0035F03C /* ListTableViewCell.swift */; };
 		C16AC26F2376E2BA0035F03C /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C16AC26D2376E2BA0035F03C /* ListTableViewCell.xib */; };
 		C16C76EA23796B5D001F7642 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C16C76E923796B5D001F7642 /* GoogleService-Info.plist */; };
-		C173822723B33F620047E081 /* azukiB.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C16AC26A2376DD2C0035F03C /* azukiB.ttf */; };
-		C173822823B33F680047E081 /* ゆず ポップ A [M] Extra Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C16AC26B2376DD3E0035F03C /* ゆず ポップ A [M] Extra Light.ttf */; };
-		C173822923B33F6D0047E081 /* azuki.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C16AC2692376DD1E0035F03C /* azuki.ttf */; };
 		C187C98E23404C5500A10733 /* メモアイコン.png in Resources */ = {isa = PBXBuildFile; fileRef = C187C98D23404C5500A10733 /* メモアイコン.png */; };
 		C187C99023404C8700A10733 /* gia.png in Resources */ = {isa = PBXBuildFile; fileRef = C187C98F23404C8700A10733 /* gia.png */; };
 		C187C99823406D7E00A10733 /* MainItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C187C99723406D7E00A10733 /* MainItem.swift */; };
@@ -136,9 +133,6 @@
 		C16A0CB9243AEA5E0042C817 /* GyearViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GyearViewController.swift; sourceTree = "<group>"; };
 		C16A0CBB243AEA6B0042C817 /* HyearViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HyearViewController.swift; sourceTree = "<group>"; };
 		C16A0CBD243AEAB50042C817 /* IyearViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IyearViewController.swift; sourceTree = "<group>"; };
-		C16AC2692376DD1E0035F03C /* azuki.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = azuki.ttf; sourceTree = "<group>"; };
-		C16AC26A2376DD2C0035F03C /* azukiB.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = azukiB.ttf; sourceTree = "<group>"; };
-		C16AC26B2376DD3E0035F03C /* ゆず ポップ A [M] Extra Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ゆず ポップ A [M] Extra Light.ttf"; sourceTree = "<group>"; };
 		C16AC26C2376E2BA0035F03C /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		C16AC26D2376E2BA0035F03C /* ListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
 		C16C76E923796B5D001F7642 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -322,11 +316,8 @@
 				4EBA8EBB22EA8F8100E85CC3 /* home3.png */,
 				C187C98F23404C8700A10733 /* gia.png */,
 				AF26245D230E644900423B58 /* 麻袋型のドル袋の無料アイコン（ユーロ）.png */,
-				C16AC26A2376DD2C0035F03C /* azukiB.ttf */,
-				C16AC2692376DD1E0035F03C /* azuki.ttf */,
 				C187C98D23404C5500A10733 /* メモアイコン.png */,
 				AF262463230E655700423B58 /* カレンダーのフリーアイコン19.png */,
-				C16AC26B2376DD3E0035F03C /* ゆず ポップ A [M] Extra Light.ttf */,
 				4EBA8EB322EA8D8900E85CC3 /* gurahu.jpeg */,
 				4EBA8EAF22EA82F200E85CC3 /* K1.png */,
 			);
@@ -535,10 +526,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C173822923B33F6D0047E081 /* azuki.ttf in Resources */,
-				C173822823B33F680047E081 /* ゆず ポップ A [M] Extra Light.ttf in Resources */,
 				C1D364C924234EAE006EAD43 /* ListTableViewCell2.xib in Resources */,
-				C173822723B33F620047E081 /* azukiB.ttf in Resources */,
 				AFC06732237B7BF800E1E06C /* 国旗.png in Resources */,
 				C187C98E23404C5500A10733 /* メモアイコン.png in Resources */,
 				AF4155DD237D3C0F00725B44 /* Main.storyboard in Resources */,
@@ -587,9 +575,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-KOZUKAITYOU/Pods-KOZUKAITYOU-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-KOZUKAITYOU/Pods-KOZUKAITYOU-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
