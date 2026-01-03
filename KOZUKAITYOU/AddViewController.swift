@@ -128,15 +128,45 @@ class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
 
     private func applyModernUIStyles() {
         // Apply modern styles to text fields
-        name?.applyModernStyle()
-        kosu?.applyModernStyle()
-        tanka?.applyModernStyle()
+        applyModernStyleToTextField(name)
+        applyModernStyleToTextField(kosu)
+        applyModernStyleToTextField(tanka)
 
         // Apply modern button style
-        Save?.applyPrimaryStyle()
+        applyPrimaryStyleToButton(Save)
 
         // Update view background
         view.backgroundColor = .systemBackground
+    }
+
+    private func applyModernStyleToTextField(_ textField: UITextField?) {
+        guard let textField = textField else { return }
+        textField.borderStyle = .none
+        textField.layer.cornerRadius = 10
+        textField.layer.borderWidth = 1
+        textField.layer.borderColor = UIColor.systemGray4.cgColor
+        textField.backgroundColor = .systemBackground
+
+        // Add padding
+        textField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 12, height: textField.frame.height))
+        textField.leftViewMode = .always
+        textField.rightView = UIView(frame: CGRect(x: 0, y: 0, width: 12, height: textField.frame.height))
+        textField.rightViewMode = .always
+
+        textField.font = .systemFont(ofSize: 16)
+    }
+
+    private func applyPrimaryStyleToButton(_ button: UIButton?) {
+        guard let button = button else { return }
+        button.layer.cornerRadius = 12
+        button.layer.shadowColor = UIColor.black.cgColor
+        button.layer.shadowOffset = CGSize(width: 0, height: 2)
+        button.layer.shadowRadius = 4
+        button.layer.shadowOpacity = 0.1
+        button.clipsToBounds = false
+        button.backgroundColor = .systemBlue
+        button.setTitleColor(.white, for: .normal)
+        button.titleLabel?.font = .systemFont(ofSize: 17, weight: .semibold)
     }
 
     // MARK: - Picker Done Button

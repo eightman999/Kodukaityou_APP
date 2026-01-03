@@ -24,8 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let rootViewController = storyboard.instantiateInitialViewController()
         window?.rootViewController = rootViewController
 
-        // IQKeyboardManager の設定（バージョン8以降）
-        IQKeyboardManager.shared.isEnabled = true
+        // IQKeyboardManager の設定（バージョン6.5）
+        IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.shouldResignOnTouchOutside = true
 
         // Firebase の初期化
