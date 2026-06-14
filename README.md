@@ -1,45 +1,96 @@
-# Kodukaityou
+# KOZUKAITYOU (おこづかい帳)
 
-Kodukaityou (小遣い帳) is an iOS application for managing your budget and expenses. The project is written in Swift and uses CocoaPods to manage its dependencies. The app now detects the device language and shows alerts in English when running on an English device.
+iOS 向けのオフラインおこづかい帳アプリ。支出・収入の記録、月別グラフ、年間費目別集計をすべて端末内で完結する。
 
-## Requirements
+## 動作環境
 
-- Xcode 15 or later
-- CocoaPods 1.11 or later
-- iOS 17.0 or later (tested on iOS 17)
+| 項目 | 値 |
+|---|---|
+| iOS | 17.0 以上 |
+| Xcode | 15.4 以上 |
+| Swift | 5 |
+| アーキテクチャ | UIKit + Storyboard (MVC) |
 
-## Setup
+## セットアップ
 
-1. Install CocoaPods if it is not installed:
+```bash
+# リポジトリをクローン
+git clone <repository-url>
+cd Kodukaityou_APP
 
-   ```bash
-   sudo gem install cocoapods
-   ```
+# CocoaPods で依存を取得
+pod install
 
-2. Install the dependencies (add `--repo-update` if you see pod errors):
+# ワークスペースを開く（.xcodeproj ではなく .xcworkspace）
+open KOZUKAITYOU.xcworkspace
+```
 
-   ```bash
-   pod install # or `pod install --repo-update`
-   ```
+> **注意**: `KOZUKAITYOU.xcodeproj` ではなく `KOZUKAITYOU.xcworkspace` を開くこと。
+> CocoaPods の依存が解決されず、ビルドエラーになる。
 
-3. Open the generated `KOZUKAITYOU.xcworkspace` in Xcode:
+## ビルド (CLI)
 
-   ```bash
-   open KOZUKAITYOU.xcworkspace
-   ```
+```bash
+xcodebuild \
+  -workspace KOZUKAITYOU.xcworkspace \
+  -scheme KOZUKAITYOU \
+  -sdk iphonesimulator \
+  -arch arm64 \
+  -configuration Debug \
+  build
+```
 
-4. Select a device running iOS 17 or later and build the project.
+## 依存ライブラリ
 
-The repository already includes a `GoogleService-Info.plist` file for Firebase configuration. If you wish to use your own Firebase project, replace this file with one generated from the Firebase console.
+| ライブラリ | 用途 |
+|---|---|
+| **RealmSwift** | ローカルデータベース (支出・収入・予算) |
+| **DGCharts** | 月別・年間の円グラフ表示 |
+| **IQKeyboardManagerSwift** | キーボード表示時の自動スクロール |
 
-## Features
+ネットワーク通信を行うライブラリは含まない。
 
-- Expense input screens with Realm database storage
-- Charts for visualizing spending
-- Support for Firebase Analytics and FirebaseUI authentication
-- UI utilities such as IQKeyboardManager and SVProgressHUD
-- Automatic English mode when the device language is set to English
+## プロジェクト構成
 
-## License
+```
+KOZUKAITYOU/
+├── AppDelegate.swift          # アプリ起動・IQKeyboard 初期化
+├── Localization.swift         # 日英切り替えヘルパー
+├── UIExtension.swift          # UI ユーティリティ
+│
+├── モデル (Realm)
+│   ├── MainItem.swift         # 出費レコード
+│   ├── SUBItem.swift          # 費目別予算
+│   └── YearItem.swift         # 年間データ
+│
+├── 画面 (ViewController)
+│   ├── mainViewController.swift       # ホーム
+│   ├── AddViewController.swift        # 出費入力
+│   ├── InmoneyViewController.swift    # 収入入力
+│   ├── SavebudgetViewController.swift # 予算設定
+│   ├── MonthViewController.swift      # 月間グラフ
+│   ├── yearViewContoller.swift        # 年間集計
+│   ├── A~IyearViewController.swift    # 費目別年間詳細 (9画面)
+│   ├── inputViewController.swift      # 入力補助
+│   ├── suksViewController.swift       # 一覧表示
+│   ├── LoginViewController.swift      # ログイン (認証廃止済み)
+│   ├── SignUpViewController.swift     # サインアップ (認証廃止済み)
+│   └── SETViewController.swift        # 設定
+│
+├── Storyboard
+│   ├── Main.storyboard        # メイン画面遷移
+│   ├── SE.storyboard          # 設定系画面
+│   └── LaunchScreen.storyboard
+│
+└── ListTableViewCell.swift / .xib  # カスタムセル
+```
 
-This project is provided as-is without warranty. See individual CocoaPods for their respective licenses.
+## 設計方針
+
+- **完全オフライン** — ネットワーク通信は一切不要。Firebase は廃止済み。
+- **Realm 一本** — すべてのデータは Realm に保存。CoreData のモデルファイルは残存するが未使用。
+- **日英対応** — `localized(japanese:english:)` で端末の言語設定に応じて切り替え。
+
+## ライセンス
+
+Copyright &copy; eightman 2005-2025. Furin-lab All rights reserved.
