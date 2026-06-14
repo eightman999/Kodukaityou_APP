@@ -1,0 +1,23 @@
+{
+  "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/KOZUKAITYOU/SUBItem.swift" : {
+    "const-values" : "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/build/KOZUKAITYOU.build/Debug-iphonesimulator/KOZUKAITYOU.build/Objects-normal/arm64/SUBItem.swiftconstvalues",
+    "dependencies" : "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/build/KOZUKAITYOU.build/Debug-iphonesimulator/KOZUKAITYOU.build/Objects-normal/arm64/SUBItem.d",
+    "diagnostics" : "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/build/KOZUKAITYOU.build/Debug-iphonesimulator/KOZUKAITYOU.build/Objects-normal/arm64/SUBItem.dia",
+    "object" : "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/build/KOZUKAITYOU.build/Debug-iphonesimulator/KOZUKAITYOU.build/Objects-normal/arm64/SUBItem.o",
+    "swift-dependencies" : "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/build/KOZUKAITYOU.build/Debug-iphonesimulator/KOZUKAITYOU.build/Objects-normal/arm64/SUBItem.swiftdeps"
+  },
+  "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/KOZUKAITYOU/ViewController.swift" : {
+    "const-values" : "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/build/KOZUKAITYOU.build/Debug-iphonesimulator/KOZUKAITYOU.build/Objects-normal/arm64/ViewController.swiftconstvalues",
+    "dependencies" : "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/build/KOZUKAITYOU.build/Debug-iphonesimulator/KOZUKAITYOU.build/Objects-normal/arm64/ViewController.d",
+    "diagnostics" : "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/build/KOZUKAITYOU.build/Debug-iphonesimulator/KOZUKAITYOU.build/Objects-normal/arm64/ViewController.dia",
+    "object" : "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/build/KOZUKAITYOU.build/Debug-iphonesimulator/KOZUKAITYOU.build/Objects-normal/arm64/ViewController.o",
+    "swift-dependencies" : "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/build/KOZUKAITYOU.build/Debug-iphonesimulator/KOZUKAITYOU.build/Objects-normal/arm64/ViewController.swiftdeps"
+  },
+  "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/KOZUKAITYOU/suksViewController.swift" : {
+    "const-values" : "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/build/KOZUKAITYOU.build/Debug-iphonesimulator/KOZUKAITYOU.build/Objects-normal/arm64/suksViewController.swiftconstvalues",
+    "dependencies" : "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/build/KOZUKAITYOU.build/Debug-iphonesimulator/KOZUKAITYOU.build/Objects-normal/arm64/suksViewController.d",
+    "diagnostics" : "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/build/KOZUKAITYOU.build/Debug-iphonesimulator/KOZUKAITYOU.build/Objects-normal/arm64/suksViewController.dia",
+    "object" : "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/build/KOZUKAITYOU.build/Debug-iphonesimulator/KOZUKAITYOU.build/Objects-normal/arm64/suksViewController.o",
+    "swift-dependencies" : "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/build/KOZUKAITYOU.build/Debug-iphonesimulator/KOZUKAITYOU.build/Objects-normal/arm64/suksViewController.swiftdeps"
+  }
+}

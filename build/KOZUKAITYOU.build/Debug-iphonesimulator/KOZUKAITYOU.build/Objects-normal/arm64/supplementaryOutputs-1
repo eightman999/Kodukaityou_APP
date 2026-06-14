@@ -1,0 +1,23 @@
+{
+  "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/KOZUKAITYOU/InmoneyViewController.swift" : {
+    "const-values" : "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/build/KOZUKAITYOU.build/Debug-iphonesimulator/KOZUKAITYOU.build/Objects-normal/arm64/InmoneyViewController.swiftconstvalues",
+    "dependencies" : "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/build/KOZUKAITYOU.build/Debug-iphonesimulator/KOZUKAITYOU.build/Objects-normal/arm64/InmoneyViewController.d",
+    "diagnostics" : "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/build/KOZUKAITYOU.build/Debug-iphonesimulator/KOZUKAITYOU.build/Objects-normal/arm64/InmoneyViewController.dia",
+    "object" : "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/build/KOZUKAITYOU.build/Debug-iphonesimulator/KOZUKAITYOU.build/Objects-normal/arm64/InmoneyViewController.o",
+    "swift-dependencies" : "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/build/KOZUKAITYOU.build/Debug-iphonesimulator/KOZUKAITYOU.build/Objects-normal/arm64/InmoneyViewController.swiftdeps"
+  },
+  "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/KOZUKAITYOU/SavebudgetViewController.swift" : {
+    "const-values" : "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/build/KOZUKAITYOU.build/Debug-iphonesimulator/KOZUKAITYOU.build/Objects-normal/arm64/SavebudgetViewController.swiftconstvalues",
+    "dependencies" : "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/build/KOZUKAITYOU.build/Debug-iphonesimulator/KOZUKAITYOU.build/Objects-normal/arm64/SavebudgetViewController.d",
+    "diagnostics" : "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/build/KOZUKAITYOU.build/Debug-iphonesimulator/KOZUKAITYOU.build/Objects-normal/arm64/SavebudgetViewController.dia",
+    "object" : "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/build/KOZUKAITYOU.build/Debug-iphonesimulator/KOZUKAITYOU.build/Objects-normal/arm64/SavebudgetViewController.o",
+    "swift-dependencies" : "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/build/KOZUKAITYOU.build/Debug-iphonesimulator/KOZUKAITYOU.build/Objects-normal/arm64/SavebudgetViewController.swiftdeps"
+  },
+  "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/KOZUKAITYOU/SignUpViewController.swift" : {
+    "const-values" : "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/build/KOZUKAITYOU.build/Debug-iphonesimulator/KOZUKAITYOU.build/Objects-normal/arm64/SignUpViewController.swiftconstvalues",
+    "dependencies" : "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/build/KOZUKAITYOU.build/Debug-iphonesimulator/KOZUKAITYOU.build/Objects-normal/arm64/SignUpViewController.d",
+    "diagnostics" : "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/build/KOZUKAITYOU.build/Debug-iphonesimulator/KOZUKAITYOU.build/Objects-normal/arm64/SignUpViewController.dia",
+    "object" : "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/build/KOZUKAITYOU.build/Debug-iphonesimulator/KOZUKAITYOU.build/Objects-normal/arm64/SignUpViewController.o",
+    "swift-dependencies" : "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/build/KOZUKAITYOU.build/Debug-iphonesimulator/KOZUKAITYOU.build/Objects-normal/arm64/SignUpViewController.swiftdeps"
+  }
+}

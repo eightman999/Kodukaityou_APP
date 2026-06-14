@@ -1,0 +1,23 @@
+{
+  "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/KOZUKAITYOU/EyearViewController.swift" : {
+    "const-values" : "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/build/KOZUKAITYOU.build/Debug-iphonesimulator/KOZUKAITYOU.build/Objects-normal/arm64/EyearViewController.swiftconstvalues",
+    "dependencies" : "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/build/KOZUKAITYOU.build/Debug-iphonesimulator/KOZUKAITYOU.build/Objects-normal/arm64/EyearViewController.d",
+    "diagnostics" : "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/build/KOZUKAITYOU.build/Debug-iphonesimulator/KOZUKAITYOU.build/Objects-normal/arm64/EyearViewController.dia",
+    "object" : "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/build/KOZUKAITYOU.build/Debug-iphonesimulator/KOZUKAITYOU.build/Objects-normal/arm64/EyearViewController.o",
+    "swift-dependencies" : "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/build/KOZUKAITYOU.build/Debug-iphonesimulator/KOZUKAITYOU.build/Objects-normal/arm64/EyearViewController.swiftdeps"
+  },
+  "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/KOZUKAITYOU/MonthViewController.swift" : {
+    "const-values" : "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/build/KOZUKAITYOU.build/Debug-iphonesimulator/KOZUKAITYOU.build/Objects-normal/arm64/MonthViewController.swiftconstvalues",
+    "dependencies" : "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/build/KOZUKAITYOU.build/Debug-iphonesimulator/KOZUKAITYOU.build/Objects-normal/arm64/MonthViewController.d",
+    "diagnostics" : "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/build/KOZUKAITYOU.build/Debug-iphonesimulator/KOZUKAITYOU.build/Objects-normal/arm64/MonthViewController.dia",
+    "object" : "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/build/KOZUKAITYOU.build/Debug-iphonesimulator/KOZUKAITYOU.build/Objects-normal/arm64/MonthViewController.o",
+    "swift-dependencies" : "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/build/KOZUKAITYOU.build/Debug-iphonesimulator/KOZUKAITYOU.build/Objects-normal/arm64/MonthViewController.swiftdeps"
+  },
+  "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/KOZUKAITYOU/yearViewContoller.swift" : {
+    "const-values" : "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/build/KOZUKAITYOU.build/Debug-iphonesimulator/KOZUKAITYOU.build/Objects-normal/arm64/yearViewContoller.swiftconstvalues",
+    "dependencies" : "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/build/KOZUKAITYOU.build/Debug-iphonesimulator/KOZUKAITYOU.build/Objects-normal/arm64/yearViewContoller.d",
+    "diagnostics" : "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/build/KOZUKAITYOU.build/Debug-iphonesimulator/KOZUKAITYOU.build/Objects-normal/arm64/yearViewContoller.dia",
+    "object" : "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/build/KOZUKAITYOU.build/Debug-iphonesimulator/KOZUKAITYOU.build/Objects-normal/arm64/yearViewContoller.o",
+    "swift-dependencies" : "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/build/KOZUKAITYOU.build/Debug-iphonesimulator/KOZUKAITYOU.build/Objects-normal/arm64/yearViewContoller.swiftdeps"
+  }
+}

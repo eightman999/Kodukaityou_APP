@@ -10,7 +10,6 @@
 
 import UIKit
 import CoreData
-import Firebase
 import IQKeyboardManagerSwift
 
 @main
@@ -27,9 +26,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // IQKeyboardManager の設定（バージョン6.5）
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.shouldResignOnTouchOutside = true
-
-        // Firebase の初期化
-        FirebaseApp.configure()
 
         return true
     }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA00010001000100DEADBEEF /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00010001000200DEADBEEF /* Localization.swift */; };
 		4E0A7DE122EA812400AD0ECD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0A7DE022EA812400AD0ECD /* AppDelegate.swift */; };
 		4E0A7DE322EA812400AD0ECD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0A7DE222EA812400AD0ECD /* ViewController.swift */; };
 		4E0A7DE922EA812400AD0ECD /* KOZUKAITYOU.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4E0A7DE722EA812400AD0ECD /* KOZUKAITYOU.xcdatamodeld */; };
@@ -35,7 +36,6 @@
 		AFD71AB6237E4ACC00706A30 /* SUBItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD71AB5237E4ACC00706A30 /* SUBItem.swift */; };
 		AFF1E9BD237BA5D900124341 /* 旗.png in Resources */ = {isa = PBXBuildFile; fileRef = AFF1E9BC237BA5D900124341 /* 旗.png */; };
 		C10ADBD724337696002E839D /* YearItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10ADBD624337696002E839D /* YearItem.swift */; };
-		C10B315423B633B0002B6232 /* FirebaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10B315323B633B0002B6232 /* FirebaseAPI.swift */; };
 		C10B315623B63F1E002B6232 /* SETViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C10B315523B63F1E002B6232 /* SETViewController.swift */; };
 		C12EBF992442E06F005BF2E2 /* yearViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12EBF982442E06F005BF2E2 /* yearViewContoller.swift */; };
 		C16A0CB2243AEA160042C817 /* CyearViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16A0CB1243AEA160042C817 /* CyearViewController.swift */; };
@@ -47,7 +47,6 @@
 		C16A0CBE243AEAB50042C817 /* IyearViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16A0CBD243AEAB50042C817 /* IyearViewController.swift */; };
 		C16AC26E2376E2BA0035F03C /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16AC26C2376E2BA0035F03C /* ListTableViewCell.swift */; };
 		C16AC26F2376E2BA0035F03C /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C16AC26D2376E2BA0035F03C /* ListTableViewCell.xib */; };
-		C16C76EA23796B5D001F7642 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C16C76E923796B5D001F7642 /* GoogleService-Info.plist */; };
 		C187C98E23404C5500A10733 /* メモアイコン.png in Resources */ = {isa = PBXBuildFile; fileRef = C187C98D23404C5500A10733 /* メモアイコン.png */; };
 		C187C99023404C8700A10733 /* gia.png in Resources */ = {isa = PBXBuildFile; fileRef = C187C98F23404C8700A10733 /* gia.png */; };
 		C187C99823406D7E00A10733 /* MainItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C187C99723406D7E00A10733 /* MainItem.swift */; };
@@ -85,6 +84,7 @@
 /* Begin PBXFileReference section */
 		23EE23A6E99E00D4FFB6D390 /* Pods-KOZUKAITYOU.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KOZUKAITYOU.debug.xcconfig"; path = "Target Support Files/Pods-KOZUKAITYOU/Pods-KOZUKAITYOU.debug.xcconfig"; sourceTree = "<group>"; };
 		4E0A7DDD22EA812400AD0ECD /* KOZUKAITYOU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KOZUKAITYOU.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA00010001000200DEADBEEF /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
 		4E0A7DE022EA812400AD0ECD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4E0A7DE222EA812400AD0ECD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4E0A7DE822EA812400AD0ECD /* KOZUKAITYOU.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KOZUKAITYOU.xcdatamodel; sourceTree = "<group>"; };
@@ -123,7 +123,6 @@
 		AFD79AA1230CE1DD002FB2E7 /* KOZUKAITYOU.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KOZUKAITYOU.entitlements; sourceTree = "<group>"; };
 		AFF1E9BC237BA5D900124341 /* 旗.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "旗.png"; sourceTree = "<group>"; };
 		C10ADBD624337696002E839D /* YearItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearItem.swift; sourceTree = "<group>"; };
-		C10B315323B633B0002B6232 /* FirebaseAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseAPI.swift; sourceTree = "<group>"; };
 		C10B315523B63F1E002B6232 /* SETViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SETViewController.swift; sourceTree = "<group>"; };
 		C12EBF982442E06F005BF2E2 /* yearViewContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = yearViewContoller.swift; sourceTree = "<group>"; };
 		C16A0CB1243AEA160042C817 /* CyearViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CyearViewController.swift; sourceTree = "<group>"; };
@@ -135,7 +134,6 @@
 		C16A0CBD243AEAB50042C817 /* IyearViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IyearViewController.swift; sourceTree = "<group>"; };
 		C16AC26C2376E2BA0035F03C /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		C16AC26D2376E2BA0035F03C /* ListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
-		C16C76E923796B5D001F7642 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C187C98D23404C5500A10733 /* メモアイコン.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "メモアイコン.png"; sourceTree = "<group>"; };
 		C187C98F23404C8700A10733 /* gia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gia.png; sourceTree = "<group>"; };
 		C187C99123404E7C00A10733 /* Charts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Charts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -216,7 +214,6 @@
 			children = (
 				AFD79AA1230CE1DD002FB2E7 /* KOZUKAITYOU.entitlements */,
 				4E0A7DE022EA812400AD0ECD /* AppDelegate.swift */,
-				C10B315323B633B0002B6232 /* FirebaseAPI.swift */,
 				C187C99723406D7E00A10733 /* MainItem.swift */,
 				AFD71AB5237E4ACC00706A30 /* SUBItem.swift */,
 				C10ADBD624337696002E839D /* YearItem.swift */,
@@ -231,12 +228,12 @@
 				AFC06733237B7FE400E1E06C /* suksViewController.swift */,
 				C16AC26C2376E2BA0035F03C /* ListTableViewCell.swift */,
 				C10B315523B63F1E002B6232 /* SETViewController.swift */,
+				AA00010001000200DEADBEEF /* Localization.swift */,
 				C16AC26D2376E2BA0035F03C /* ListTableViewCell.xib */,
 				C1D364C824234EAE006EAD43 /* ListTableViewCell2.xib */,
 				C1FED9C9287BC72000C73403 /* LaunchScreen.storyboard */,
 				AF4155DC237D3C0E00725B44 /* Main.storyboard */,
 				C1F88A56251ED3C900533C9A /* SE.storyboard */,
-				C16C76E923796B5D001F7642 /* GoogleService-Info.plist */,
 				4E0A7DEF22EA812600AD0ECD /* Info.plist */,
 				4E0A7DE722EA812400AD0ECD /* KOZUKAITYOU.xcdatamodeld */,
 				4E0A7DEA22EA812600AD0ECD /* Assets.xcassets */,
@@ -530,7 +527,6 @@
 				AFC06732237B7BF800E1E06C /* 国旗.png in Resources */,
 				C187C98E23404C5500A10733 /* メモアイコン.png in Resources */,
 				AF4155DD237D3C0F00725B44 /* Main.storyboard in Resources */,
-				C16C76EA23796B5D001F7642 /* GoogleService-Info.plist in Resources */,
 				AF26245E230E644A00423B58 /* 麻袋型のドル袋の無料アイコン（ユーロ）.png in Resources */,
 				C1FED9CA287BC72000C73403 /* LaunchScreen.storyboard in Resources */,
 				4EBA8EBC22EA8F8100E85CC3 /* home3.png in Resources */,
@@ -575,13 +571,9 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-KOZUKAITYOU/Pods-KOZUKAITYOU-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-KOZUKAITYOU/Pods-KOZUKAITYOU-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -658,7 +650,7 @@
 				C16A0CB8243AEA3B0042C817 /* FyearViewController.swift in Sources */,
 				C16A0CB2243AEA160042C817 /* CyearViewController.swift in Sources */,
 				C10B315623B63F1E002B6232 /* SETViewController.swift in Sources */,
-				C10B315423B633B0002B6232 /* FirebaseAPI.swift in Sources */,
+				AA00010001000100DEADBEEF /* Localization.swift in Sources */,
 				C10ADBD724337696002E839D /* YearItem.swift in Sources */,
 				4EBA8EC422EA936500E85CC3 /* mainViewController.swift in Sources */,
 			);
@@ -838,6 +830,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.Sunlight.library.app.KOZUKAITYOU;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -863,6 +857,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.Sunlight.library.app.KOZUKAITYOU;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

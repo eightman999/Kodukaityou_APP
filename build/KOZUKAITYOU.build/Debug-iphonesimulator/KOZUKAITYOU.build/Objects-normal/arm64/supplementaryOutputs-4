@@ -1,0 +1,23 @@
+{
+  "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/KOZUKAITYOU/AddViewController.swift" : {
+    "const-values" : "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/build/KOZUKAITYOU.build/Debug-iphonesimulator/KOZUKAITYOU.build/Objects-normal/arm64/AddViewController.swiftconstvalues",
+    "dependencies" : "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/build/KOZUKAITYOU.build/Debug-iphonesimulator/KOZUKAITYOU.build/Objects-normal/arm64/AddViewController.d",
+    "diagnostics" : "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/build/KOZUKAITYOU.build/Debug-iphonesimulator/KOZUKAITYOU.build/Objects-normal/arm64/AddViewController.dia",
+    "object" : "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/build/KOZUKAITYOU.build/Debug-iphonesimulator/KOZUKAITYOU.build/Objects-normal/arm64/AddViewController.o",
+    "swift-dependencies" : "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/build/KOZUKAITYOU.build/Debug-iphonesimulator/KOZUKAITYOU.build/Objects-normal/arm64/AddViewController.swiftdeps"
+  },
+  "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/KOZUKAITYOU/AyearViewController.swift" : {
+    "const-values" : "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/build/KOZUKAITYOU.build/Debug-iphonesimulator/KOZUKAITYOU.build/Objects-normal/arm64/AyearViewController.swiftconstvalues",
+    "dependencies" : "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/build/KOZUKAITYOU.build/Debug-iphonesimulator/KOZUKAITYOU.build/Objects-normal/arm64/AyearViewController.d",
+    "diagnostics" : "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/build/KOZUKAITYOU.build/Debug-iphonesimulator/KOZUKAITYOU.build/Objects-normal/arm64/AyearViewController.dia",
+    "object" : "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/build/KOZUKAITYOU.build/Debug-iphonesimulator/KOZUKAITYOU.build/Objects-normal/arm64/AyearViewController.o",
+    "swift-dependencies" : "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/build/KOZUKAITYOU.build/Debug-iphonesimulator/KOZUKAITYOU.build/Objects-normal/arm64/AyearViewController.swiftdeps"
+  },
+  "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/KOZUKAITYOU/GyearViewController.swift" : {
+    "const-values" : "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/build/KOZUKAITYOU.build/Debug-iphonesimulator/KOZUKAITYOU.build/Objects-normal/arm64/GyearViewController.swiftconstvalues",
+    "dependencies" : "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/build/KOZUKAITYOU.build/Debug-iphonesimulator/KOZUKAITYOU.build/Objects-normal/arm64/GyearViewController.d",
+    "diagnostics" : "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/build/KOZUKAITYOU.build/Debug-iphonesimulator/KOZUKAITYOU.build/Objects-normal/arm64/GyearViewController.dia",
+    "object" : "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/build/KOZUKAITYOU.build/Debug-iphonesimulator/KOZUKAITYOU.build/Objects-normal/arm64/GyearViewController.o",
+    "swift-dependencies" : "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/build/KOZUKAITYOU.build/Debug-iphonesimulator/KOZUKAITYOU.build/Objects-normal/arm64/GyearViewController.swiftdeps"
+  }
+}

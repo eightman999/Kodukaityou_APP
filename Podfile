@@ -3,8 +3,6 @@ platform :ios, '17.0'
 target 'KOZUKAITYOU' do
   use_frameworks!
 
-  # Pods for KOZUKAITYOU
-
   # Charts for data visualization
   pod 'DGCharts'
 
@@ -13,12 +11,6 @@ target 'KOZUKAITYOU' do
 
   # Keyboard management
   pod 'IQKeyboardManagerSwift', '~> 6.5'
-
-  # Firebase services
-  pod 'Firebase'
-  pod 'Firebase/Analytics'
-  pod 'Firebase/Auth'
-  pod 'Firebase/Database'
 end
 
 post_install do |installer|

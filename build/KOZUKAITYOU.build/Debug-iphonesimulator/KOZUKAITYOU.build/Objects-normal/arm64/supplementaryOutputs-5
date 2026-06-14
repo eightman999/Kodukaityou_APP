@@ -1,0 +1,23 @@
+{
+  "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/KOZUKAITYOU/DyearViewController.swift" : {
+    "const-values" : "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/build/KOZUKAITYOU.build/Debug-iphonesimulator/KOZUKAITYOU.build/Objects-normal/arm64/DyearViewController.swiftconstvalues",
+    "dependencies" : "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/build/KOZUKAITYOU.build/Debug-iphonesimulator/KOZUKAITYOU.build/Objects-normal/arm64/DyearViewController.d",
+    "diagnostics" : "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/build/KOZUKAITYOU.build/Debug-iphonesimulator/KOZUKAITYOU.build/Objects-normal/arm64/DyearViewController.dia",
+    "object" : "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/build/KOZUKAITYOU.build/Debug-iphonesimulator/KOZUKAITYOU.build/Objects-normal/arm64/DyearViewController.o",
+    "swift-dependencies" : "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/build/KOZUKAITYOU.build/Debug-iphonesimulator/KOZUKAITYOU.build/Objects-normal/arm64/DyearViewController.swiftdeps"
+  },
+  "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/KOZUKAITYOU/ListTableViewCell.swift" : {
+    "const-values" : "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/build/KOZUKAITYOU.build/Debug-iphonesimulator/KOZUKAITYOU.build/Objects-normal/arm64/ListTableViewCell.swiftconstvalues",
+    "dependencies" : "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/build/KOZUKAITYOU.build/Debug-iphonesimulator/KOZUKAITYOU.build/Objects-normal/arm64/ListTableViewCell.d",
+    "diagnostics" : "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/build/KOZUKAITYOU.build/Debug-iphonesimulator/KOZUKAITYOU.build/Objects-normal/arm64/ListTableViewCell.dia",
+    "object" : "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/build/KOZUKAITYOU.build/Debug-iphonesimulator/KOZUKAITYOU.build/Objects-normal/arm64/ListTableViewCell.o",
+    "swift-dependencies" : "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/build/KOZUKAITYOU.build/Debug-iphonesimulator/KOZUKAITYOU.build/Objects-normal/arm64/ListTableViewCell.swiftdeps"
+  },
+  "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/KOZUKAITYOU/MainItem.swift" : {
+    "const-values" : "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/build/KOZUKAITYOU.build/Debug-iphonesimulator/KOZUKAITYOU.build/Objects-normal/arm64/MainItem.swiftconstvalues",
+    "dependencies" : "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/build/KOZUKAITYOU.build/Debug-iphonesimulator/KOZUKAITYOU.build/Objects-normal/arm64/MainItem.d",
+    "diagnostics" : "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/build/KOZUKAITYOU.build/Debug-iphonesimulator/KOZUKAITYOU.build/Objects-normal/arm64/MainItem.dia",
+    "object" : "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/build/KOZUKAITYOU.build/Debug-iphonesimulator/KOZUKAITYOU.build/Objects-normal/arm64/MainItem.o",
+    "swift-dependencies" : "/Users/eightman/Desktop/software_develop/Kodukaityou_APP/build/KOZUKAITYOU.build/Debug-iphonesimulator/KOZUKAITYOU.build/Objects-normal/arm64/MainItem.swiftdeps"
+  }
+}

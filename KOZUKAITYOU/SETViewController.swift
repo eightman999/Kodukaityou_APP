@@ -2,45 +2,18 @@
 //  SETViewController.swift
 //  KOZUKAITYOU
 //
-//  Created by 塙詠斗 on 2019/12/27.
-//  Copyright © 2019 塙　詠斗. All rights reserved.
-//
 // © eightman 2005-2025. Furin-lab All rights reserved.
-// Operation: 設定画面、Firebase認証周りを担当
+// Operation: 設定画面（Firebase認証廃止済み）
 
 import UIKit
-import Firebase
-#if canImport(FirebaseAuth)
-import FirebaseAuth
-#endif
+
 class SETViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
+
     @IBAction func logout(){
-#if canImport(FirebaseAuth)
-          do {
-           try Auth.auth().signOut()
-       } catch {
-         print("FirebaseAuth signOut failed: \(error)")
-       }
-#else
-       print("FirebaseAuth not available; logout is a no-op in this build.")
-#endif
+        // Firebase認証廃止のため、ログアウト処理は不要
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
