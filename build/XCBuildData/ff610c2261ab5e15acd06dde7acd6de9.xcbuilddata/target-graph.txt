@@ -1,2 +1,0 @@
-Target dependency graph (1 target)
-Target 'KOZUKAITYOU' in project 'KOZUKAITYOU' (no dependencies)

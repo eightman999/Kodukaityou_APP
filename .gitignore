@@ -4,3 +4,6 @@ Pods/
 /Pods/abseil
 .DS_Store
 KOZUKAITYOU.xcworkspace/xcuserdata/eightman.xcuserdatad/UserInterfaceState.xcuserstate
+
+# --- ignore cleanup 2026-11-26 ---
+/build/

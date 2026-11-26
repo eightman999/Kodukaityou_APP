@@ -16,7 +16,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+    # CocoaPods構成のため swift build は使用できない（Package.swift が無い）。
+    # テストターゲットは雛形の空実装のみのため、ビルドまでを検証する正直なCIとする。
+    - name: Install CocoaPods dependencies
+      run: pod install
     - name: Build
-      run: swift build -v
-    - name: Run tests
-      run: swift test -v
+      run: xcodebuild -workspace KOZUKAITYOU.xcworkspace -scheme KOZUKAITYOU -sdk iphonesimulator build
